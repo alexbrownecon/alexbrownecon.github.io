@@ -83,3 +83,8 @@ Alex approved or rejected, and why.
   WAPLAC team page, pending Alex's pick. Forrest: no usable public photo
   exists (PSU profile has none; old Google site is login-walled) — Alex to
   request a photo file from him directly.
+- Photos installed (Alex-approved): Jose Castillo Garcia (WAPLAC 1024px,
+  optimized to 600px) and J. Forrest Williams (photo URL supplied by Alex from
+  PSU econ page, 300px) — self-hosted in assets/images/students/. Forrest's
+  title updated to Associate Professor and Chair (per his PSU page).
+- Alex removed the mis-attributed "churches" paper from his Scholar profile.
