@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alex Brown | Economics</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; color: #333; background: #fff; line-height: 1.65; }
+  a { color: #2563eb; text-decoration: none; }
+  a:hover { color: #1d4ed8; text-decoration: underline; }
+
+  /* NAV */
+  nav { position: fixed; top: 0; width: 100%; z-index: 100; background: rgba(255,255,255,0.97); border-bottom: 1px solid #e0e0e0; display: flex; justify-content: space-between; align-items: center; padding: 0 40px; height: 60px; }
+  nav .logo { font-size: 1.15rem; font-weight: 700; color: #1e3a5f; letter-spacing: 0.5px; }
+  nav .nav-links { display: flex; gap: 28px; }
+  nav .nav-links a { font-size: 0.9rem; font-weight: 500; color: #555; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; padding: 4px 0; border-bottom: 2px solid transparent; transition: all 0.2s; }
+  nav .nav-links a:hover, nav .nav-links a.active { color: #1e3a5f; border-bottom-color: #f59e0b; text-decoration: none; }
+
+  /* HERO */
+  .hero { margin-top: 60px; min-height: 400px; background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 35%, #3b82a0 70%, #4db6ac 100%); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 80% 20%, rgba(245,158,11,0.12) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(255,255,255,0.06) 0%, transparent 40%); }
+  .hero-content { position: relative; z-index: 1; display: flex; align-items: center; gap: 50px; max-width: 940px; padding: 40px; }
+  .hero-photo { width: 220px; height: 220px; border-radius: 50%; border: 4px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.5); font-size: 0.8rem; text-align: center; flex-shrink: 0; overflow: hidden; }
+  .hero-photo img { width: 100%; height: 100%; object-fit: cover; }
+  .hero-text { color: #fff; }
+  .hero-text h1 { font-size: 2.8rem; font-weight: 300; margin-bottom: 6px; }
+  .hero-text h1 span { font-weight: 600; }
+  .hero-text .subtitle { font-size: 1.1rem; opacity: 0.85; margin-bottom: 14px; font-weight: 300; }
+  .hero-text .interests { display: flex; flex-wrap: wrap; gap: 8px; }
+  .hero-text .interests span { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25); padding: 5px 16px; border-radius: 20px; font-size: 0.82rem; color: rgba(255,255,255,0.92); }
+
+  /* MINI HERO (sub-pages) */
+  .hero-mini { height: 140px; min-height: 140px; }
+  .hero-mini .hero-text h1 { font-size: 2rem; }
+
+  /* SECTIONS — optimized width for readability (940px gives ~65 characters per line at 18px body text, within the ideal 60-70 range) */
+  section { max-width: 940px; margin: 0 auto; padding: 50px 40px; }
+  section h2 { font-size: 1.5rem; font-weight: 600; color: #1e3a5f; margin-bottom: 20px; padding-bottom: 8px; border-bottom: 2px solid #e8f0fe; }
+  section h3 { font-size: 1.15rem; color: #1e3a5f; margin: 28px 0 12px; }
+
+  /* ABOUT — 2-column landing */
+  .landing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+  .placeholder-blurb { background: #f8f9fc; border-left: 3px solid #2563eb; padding: 16px 20px; border-radius: 4px; color: #888; font-style: italic; margin-bottom: 16px; }
+  .about-sidebar .info-block { margin-bottom: 20px; }
+  .about-sidebar .info-block h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 1.5px; color: #999; margin-bottom: 6px; }
+  .about-sidebar .info-block p { color: #444; font-size: 0.95rem; }
+
+  /* HIGHLIGHT CARDS (landing page) */
+  .highlight-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin: 30px 0; }
+  .highlight-card { background: #f8f9fc; border-radius: 10px; padding: 24px; border: 1px solid #e8f0fe; transition: all 0.2s; }
+  .highlight-card:hover { border-color: #bfdbfe; box-shadow: 0 4px 12px rgba(37,99,235,0.08); }
+  .highlight-card .hc-icon { font-size: 1.8rem; margin-bottom: 10px; }
+  .highlight-card h4 { font-size: 1rem; font-weight: 600; color: #1e3a5f; margin-bottom: 8px; }
+  .highlight-card p { font-size: 0.88rem; color: #666; }
+  .highlight-card .hc-count { font-size: 2rem; font-weight: 700; color: #2563eb; }
+
+  /* THEME CARDS — colored borders */
+  .theme-card { background: #fff; border-radius: 10px; padding: 24px; border: 1px solid #e8f0fe; border-top: 4px solid #ccc; transition: all 0.2s; }
+  .theme-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+  .theme-card.theme-gt { border-top-color: #1d4ed8; }
+  .theme-card.theme-dc { border-top-color: #b45309; }
+  .theme-card.theme-policy { border-top-color: #047857; }
+  .theme-card.theme-methods { border-top-color: #be185d; }
+
+  /* ACTION PHOTO PLACEHOLDER */
+  .photo-placeholder { width: 100%; height: 220px; background: linear-gradient(135deg, #f0f4ff 0%, #e8f0fe 100%); border: 2px dashed #bfdbfe; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #93b4e8; font-style: italic; font-size: 0.9rem; }
+
+  /* FEATURED WORK & GRANTS (landing — matching format) */
+  .featured-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .feat-card { padding: 16px 20px; border-radius: 8px; border: 1px solid #eee; background: #fafbfc; }
+  .feat-card .fc-title { font-weight: 600; font-size: 0.92rem; color: #333; margin-bottom: 4px; }
+  .feat-card .fc-detail { font-size: 0.82rem; color: #888; font-style: italic; }
+  .feat-card .fc-extra { font-size: 0.8rem; color: #666; margin-top: 4px; }
+  .feat-card .fc-amount { font-size: 0.8rem; font-weight: 600; color: #f59e0b; margin-top: 2px; }
+
+  /* RESEARCH FILTERS */
+  .filter-bar { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; }
+  .filter-btn { padding: 8px 20px; border-radius: 25px; border: 1.5px solid #d1d5db; background: #fff; color: #666; font-size: 0.85rem; cursor: pointer; font-weight: 500; transition: all 0.2s; font-family: inherit; }
+  .filter-btn:hover { border-color: #2563eb; color: #2563eb; }
+  .filter-btn.active { background: #1e3a5f; color: #fff; border-color: #1e3a5f; }
+
+  /* PAPER CARDS */
+  .paper-list { display: flex; flex-direction: column; gap: 16px; }
+  .paper-card { padding: 18px 22px; border: 1px solid #eee; border-radius: 8px; background: #fafbfc; transition: all 0.2s; }
+  .paper-card:hover { border-color: #bfdbfe; box-shadow: 0 2px 8px rgba(37,99,235,0.06); }
+  .paper-card.hidden { display: none; }
+  .paper-title { font-size: 0.98rem; font-weight: 600; color: #333; margin-bottom: 4px; }
+  .paper-authors { font-size: 0.86rem; color: #666; margin-bottom: 3px; }
+  .paper-venue { font-size: 0.86rem; color: #888; font-style: italic; margin-bottom: 8px; }
+  .paper-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+  .tag { font-size: 0.7rem; padding: 2px 10px; border-radius: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+  .tag-gt { background: #dbeafe; color: #1d4ed8; }
+  .tag-dc { background: #fef3c7; color: #b45309; }
+  .tag-policy { background: #d1fae5; color: #047857; }
+  .tag-methods { background: #fce7f3; color: #be185d; }
+  .paper-links { display: flex; flex-wrap: wrap; gap: 10px; }
+  .paper-links a { font-size: 0.8rem; color: #2563eb; font-weight: 500; padding: 3px 10px; border: 1px solid #dbeafe; border-radius: 4px; transition: all 0.15s; }
+  .paper-links a:hover { background: #2563eb; color: #fff; border-color: #2563eb; text-decoration: none; }
+
+  /* GRANTS (full page) */
+  .grant-card { padding: 20px 24px; border-radius: 10px; background: #f8f9fc; border-left: 4px solid #f59e0b; margin-bottom: 16px; }
+  .grant-card h4 { font-size: 0.95rem; color: #1e3a5f; margin-bottom: 4px; }
+  .grant-card .grant-source { font-size: 0.88rem; color: #666; font-style: italic; }
+  .grant-card .grant-amount { font-size: 0.88rem; font-weight: 600; color: #f59e0b; margin-top: 4px; }
+  .grant-card .grant-team { font-size: 0.82rem; color: #888; margin-top: 4px; }
+  .grant-card .grant-link { font-size: 0.8rem; margin-top: 6px; }
+
+  /* STUDENTS — two-column grid with square photos */
+  .students-section-label { font-size: 1.15rem; font-weight: 600; color: #1e3a5f; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid #e8f0fe; display: flex; align-items: center; gap: 10px; }
+  .students-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 40px; }
+  .student-card-sq { border-radius: 10px; border: 1px solid #eee; background: #fafbfc; overflow: hidden; transition: all 0.2s; position: relative; }
+  .student-card-sq:hover { border-color: #bfdbfe; box-shadow: 0 2px 8px rgba(37,99,235,0.06); }
+  .student-card-sq .student-photo-sq { width: 100%; aspect-ratio: 1; background: #e8f0fe; display: flex; align-items: center; justify-content: center; overflow: hidden; font-size: 0.8rem; color: #93b4e8; text-align: center; }
+  .student-card-sq .student-photo-sq img { width: 100%; height: 100%; object-fit: cover; }
+  .student-card-sq .student-body { padding: 16px; }
+  .student-card-sq .student-body h4 { font-size: 0.95rem; color: #333; margin-bottom: 3px; }
+  .student-card-sq .student-body h4 a { color: #2563eb; }
+  .student-card-sq .student-body .student-title { font-size: 0.82rem; color: #666; }
+  .student-card-sq .student-body .student-affil { font-size: 0.82rem; color: #888; margin-top: 2px; }
+  .current-badge { position: absolute; top: 10px; right: 10px; background: #dc2626; color: #fff; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; padding: 3px 10px; border-radius: 4px; }
+
+  /* TEACHING — category cards */
+  .teaching-category { margin-bottom: 32px; }
+  .teaching-category h3 { font-size: 1.1rem; color: #1e3a5f; margin-bottom: 12px; padding-bottom: 6px; border-bottom: 2px solid #e8f0fe; }
+  .course-card-full { padding: 18px 22px; border-radius: 8px; border: 1px solid #eee; background: #fafbfc; margin-bottom: 12px; }
+  .course-card-full .course-num { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 1px; color: #2563eb; font-weight: 700; }
+  .course-card-full .course-name { font-size: 1rem; font-weight: 600; color: #333; margin: 4px 0; }
+  .course-card-full .course-desc { font-size: 0.88rem; color: #666; line-height: 1.5; }
+  .course-card-full .course-link { font-size: 0.8rem; margin-top: 6px; }
+
+  /* FOOTER */
+  footer { background: #1e3a5f; color: rgba(255,255,255,0.7); text-align: center; padding: 30px 40px; font-size: 0.85rem; }
+  footer a { color: rgba(255,255,255,0.9); }
+
+  /* PAGE TOGGLE */
+  .page { display: none; }
+  .page.active { display: block; }
+
+  /* SECTION ALT BG */
+  .section-alt { background: #f8f9fc; }
+  .section-alt-wrap { padding: 50px 0; }
+  .section-alt-wrap section { padding-top: 0; padding-bottom: 0; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Alex Brown</div>
+  <div class="nav-links">
+    <a href="#" class="active" onclick="showPage('home')">Home</a>
+    <a href="#" onclick="showPage('research')">Research</a>
+    <a href="#" onclick="showPage('teaching')">Teaching</a>
+    <a href="#" onclick="showPage('cv')">CV</a>
+    <a href="#" onclick="showPage('students')">Students</a>
+    <a href="#" onclick="showPage('contact')">Contact</a>
+  </div>
+</nav>
+
+<!-- ========== HOME ========== -->
+<div id="home" class="page active">
+
+  <div class="hero">
+    <div class="hero-content">
+      <div class="hero-photo"><img src="images/newhead4.jpg" alt="Alex Brown"></div>
+      <div class="hero-text">
+        <h1><span>Alex</span> Brown</h1>
+        <div class="subtitle">Professor of Economics &bull; Texas A&amp;M University</div>
+        <div class="interests">
+          <span>Game Theory</span>
+          <span>Experimental Economics</span>
+          <span>Behavioral Economics</span>
+          <span>Microeconomic Theory</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="landing-grid">
+      <div>
+        <h2>About</h2>
+        <div class="placeholder-blurb">[Research statement placeholder — 2-3 sentences about what motivates your research. E.g., "I use experiments and theory to study how people make strategic and individual decisions. My work spans equilibrium selection in games, how people resolve risk and allocate resources over time, and experimental methods for testing economic theory."]</div>
+        <div class="placeholder-blurb">[Additional paragraph about your broader interests, approach to mentoring, or connection between theory and policy — to be written]</div>
+        <div style="margin-top:20px;">
+          <div class="photo-placeholder">Teaching / presenting action photo<br>(to be taken)</div>
+        </div>
+      </div>
+      <div class="about-sidebar">
+        <div class="info-block">
+          <h4>Position</h4>
+          <p>Professor of Economics<br>Texas A&amp;M University</p>
+        </div>
+        <div class="info-block">
+          <h4>Education</h4>
+          <p>Ph.D. Social Science, California Institute of Technology, 2008<br>B.S. Economics &amp; B.S. Actuarial Science, Ohio State University, 2003</p>
+        </div>
+        <div class="info-block">
+          <h4>Contact</h4>
+          <p>alexbrown@tamu.edu<br>(979) 845-7392<br>232 West Campus Social Sciences Building</p>
+        </div>
+        <div class="info-block">
+          <h4>Links</h4>
+          <p><a href="https://scholar.google.com/citations?user=mM_5lrMAAAAJ&hl=en">Google Scholar</a> &bull; <a href="https://orcid.org/0000-0002-5582-5304">ORCID</a> &bull; <a href="#">CV (PDF)</a></p>
+        </div>
+        <div class="info-block" style="margin-top:30px;">
+          <div class="photo-placeholder" style="height:180px;">Campus / office photo<br>(to be taken)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHTS ROW -->
+  <div class="section-alt">
+    <div class="section-alt-wrap">
+      <section>
+        <div class="highlight-row">
+          <div class="highlight-card" style="cursor:pointer;" onclick="showPage('research')">
+            <div class="hc-count">30+</div>
+            <h4>Publications</h4>
+            <p>Journal articles in QJE, Management Science, Nature Human Behaviour, JEL, AEJ, and more</p>
+          </div>
+          <div class="highlight-card">
+            <div class="hc-count">$3.4M+</div>
+            <h4>Grant Funding</h4>
+            <p>NSF, Federal Highway Administration, and university awards supporting research in game theory, transportation, and energy security</p>
+          </div>
+          <div class="highlight-card" style="cursor:pointer;" onclick="showPage('students')">
+            <div class="hc-count">9+</div>
+            <h4>PhD Students</h4>
+            <p>Graduates placed at CFPB, universities, and industry; current students working on game theory and resource economics</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- RESEARCH THEMES — four colored cards -->
+  <section>
+    <h2>Research Themes</h2>
+    <div class="highlight-row" style="grid-template-columns: 1fr 1fr;">
+      <div class="theme-card theme-gt">
+        <h4 style="color:#1d4ed8;">Equilibrium Selection, Game Theory &amp; Mechanism Design</h4>
+        <p style="font-size:0.88rem; color:#666;">How do players coordinate on equilibria? When are mechanisms simple enough to work in practice? My work tests refinements of Nash equilibrium, studies strategic thinking in field settings like the movie industry, and examines auction design and contract mechanisms.</p>
+      </div>
+      <div class="theme-card theme-dc">
+        <h4 style="color:#b45309;">Decisions &amp; Consumption</h4>
+        <p style="font-size:0.88rem; color:#666;">How do people make choices about risk, savings, and spending over time? This stream includes meta-analysis of loss aversion, dynamic savings with temptation, debt repayment behavior, capital allocation in firms, and preferences for the resolution of uncertainty.</p>
+      </div>
+    </div>
+    <div class="highlight-row" style="grid-template-columns: 1fr 1fr;">
+      <div class="theme-card theme-policy">
+        <h4 style="color:#047857;">Policy</h4>
+        <p style="font-size:0.88rem; color:#666;">Connecting experiments and behavioral insights to real-world policy — from the spillover effects of the CARD Act on student loans, to how nudges shape express lane choices, to measuring dynamic financial vulnerability of consumers.</p>
+      </div>
+      <div class="theme-card theme-methods">
+        <h4 style="color:#be185d;">Experimental Methods</h4>
+        <p style="font-size:0.88rem; color:#666;">Developing and testing experimental tools: when do separated elicitation methods improve measurement? What can 2,000 classroom bargaining experiments teach us about general economic principles? Which value elicitation mechanisms perform best?</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SELECTED PUBLICATIONS & GRANTS — balanced 4+4 -->
+  <div class="section-alt">
+    <div class="section-alt-wrap">
+      <section>
+        <h2>Selected Recent Publications</h2>
+        <div class="featured-grid">
+          <div class="feat-card">
+            <div class="fc-title">"When Consumer Financial Protection Spills Over: Student Loan Borrowing under the CARD Act"</div>
+            <div class="fc-detail">Management Science, forthcoming</div>
+          </div>
+          <div class="feat-card">
+            <div class="fc-title">"Preferences for the Resolution of Risk and Ambiguity"</div>
+            <div class="fc-detail">Journal of Economic Theory, 2026</div>
+          </div>
+          <div class="feat-card">
+            <div class="fc-title">"Meta-analysis of Empirical Estimates of Loss-aversion"</div>
+            <div class="fc-detail">Journal of Economic Literature, 2024</div>
+          </div>
+          <div class="feat-card">
+            <div class="fc-title">"General Economic Principles of Bargaining and Trade"</div>
+            <div class="fc-detail">Nature Human Behaviour, 2020</div>
+          </div>
+        </div>
+        <p style="margin-top:16px; text-align:center;"><a href="#" onclick="showPage('research')" style="font-weight:600;">View all publications &rarr;</a></p>
+      </section>
+    </div>
+  </div>
+
+  <section>
+    <h2>Selected Grants</h2>
+    <div class="featured-grid">
+      <div class="feat-card">
+        <div class="fc-title">"SCC-IRG Track1: Advanced Learning for Energy Risk Tracking (ALERT)"</div>
+        <div class="fc-detail">National Science Foundation</div>
+        <div class="fc-amount">$1,518,793</div>
+        <div class="fc-extra">Kezunovic, Brown, Enriquez, Pavlou, and Obradovic</div>
+        <div class="fc-extra"><a href="https://web.archive.org/web/20241208113945/https://research.tamu.edu/2024/02/29/combining-big-data-and-machine-learning-may-help-predict-unplanned-power-outages/" target="_blank">Research@TAMU article</a> &bull; <a href="https://pscp.engr.tamu.edu/alert/" target="_blank">ALERT project page</a></div>
+      </div>
+      <div class="feat-card">
+        <div class="fc-title">"Using Behavioral Economics to Better Understand ML Use"</div>
+        <div class="fc-detail">Federal Highway Administration — Exploratory Advanced Research</div>
+        <div class="fc-amount">$1,425,716</div>
+        <div class="fc-extra">Burris, Arthur Jr., Brown, Chrysler, Green, Robinson, Shaw, and Wood</div>
+        <div class="fc-extra"><a href="https://static.tti.tamu.edu/tti.tamu.edu/documents/0-6907-r1.pdf" target="_blank">TTI technical report</a></div>
+      </div>
+      <div class="feat-card">
+        <div class="fc-title">"Collaborative Research: Meta-Analysis of Empirical Estimates of Loss Aversion"</div>
+        <div class="fc-detail">National Science Foundation</div>
+        <div class="fc-amount">$93,923</div>
+        <div class="fc-extra">Camerer and Brown</div>
+      </div>
+      <div class="feat-card">
+        <div class="fc-title">"Cybersecurity Risk Reduction for Small Businesses"</div>
+        <div class="fc-detail">Targeted Proposal Teams, Texas A&amp;M University</div>
+        <div class="fc-amount">$80,000</div>
+        <div class="fc-extra">Guo, Brown, and Kumar</div>
+      </div>
+    </div>
+    <p style="margin-top:16px; text-align:center;"><a href="#" onclick="showPage('cv')" style="font-weight:600;">View full CV &rarr;</a></p>
+  </section>
+
+</div>
+
+<!-- ========== RESEARCH ========== -->
+<div id="research" class="page">
+  <div class="hero hero-mini"><div class="hero-content"><div class="hero-text"><h1 style="font-size:2rem;">Research</h1></div></div></div>
+  <section>
+    <div class="filter-bar">
+      <button class="filter-btn active" onclick="filterPapers('all')">All</button>
+      <button class="filter-btn" onclick="filterPapers('gt')" style="border-color:#1d4ed8; color:#1d4ed8;">Game Theory &amp; Mechanism Design</button>
+      <button class="filter-btn" onclick="filterPapers('dc')" style="border-color:#b45309; color:#b45309;">Decisions &amp; Consumption</button>
+      <button class="filter-btn" onclick="filterPapers('policy')" style="border-color:#047857; color:#047857;">Policy</button>
+      <button class="filter-btn" onclick="filterPapers('methods')" style="border-color:#be185d; color:#be185d;">Experimental Methods</button>
+    </div>
+    <div class="paper-list">
+      <h3>Journal Publications</h3>
+
+      <div class="paper-card" data-tags="dc,policy"><div class="paper-tags"><span class="tag tag-dc">Decisions</span><span class="tag tag-policy">Policy</span></div><div class="paper-title">"When Consumer Financial Protection Spills Over: Student Loan Borrowing under the CARD Act"</div><div class="paper-authors">Brown, Alexander L., Daniel Grodzicki, and Paolina C. Medina</div><div class="paper-venue">Management Science, forthcoming</div><div class="paper-links"><a href="#">most recent version</a></div></div>
+
+      <div class="paper-card" data-tags="policy"><div class="paper-tags"><span class="tag tag-policy">Policy</span></div><div class="paper-title">"Influence of Message-Based Nudges on Travel Choices on Express Lanes"</div><div class="paper-authors">Burris, Mark, et al.</div><div class="paper-venue">Transportation Research Record, forthcoming</div><div class="paper-links"><a href="#">journal version</a></div></div>
+
+      <div class="paper-card" data-tags="dc"><div class="paper-tags"><span class="tag tag-dc">Decisions</span></div><div class="paper-title">"Preferences for the Resolution of Risk and Ambiguity"</div><div class="paper-authors">Brown, Alexander L., Huiyi Guo, and Hyundam Je</div><div class="paper-venue">Journal of Economic Theory, 232, 106151, 2026</div><div class="paper-links"><a href="#">journal version</a><a href="#">most recent version</a></div></div>
+
+      <div class="paper-card" data-tags="gt,methods"><div class="paper-tags"><span class="tag tag-gt">Game Theory</span><span class="tag tag-methods">Methods</span></div><div class="paper-title">"Testing the Simplicity of Strategy-Proof Mechanisms"</div><div class="paper-authors">Brown, Alexander L., Daniel G. Stephenson, and Rodrigo A. Velez</div><div class="paper-venue">Economic Theory, 81(1-2): 13-42, 2026</div><div class="paper-links"><a href="#">journal version</a><a href="#">most recent version</a></div></div>
+
+      <div class="paper-card" data-tags="gt"><div class="paper-tags"><span class="tag tag-gt">Game Theory</span></div><div class="paper-title">"The Refinement of Nash Equilibrium Based on Equilibrium Models of Imperfectly Rational Behavior"</div><div class="paper-authors">Velez, Rodrigo A. and Alexander L. Brown</div><div class="paper-venue">Games and Economic Behavior, 157: 516-534, 2026</div><div class="paper-links"><a href="#">journal version</a><a href="#">most recent version</a></div></div>
+
+      <div class="paper-card" data-tags="dc"><div class="paper-tags"><span class="tag tag-dc">Decisions</span></div><div class="paper-title">"Social-Benefits Stigma and Subsequent Competitiveness"</div><div class="paper-authors">Valdez Gonzalez, Natalia I., Alexander L. Brown, and Marco A. Palma</div><div class="paper-venue">Economic Inquiry, 63(3): 903-925, July 2025</div><div class="paper-links"><a href="#">journal version</a></div></div>
+
+      <div class="paper-card" data-tags="dc"><div class="paper-tags"><span class="tag tag-dc">Decisions</span></div><div class="paper-title">"Meta-analysis of Empirical Estimates of Loss-aversion"</div><div class="paper-authors">Brown, Alexander L., Taisuke Imai, Ferdinand Vieider, and Colin F. Camerer</div><div class="paper-venue">Journal of Economic Literature, 62(2): 485-516, June 2024</div><div class="paper-links"><a href="#">journal version</a><a href="#">most recent version</a><a href="#">supplemental materials</a></div></div>
+
+      <div class="paper-card" data-tags="gt"><div class="paper-tags"><span class="tag tag-gt">Game Theory</span></div><div class="paper-title">"Aggregate and Individual Effects of Additional Information in a Coordination (Traffic) Game"</div><div class="paper-authors">Ashraf, Sruthi, Alexander L. Brown, Mark W. Burris, and Valon Vitaku</div><div class="paper-venue">Economic Inquiry, 61(4): 818-850, October 2023</div><div class="paper-links"><a href="#">journal version</a><a href="#">most recent version</a></div></div>
+
+      <div class="paper-card" data-tags="dc,policy"><div class="paper-tags"><span class="tag tag-dc">Decisions</span><span class="tag tag-policy">Policy</span></div><div class="paper-title">"Beyond Income: Dynamic Consumer Financial Vulnerability"</div><div class="paper-authors">Salisbury, Linda Court, et al.</div><div class="paper-venue">Journal of Marketing, 87(5), 657-678, September 2023</div><div class="paper-links"><a href="#">journal version</a></div></div>
+
+      <div class="paper-card" data-tags="policy"><div class="paper-tags"><span class="tag tag-policy">Policy</span></div><div class="paper-title">"Factors Influencing Traveler Use of Transit before, during, and after the COVID-19 Pandemic"</div><div class="paper-authors">Burris, Mark W., et al.</div><div class="paper-venue">Journal of Public Transportation, 25, 100058, 2023</div><div class="paper-links"><a href="#">journal version</a></div></div>
+
+      <div class="paper-card" data-tags="policy"><div class="paper-tags"><span class="tag tag-policy">Policy</span></div><div class="paper-title">"Using Behavioral Economics to Identify Potential Managed Lane Users"</div><div class="paper-authors">Ashraf, Sruthi, Mark W. Burris, Alexander L. Brown, and Valon Vitaku</div><div class="paper-venue">Transportation Research Record, 2676(8): 144-158, August 2022</div><div class="paper-links"><a href="#">journal version</a></div></div>
+
+      <div class="paper-card" data-tags="gt"><div class="paper-tags"><span class="tag tag-gt">Game Theory</span></div><div class="paper-title">"Breaking-Up Should Not be Hard to Do! Designing Contracts to Avoid Wars of Attrition"</div><div class="paper-authors">Brown, Alexander L. and Matt Van Essen</div><div class="paper-venue">European Economic Review, 143: 104059, April 2022</div><div class="paper-links"><a href="#">journal version</a><a href="#">most recent version</a></div></div>
+
+      <div class="paper-card" data-tags="gt"><div class="paper-tags"><span class="tag tag-gt">Game Theory</span></div><div class="paper-title">"Playing the Field in All-pay Auctions"</div><div class="paper-authors">Stephenson, Daniel G. and Alexander L. Brown</div><div class="paper-venue">Experimental Economics, 24(2):489-514, June 2021</div><div class="paper-links"><a href="#">journal version</a><a href="#">final version</a></div></div>
+
+      <div class="paper-card" data-tags="gt,methods"><div class="paper-tags"><span class="tag tag-gt">Game Theory</span><span class="tag tag-methods">Methods</span></div><div class="paper-title">"General Economic Principles of Bargaining and Trade: Evidence from 2,000 Classroom Experiments"</div><div class="paper-authors">Lin, Po-Hsuan, Alexander L. Brown, et al.</div><div class="paper-venue">Nature Human Behaviour, 4, 917-927, September 2020</div><div class="paper-links"><a href="#">journal version</a><a href="#">most recent version</a></div></div>
+
+      <div class="paper-card" data-tags="dc"><div class="paper-tags"><span class="tag tag-dc">Decisions</span></div><div class="paper-title">"Resource Re-allocation Capabilities in Internal Capital Markets: The Value of Overcoming Inertia"</div><div class="paper-authors">Lovallo, Dan, Alexander L. Brown, David J. Teece, and David Bardolet</div><div class="paper-venue">Strategic Management Journal, 41(8):1365-1380, August 2020</div><div class="paper-links"><a href="#">journal version</a></div></div>
+
+      <div class="paper-card" data-tags="dc"><div class="paper-tags"><span class="tag tag-dc">Decisions</span></div><div class="paper-title">"Why Do People Volunteer? An Experimental Analysis of Preferences for Time Donations"</div><div class="paper-authors">Brown, Alexander L., Jonathan Meer, and J. Forrest Williams</div><div class="paper-venue">Management Science, 65(4):1455-1468, April 2019</div><div class="paper-links"><a href="#">journal version</a><a href="#">NBER version</a></div></div>
+
+      <div class="paper-card" data-tags="gt"><div class="paper-tags"><span class="tag tag-gt">Game Theory</span></div><div class="paper-title">"When Less Information Is Good Enough: Experiments with Global Stag Hunt Games"</div><div class="paper-authors">Van Huyck, John, Ajalavat Viriyavipart, and Alexander L. Brown</div><div class="paper-venue">Experimental Economics, 21(3): 527-548, September 2018</div><div class="paper-links"><a href="#">journal version</a><a href="#">most recent version</a></div></div>
+
+      <div class="paper-card" data-tags="gt"><div class="paper-tags"><span class="tag tag-gt">Game Theory</span></div><div class="paper-title">"Search Deterrence in Experimental Consumer Goods Markets"</div><div class="paper-authors">Brown, Alexander L., Ajalavat Viriyavipart, and Xiaoyuan Wang</div><div class="paper-venue">European Economic Review, 104: 167-184, May 2018</div><div class="paper-links"><a href="#">journal version</a><a href="#">most recent version</a></div></div>
+
+      <div class="paper-card" data-tags="dc,methods"><div class="paper-tags"><span class="tag tag-dc">Decisions</span><span class="tag tag-methods">Methods</span></div><div class="paper-title">"Separated Decisions"</div><div class="paper-authors">Brown, Alexander L. and Paul J. Healy</div><div class="paper-venue">European Economic Review, 101: 20-34, January 2018</div><div class="paper-links"><a href="#">journal version</a><a href="#">final version</a></div></div>
+
+      <div class="paper-card" data-tags="dc"><div class="paper-tags"><span class="tag tag-dc">Decisions</span></div><div class="paper-title">"The Effects of Relative Size, Profitability, and Growth on Corporate Capital Allocations"</div><div class="paper-authors">Bardolet, David, Alexander L. Brown, and Dan Lovallo</div><div class="paper-venue">Journal of Management, 43(8): 2469-2496, November 2017</div><div class="paper-links"><a href="#">journal version</a><a href="#">final version</a></div></div>
+
+      <div class="paper-card" data-tags="dc"><div class="paper-tags"><span class="tag tag-dc">Decisions</span></div><div class="paper-title">"Social Distance and Quality Ratings in Charity Choice"</div><div class="paper-authors">Brown, Alexander L., Jonathan Meer, and J. Forrest Williams</div><div class="paper-venue">J. of Behavioral and Experimental Economics, 66: 9-15, February 2017</div><div class="paper-links"><a href="#">journal version</a><a href="#">NBER version</a></div></div>
+
+      <div class="paper-card" data-tags="gt"><div class="paper-tags"><span class="tag tag-gt">Game Theory</span></div><div class="paper-title">"The Costs and Benefits of Symmetry in Common-Ownership Allocation Problems"</div><div class="paper-authors">Brown, Alexander L. and Rodrigo A. Velez</div><div class="paper-venue">Games and Economic Behavior, 96: 115-131, March 2016</div><div class="paper-links"><a href="#">journal version</a><a href="#">final version</a></div></div>
+
+      <div class="paper-card" data-tags="dc"><div class="paper-tags"><span class="tag tag-dc">Decisions</span></div><div class="paper-title">"Small Victories: Creating Intrinsic Motivation in Task Completion and Debt Repayment"</div><div class="paper-authors">Brown, Alexander L. and Joanna Lahey</div><div class="paper-venue">Journal of Marketing Research, 52(6): 768-783, December 2015</div><div class="paper-links"><a href="#">journal version</a><a href="#">NBER version</a></div></div>
+
+      <div class="paper-card" data-tags="dc"><div class="paper-tags"><span class="tag tag-dc">Decisions</span></div><div class="paper-title">"Does Anonymity Affect the Willingness To Accept and Willingness To Pay Gap?"</div><div class="paper-authors">Brown, Alexander L. and Gregory Cohen</div><div class="paper-venue">Experimental Economics, 18(2): 173-184, June 2015</div><div class="paper-links"><a href="#">journal version</a><a href="#">final version</a></div></div>
+
+      <div class="paper-card" data-tags="dc"><div class="paper-tags"><span class="tag tag-dc">Decisions</span></div><div class="paper-title">"Do Individuals Have Preferences Used in Macro-Finance Models? An Experimental Investigation"</div><div class="paper-authors">Brown, Alexander L. and Hwagyun Kim</div><div class="paper-venue">Management Science, 60(4): 939-958, April 2014</div><div class="paper-links"><a href="#">journal version</a><a href="#">final version</a></div></div>
+
+      <div class="paper-card" data-tags="gt"><div class="paper-tags"><span class="tag tag-gt">Game Theory</span></div><div class="paper-title">"Estimating Structural Models of Limited Strategic Thinking in the Field"</div><div class="paper-authors">Brown, Alexander L., Colin F. Camerer, and Dan Lovallo</div><div class="paper-venue">Management Science, 59(3): 733-747, March 2013</div><div class="paper-links"><a href="#">journal version</a><a href="#">final version</a></div></div>
+
+      <div class="paper-card" data-tags="gt"><div class="paper-tags"><span class="tag tag-gt">Game Theory</span></div><div class="paper-title">"Behavioral Models of Managerial Decision-Making"</div><div class="paper-authors">Goldfarb, Avi, Teck-Hua Ho, et al.</div><div class="paper-venue">Marketing Letters, 23(2): 405-421, June 2012</div><div class="paper-links"><a href="#">journal version</a></div></div>
+
+      <div class="paper-card" data-tags="gt"><div class="paper-tags"><span class="tag tag-gt">Game Theory</span></div><div class="paper-title">"To Review or Not to Review? Limited Strategic Thinking at the Box Office"</div><div class="paper-authors">Brown, Alexander L., Colin F. Camerer, and Dan Lovallo</div><div class="paper-venue">American Economic Journal: Microeconomics, 4(2): 1-26, May 2012</div><div class="paper-links"><a href="#">journal version</a><a href="#">final version</a></div></div>
+
+      <div class="paper-card" data-tags="gt"><div class="paper-tags"><span class="tag tag-gt">Game Theory</span></div><div class="paper-title">"Collusion Facilitating and Collusion Breaking Power of Simultaneous Ascending and Descending Price Auctions"</div><div class="paper-authors">Brown, Alexander L., Charles R. Plott, and Heidi J. Sullivan</div><div class="paper-venue">Economic Inquiry, 47(3): 395-424, July 2009</div><div class="paper-links"><a href="#">journal version</a><a href="#">final version</a></div></div>
+
+      <div class="paper-card" data-tags="dc"><div class="paper-tags"><span class="tag tag-dc">Decisions</span></div><div class="paper-title">"Learning and Visceral Temptation in Dynamic Savings Experiments"</div><div class="paper-authors">Brown, Alexander L., Zhikang Eric Chua, and Colin F. Camerer</div><div class="paper-venue">Quarterly Journal of Economics, 124(1): 197-231, February 2009</div><div class="paper-links"><a href="#">journal version</a><a href="#">final version</a></div></div>
+
+      <div class="paper-card" data-tags="dc"><div class="paper-tags"><span class="tag tag-dc">Decisions</span></div><div class="paper-title">"Behavior in a Simplified Stock Market: The Status Quo Bias, the Disposition Effect and the Ostrich Effect"</div><div class="paper-authors">Brown, Alexander L. and John H. Kagel</div><div class="paper-venue">Annals of Finance, 5(1): 1-14, January 2009</div><div class="paper-links"><a href="#">journal version</a><a href="#">final version</a></div></div>
+
+      <h3>Working Papers</h3>
+
+      <div class="paper-card" data-tags="gt"><div class="paper-tags"><span class="tag tag-gt">Game Theory</span></div><div class="paper-title">"Asymmetric Information Undermines Coasian Bargaining in Common (Oil) Pool Resources"</div><div class="paper-authors">Brown, Alexander L., Catherine C. Eckel, Steven N. Wiggins, and Sijia Zhang</div><div class="paper-venue">Working paper</div><div class="paper-links"><a href="#">request copy</a></div></div>
+
+      <div class="paper-card" data-tags="gt"><div class="paper-tags"><span class="tag tag-gt">Game Theory</span></div><div class="paper-title">"Peer Evaluations: Exploiting Meritocratic Norms to Overcome Social Dilemmas"</div><div class="paper-authors">Brown, Alexander L.</div><div class="paper-venue">Under review</div><div class="paper-links"><a href="#">most recent version</a></div></div>
+
+      <div class="paper-card" data-tags="gt,methods"><div class="paper-tags"><span class="tag tag-gt">Game Theory</span><span class="tag tag-methods">Methods</span></div><div class="paper-title">"Simplicity Refinements and Value Elicitation: What Outperforms the BDM on Initial Play?"</div><div class="paper-authors">Brown, Alexander L., Jinliang Liu, and Michael Tsoi</div><div class="paper-venue">Working paper</div><div class="paper-links"><a href="#">request copy</a></div></div>
+
+      <div class="paper-card" data-tags="dc"><div class="paper-tags"><span class="tag tag-dc">Decisions</span></div><div class="paper-title">"ALERT: Disclosure of Statistical Distributions of Power Outages for Public Consumption"</div><div class="paper-authors">Brown, Alexander L., Colin Hegarty, and Jinliang Liu</div><div class="paper-venue">Working paper</div><div class="paper-links"><a href="#">request copy</a></div></div>
+
+    </div>
+  </section>
+</div>
+
+<!-- ========== TEACHING ========== -->
+<div id="teaching" class="page">
+  <div class="hero hero-mini"><div class="hero-content"><div class="hero-text"><h1 style="font-size:2rem;">Teaching</h1></div></div></div>
+  <section>
+    <div class="photo-placeholder" style="max-width:700px; margin: 0 auto 30px;">Teaching / classroom photo placeholder</div>
+
+    <div class="teaching-category">
+      <h3>PhD</h3>
+      <div class="course-card-full">
+        <div class="course-num">ECON 655</div>
+        <div class="course-name">Experimental Economics</div>
+        <div class="course-desc">Hands-on introduction to designing and running economics experiments, covering choice behavior, survey research, and planned economic environments.</div>
+        <div class="course-link"><a href="https://catalog.tamu.edu/graduate/course-descriptions/econ/" target="_blank">TAMU Graduate Catalog &rarr;</a></div>
+      </div>
+    </div>
+
+    <div class="teaching-category">
+      <h3>MS</h3>
+      <div class="course-card-full">
+        <div class="course-num">ECON 618</div>
+        <div class="course-name">Behavioral Financial Economics</div>
+        <div class="course-desc">Examines how real-world financial decisions by individuals and firms differ from predictions of standard economic theory, drawing on behavioral economics and psychology.</div>
+        <div class="course-link"><a href="https://catalog.tamu.edu/graduate/course-descriptions/econ/" target="_blank">TAMU Graduate Catalog &rarr;</a></div>
+      </div>
+    </div>
+
+    <div class="teaching-category">
+      <h3>Undergraduate</h3>
+      <div class="course-card-full">
+        <div class="course-num">ECON 459</div>
+        <div class="course-name">Games and Economic Behavior</div>
+        <div class="course-desc">Game theory for advanced undergraduates: equilibrium concepts, strategic and extensive form games, evolutionary refinements, and applications to auctions, bargaining, and oligopoly.</div>
+        <div class="course-link"><a href="https://catalog.tamu.edu/undergraduate/course-descriptions/econ/" target="_blank">TAMU Undergraduate Catalog &rarr;</a></div>
+      </div>
+    </div>
+
+    <div class="placeholder-blurb" style="margin-top:20px;">[Optional: teaching philosophy or approach placeholder]</div>
+  </section>
+</div>
+
+<!-- ========== CV ========== -->
+<div id="cv" class="page">
+  <div class="hero hero-mini"><div class="hero-content"><div class="hero-text"><h1 style="font-size:2rem;">Curriculum Vitae</h1></div></div></div>
+  <section style="text-align:center;">
+    <p style="margin-bottom:20px;"><a href="#" style="font-weight:600; font-size:1.1rem;">Download CV (PDF) &darr;</a></p>
+    <div style="background:#f8f9fc; border:1px solid #eee; border-radius:8px; padding:60px; color:#999; font-style:italic;">Embedded PDF viewer placeholder</div>
+  </section>
+</div>
+
+<!-- ========== STUDENTS ========== -->
+<div id="students" class="page">
+  <div class="hero hero-mini"><div class="hero-content"><div class="hero-text"><h1 style="font-size:2rem;">Students</h1></div></div></div>
+  <section>
+
+    <!-- CURRENT STUDENTS -->
+    <div class="students-section-label">Current Students</div>
+    <div class="students-two-col" style="margin-bottom:50px;">
+
+      <div class="student-card-sq">
+        <div class="current-badge">Current</div>
+        <div class="student-photo-sq"><img src="https://artsci.tamu.edu/economics/contact/sijia-zheng.jpg" alt="Sijia Zhang" onerror="this.parentElement.innerHTML='Photo'"></div>
+        <div class="student-body">
+          <h4><a href="https://artsci.tamu.edu/economics/contact/profiles/sijia-teresa-zhang.html">Sijia (Teresa) Zhang</a></h4>
+          <div class="student-title">Ph.D. Candidate, Economics</div>
+          <div class="student-affil">Texas A&amp;M University</div>
+        </div>
+      </div>
+
+      <div class="student-card-sq">
+        <div class="current-badge">Current</div>
+        <div class="student-photo-sq"><img src="https://artsci.tamu.edu/economics/_files/_images/_profile-images/hegarty-colin.jpg" alt="Colin Hegarty" onerror="this.parentElement.innerHTML='Photo'"></div>
+        <div class="student-body">
+          <h4><a href="https://artsci.tamu.edu/economics/contact/phd-students.html">Colin Hegarty</a></h4>
+          <div class="student-title">Ph.D. Student, Economics</div>
+          <div class="student-affil">Texas A&amp;M University</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- FORMER STUDENTS -->
+    <div class="students-section-label">Former Students</div>
+    <div class="students-two-col">
+
+      <div class="student-card-sq">
+        <div class="student-photo-sq"><img src="https://lh3.googleusercontent.com/sitesv/APaQ0STeASHs-mPipc4SX6g0WTwAhhvA3Vocck35mUNge0fsVF12JY1C100RVg2dVd0HzPkR3QTYoavpj6U4XfFgBPkitFStMkxZB986iUuu9k9pUK0psuceX6Ymtb1VUNVG6Yu6daHoYiuNwjWrB9wD8u9CRb4yNJmgffe93JkI851XOOfF75yOvNCaAZU2ETq8WJNNBOq0s0mRhR2D0usp6u_eyI6guNQbtVn6eko=w1280" alt="Jinliang Liu" onerror="this.parentElement.innerHTML='Photo'"></div>
+        <div class="student-body">
+          <h4><a href="https://sites.google.com/view/jinliangliu/home">Jinliang Liu</a></h4>
+          <div class="student-title">Ph.D. 2024</div>
+          <div class="student-affil">Assistant Professor, School of Economics, Shandong University</div>
+        </div>
+      </div>
+
+      <div class="student-card-sq">
+        <div class="student-photo-sq"><img src="https://hyundamje.github.io/images/usyd3.jpg" alt="Hyundam Je" onerror="this.parentElement.innerHTML='Photo'"></div>
+        <div class="student-body">
+          <h4><a href="https://hyundamje.github.io/">Hyundam Je</a></h4>
+          <div class="student-title">Ph.D. 2023</div>
+          <div class="student-affil">University of Seoul</div>
+        </div>
+      </div>
+
+      <div class="student-card-sq">
+        <div class="student-photo-sq"><img src="https://www.valonvitaku.com/images/home-img.jpg" alt="Valon Vitaku" onerror="this.parentElement.innerHTML='Photo'"></div>
+        <div class="student-body">
+          <h4><a href="https://www.valonvitaku.com">Valon Vitaku</a></h4>
+          <div class="student-title">Ph.D. 2023</div>
+          <div class="student-affil">Adjunct Lecturer, Rutgers University-Camden</div>
+        </div>
+      </div>
+
+      <div class="student-card-sq">
+        <div class="student-photo-sq"><img src="https://lh3.googleusercontent.com/sitesv/APaQ0ST4prl2yKvfyu4e08y6oAXseDu8G-D3wtHXNt7ADaGg4Iy9coELPDLsfSNF7sakzNw_emVUZrPUvZlbXGfqWTTUQWOroxRpiRQjL_daISK2SdOlrLgJuqW-PhEWfpGsfS0vsvROkYaSgZhHcQHk033xRsDytbv_f5I0UOHj58TvZcUo41iQlhdGUisYIezhkbTfDnJ4m6oMsaJOXCSt5ufn51inasPUCNZgCh0=w1280" alt="Ada Kovaliukaite" onerror="this.parentElement.innerHTML='Photo'"></div>
+        <div class="student-body">
+          <h4><a href="https://sites.google.com/view/adakovaliukaite/home">Ada Kovaliukaite</a></h4>
+          <div class="student-title">Ph.D. 2018</div>
+          <div class="student-affil">Postdoctoral Associate, University of Vienna</div>
+        </div>
+      </div>
+
+      <div class="student-card-sq">
+        <div class="student-photo-sq"><img src="https://danielgstephenson.com/items/Daniel-2024-Small.jpg" alt="Daniel Stephenson" onerror="this.parentElement.innerHTML='Photo'"></div>
+        <div class="student-body">
+          <h4><a href="http://danielgstephenson.com/">Daniel Stephenson</a></h4>
+          <div class="student-title">Ph.D. 2017</div>
+          <div class="student-affil">Professor, Texas A&amp;M University</div>
+        </div>
+      </div>
+
+      <div class="student-card-sq">
+        <div class="student-photo-sq">Photo</div>
+        <div class="student-body">
+          <h4><a href="https://www.linkedin.com/pub/jose-gabriel-castillo-garcia/55/b0a/b25">Jose Castillo Garcia</a></h4>
+          <div class="student-title">Ph.D. 2015</div>
+          <div class="student-affil">Ex-Vice Minister of Economics, Ecuador; IADB</div>
+        </div>
+      </div>
+
+      <div class="student-card-sq">
+        <div class="student-photo-sq"><img src="https://lh3.googleusercontent.com/sitesv/APaQ0SSDZDMpz2GqrT-lllRhhdNz60kEVS5opI2UBCIt3QJW-ws-OTvNrs_8eOtQ9jBv3_qCJcR1CL_tmbTFyekuCJms20yOgdgexm9MOfOU_mIa-IaAHo_ZQd254V591MoPkXBt1lbhOszia8_7jE9hjq34JEW2OyNRMH3cOpvav4clnOKPCS9Ai3_ye7iE7Uq1eoMCWyUD=w1280" alt="Ajalavat Viriyavipart" onerror="this.parentElement.innerHTML='Photo'"></div>
+        <div class="student-body">
+          <h4><a href="https://sites.google.com/site/aviriyavipart/">Ajalavat Viriyavipart</a></h4>
+          <div class="student-title">Ph.D. 2015</div>
+          <div class="student-affil">Assistant Professor, American University of Sharjah</div>
+        </div>
+      </div>
+
+      <div class="student-card-sq">
+        <div class="student-photo-sq">Photo</div>
+        <div class="student-body">
+          <h4><a href="https://www.pdx.edu/profile/j-forrest-williams">J. Forrest Williams</a></h4>
+          <div class="student-title">Ph.D. 2014</div>
+          <div class="student-affil">Assistant Professor, Portland State University</div>
+        </div>
+      </div>
+
+      <div class="student-card-sq">
+        <div class="student-photo-sq"><img src="https://www.mgmt.uestc.edu.cn/__local/4/20/3E/0490E3CF8B3BC428607547A9DD4_E908BEE4_14EEE.png?e=.png" alt="Xiaoyuan Wang" onerror="this.parentElement.innerHTML='Photo'"></div>
+        <div class="student-body">
+          <h4><a href="https://www.mgmt.uestc.edu.cn/en/info/1016/1335.htm">Xiaoyuan Wang</a></h4>
+          <div class="student-title">Ph.D. 2014</div>
+          <div class="student-affil">Assistant Professor, UESTC (China)</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+<!-- ========== CONTACT ========== -->
+<div id="contact" class="page">
+  <div class="hero hero-mini"><div class="hero-content"><div class="hero-text"><h1 style="font-size:2rem;">Contact</h1></div></div></div>
+  <section>
+    <div class="landing-grid">
+      <div>
+        <h3 style="margin-bottom:12px; color:#1e3a5f;">Get in Touch</h3>
+        <p><strong>Email:</strong> alexbrown@tamu.edu</p>
+        <p style="margin-top:8px;"><strong>Phone:</strong> (979) 845-7392</p>
+        <p style="margin-top:8px;"><strong>Office:</strong> 232 <a href="https://goo.gl/maps/ytEnmB79qBVBowQv7">West Campus Social Sciences Building</a></p>
+        <p style="margin-top:8px;"><strong>Mailing Address:</strong><br>Department of Economics, 4228 TAMU<br>Texas A&amp;M University<br>2935 Research Parkway<br>College Station, TX 77843</p>
+      </div>
+      <div>
+        <div class="photo-placeholder" style="height:260px;">Campus / office photo placeholder</div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>&copy; 2026 Alex Brown &bull; Department of Economics &bull; Texas A&amp;M University</footer>
+
+<script>
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+  event.target.classList.add('active');
+  window.scrollTo(0, 0);
+}
+function filterPapers(tag) {
+  document.querySelectorAll('.filter-btn').forEach(b => {
+    b.classList.remove('active');
+    b.style.background = '';
+    b.style.color = '';
+    b.style.borderColor = '';
+  });
+  const btn = event.target;
+  btn.classList.add('active');
+  if (tag === 'all') {
+    btn.style.background = '#1e3a5f'; btn.style.color = '#fff'; btn.style.borderColor = '#1e3a5f';
+  } else if (tag === 'gt') {
+    btn.style.background = '#1d4ed8'; btn.style.color = '#fff'; btn.style.borderColor = '#1d4ed8';
+  } else if (tag === 'dc') {
+    btn.style.background = '#b45309'; btn.style.color = '#fff'; btn.style.borderColor = '#b45309';
+  } else if (tag === 'policy') {
+    btn.style.background = '#047857'; btn.style.color = '#fff'; btn.style.borderColor = '#047857';
+  } else if (tag === 'methods') {
+    btn.style.background = '#be185d'; btn.style.color = '#fff'; btn.style.borderColor = '#be185d';
+  }
+  document.querySelectorAll('.paper-card').forEach(card => {
+    if (tag === 'all') { card.classList.remove('hidden'); }
+    else {
+      const t = card.getAttribute('data-tags');
+      card.classList.toggle('hidden', !(t && t.split(',').includes(tag)));
+    }
+  });
+}
+</script>
+</body>
+</html>
