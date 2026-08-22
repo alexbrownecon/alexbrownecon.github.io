@@ -96,3 +96,21 @@ Alex approved or rejected, and why.
 - Domain is parked: NO DNS records or nameserver changes until Phase 4
   (GitHub Pages wiring per GitHub's checklist). Canonical URL for Phase 2:
   https://alexbrownecon.com — now unblocked.
+
+## 2026-08-22 — About-text method change (Alex; REJECTED first drafts)
+
+- Alex rejected the first About/teaching drafts as "very AI-ish, highly
+  synthetic" (em dashes, three-part lists, inflated phrasing). New standing
+  method for ALL site copy:
+  1. identity.md interview answers ARE the draft, in Alex's voice. Minimal
+     editing only: trim, reorder, fix grammar. Keep his phrasing, rhythm,
+     word choices. Connective tissue must imitate his sentences.
+  2. Match Alex's supplied writing sample over any house style.
+  3. Banned regardless: em dashes (unless his sample uses them), forced
+     three-item lists, "not just X, it's Y," adjectives doing
+     impressiveness work.
+  4. Run results through the Humanizer skill (installed v2.11.2 at
+     ~/.claude/skills/humanizer via repo-archive fallback; /plugin is
+     terminal-only) and show critique plus both versions.
+  5. Alex audits in a separate fresh chat naming exact failing lines;
+     expect one fix round.
