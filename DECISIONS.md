@@ -39,6 +39,32 @@ Alex approved or rejected, and why.
   `images/` to `assets/images/` per revised Phase 0 structure; the one reference
   in index.html updated. DECISIONS.md created (new safety rail #7).
 
+## 2026-08-22 — Phase 1a: publications verified & applied (Alex approved)
+
+- Verified all 31 journal pubs against Crossref/publisher, ORCID, and Scholar.
+- Status changes: CARD Act → Management Science, Articles in Advance, 2026
+  (DOI 10.1287/mnsc.2024.06339, online Aug 10 2026 — vol/issue TBD, recheck at
+  each maintenance pass); TRR Nudges → 2680(4): 377-396, April 2026.
+- Six title corrections to match publisher records (NHB, MS 2013, AEJ Micro,
+  JEL "Loss Aversion", QJE "Saving", ExpEcon Plott-Zeiler subtitle).
+- Working papers: full CV list added (AI Incentives, Biometric, Benign,
+  Lies-Labels, Extreme-Price, Disequilibrium Dynamics); Peer Evaluations
+  authors fixed (Brown, Van Essen, Wooders). BDM elicitation paper retitled to
+  current "Testing Strategy-Proofness and Simplicity Refinements in Elicitation
+  Mechanisms" (Alex: same paper, many titles). ALERT paper confirmed real
+  (live site "Research in Progress"; Brown, Hegarty, Liu) — kept, relabeled.
+- Other Publications section added (NICR report, Handbook chapter, Palgrave).
+- All links populated: journal → DOI; paper PDFs → existing people.tamu.edu
+  URLs (never moved, per hosting decision). Author display: full lists (no et al.).
+- CV (cv/cv_brown.tex) updated with the same A-item status changes + retitle,
+  recompiled, new PDF in assets/. Alex explicitly authorized editing the CV.
+- Alex confirmed the "Participatory Communication/churches" Scholar entry is
+  not his — he will remove it from his Scholar profile himself.
+- Live-site extras NOT yet in the new site (awaiting Alex): "Empirical Bias of
+  Extreme-Price Auctions: Analysis" (arXiv 1905.08234), "Empirical
+  Strategy-Proofness" (ESP-June142022.pdf), and the Research in Progress
+  section (Beckett social learning; vaccination ambiguity; debt snowball).
+
 ## Standing resolutions (from strategy)
 
 - CV style: `cv/cv_brown.tex` (Option 4 header + Blevins body), embedded as
