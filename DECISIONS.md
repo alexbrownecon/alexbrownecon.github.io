@@ -72,3 +72,14 @@ Alex approved or rejected, and why.
 - Still open: heading font (Phase 3); reference sites (Phase 3); publications
   approval table (Phase 1 gate); separate pages vs. one long page (Phase 2);
   whether the stats band stays (Phase 3, Pass 3).
+
+## 2026-08-22 — Post-1a corrections (Alex)
+
+- ALERT paper: Jinliang Liu removed from the author list — Alex confirms he is
+  not a contributor to that project. (He remains a coauthor on "Testing
+  Strategy-Proofness and Simplicity Refinements in Elicitation Mechanisms.")
+- Photo permissions obtained (Alex, by email): J. Forrest Williams and Jose
+  Castillo Garcia approved headshot use. Jose: good 1024x1024 photo found on
+  WAPLAC team page, pending Alex's pick. Forrest: no usable public photo
+  exists (PSU profile has none; old Google site is login-walled) — Alex to
+  request a photo file from him directly.
