@@ -88,3 +88,11 @@ Alex approved or rejected, and why.
   PSU econ page, 300px) — self-hosted in assets/images/students/. Forrest's
   title updated to Associate Professor and Chair (per his PSU page).
 - Alex removed the mis-attributed "churches" paper from his Scholar profile.
+
+## 2026-08-22 — Domain PURCHASED
+
+- alexbrownecon.com registered by Alex at Cloudflare Registrar, 3 years
+  (expires 2029-08-22), auto-renew ON. Verified in Verisign registry.
+- Domain is parked: NO DNS records or nameserver changes until Phase 4
+  (GitHub Pages wiring per GitHub's checklist). Canonical URL for Phase 2:
+  https://alexbrownecon.com — now unblocked.
