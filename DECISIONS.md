@@ -114,3 +114,25 @@ Alex approved or rejected, and why.
      terminal-only) and show critique plus both versions.
   5. Alex audits in a separate fresh chat naming exact failing lines;
      expect one fix round.
+
+## 2026-08-22 — Fresh-chat audit + AMA award (audit chat)
+
+- Audit of the three About/Teaching texts done in the fresh Cowork chat as
+  planned; fixes ran three rounds. Key correction: the round-2 draft claimed
+  bounded-rationality MODELS fail at contingent thinking; Alex confirmed the
+  opposite meaning (people fail at contingent reasoning). Logged in
+  identity.md — though Alex later cut the loss-aversion/contingent-thinking
+  material from the About text entirely (candidate for Research Themes
+  instead).
+- NEW (Alex): "Beyond Income: Dynamic Consumer Financial Vulnerability"
+  (J. Marketing 2023) named Distinguished Winner, AMA-EBSCO-RRBM Award for
+  Responsible Research in Marketing, 2026 (verified at ama.org). Featured:
+  award line on its paper card (new `.paper-award` style); one About sentence
+  queued for when the text is placed; added to `cv/cv_brown.tex` as a new
+  Honors and Awards section and the PDF recompiled (prior PDF kept as
+  `cv_brown_before_ama_award.pdf`).
+- Collaborations line: "transportation and electrical grids" (Alex's choice)
+  replaces "traffic and chemical engineering"; CFPB stays, now with "(CFPB)"
+  after the spelled-out name.
+- About text still NOT placed in index.html — STOP RULE: awaiting Alex's
+  approval of the final wording.

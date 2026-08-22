@@ -26,6 +26,10 @@ academic boilerplate.
 - Nuanced stances he owns publicly: "strong support of loss aversion but
   realization it has been over-applied"; "recognition of failures of bounded
   rationality in things like contingent thinking."
+  - CLARIFIED (Alex, fresh-chat audit Aug 22): the contingent-thinking claim
+    means PEOPLE fail at contingent reasoning (rationality is bounded there) —
+    NOT that bounded-rationality models fail in those settings. The round-2
+    draft stated the opposite; corrected in the audit fix round.
 - "Expertise in lab experimental design, but willing to branch to alternative
   means when necessary."
 - Translation to practice: "willingness to collaborate with applied researchers
@@ -67,6 +71,47 @@ academic boilerplate.
   paper — Brown and Kagel — is from undergraduate work. It changed my life."
 - REQUIRED subtle boundary note: does not take on undergrad/high-school
   researchers until they are enrolled at TAMU — "just too many requests."
+
+## Voice sample analysis (JEL publication-bias section, Alex's own prose)
+
+- Long sentences that carry qualifications honestly: "might be suggestive of a
+  form of this type of publication bias, just at a much smaller magnitude."
+- "however" placed mid-sentence between commas: "This may, however, in part be
+  due to..."; "there are, however, better alternative explanations."
+- Parenthetical asides doing real work: "(In such a model, low-precision,
+  low-estimate studies would not be published because...)"
+- Plain flat judgments: "it is difficult to reconcile"; "A more plausible
+  explanation is simply that..."
+- Sentence openers vary: Regarding, At first sight, Even more pronounced,
+  While, Notably, Instead.
+- Em dashes: exactly one pair in ~900 words. Permitted at that rate, no more.
+- No sales adjectives anywhere. Precision words only.
+- Rule for all site copy: imitate THIS register, first person, slightly more
+  direct per Q3 (website, not journal).
+- ROUND 3 (Alex, audit chat Aug 22): say "formalized economic theory," not
+  bare "formalized theory." Affect-forward phrasings rejected as too much:
+  "theorists I admire" (cut) and "I love economic theory" (sentence doesn't
+  work) — "changed my life" remains the one sanctioned emotional note.
+  "Nothing wrong with either" too limp; fold the written-in-each-mode fact
+  into the ultimate-goal sentence instead.
+- ROUND 4 (Alex, audit chat Aug 22, supersedes where in conflict): Alex
+  rebuilt the interests opening himself — keep verbatim: "My work requires
+  most of the tools of economics... My research often begins with formalized
+  economic theory. I distill it down to make sharp predictions I can test in
+  the lab. From there we follow the scientific approach: results either
+  support an aspect of the theory or do not." CUT from About: "tests
+  frequently find failures / behavioral theory is the solution" and the
+  loss-aversion + contingent-reasoning examples (candidates for Research
+  Themes instead). "novel" cut. Motivation: "I have written papers at either
+  end of the spectrum, but the ultimate goal..."; robust→empirical
+  verification; "unified theory of human behavior." Collaborations name
+  transportation and electrical grids (not traffic/chemical engineering).
+- CLARIFIED (Alex, after fix round 1): the JEL sample IS the target register —
+  "the journal sounds like me when I try to make everything as polished as I
+  can." Interview answers = content only; verbatim interview phrasing is TOO
+  RAW for the site. Build polished sentences the way the sample builds them.
+  Neither extreme: not transcript, not AI-slick.
+
 
 
 
