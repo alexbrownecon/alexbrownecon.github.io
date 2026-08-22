@@ -106,11 +106,50 @@ academic boilerplate.
   end of the spectrum, but the ultimate goal..."; robust→empirical
   verification; "unified theory of human behavior." Collaborations name
   transportation and electrical grids (not traffic/chemical engineering).
+- ROUND 5 (Alex, audit chat Aug 22): Teaching course list = "experimental
+  methodology, behavioral financial economics, and game theory."
+  CORRECTION — "changed my life" is factually off and CUT: per Alex, "the
+  paper didn't change my life, the project helped determine my career."
+  Final line: "My own undergraduate research produced my first paper, Brown
+  and Kagel (2009), and set the direction of my career." Do not resurrect
+  "changed my life." UG/MS/PhD levels spelled out, not "all levels."
 - CLARIFIED (Alex, after fix round 1): the JEL sample IS the target register —
   "the journal sounds like me when I try to make everything as polished as I
   can." Interview answers = content only; verbatim interview phrasing is TOO
   RAW for the site. Build polished sentences the way the sample builds them.
   Neither extreme: not transcript, not AI-slick.
+
+## Style profile — distilled from the Aug 22 revision rounds
+
+How Alex actually edits, observed across ~8 rounds. Apply to ALL future
+drafting for him, not just the website.
+
+1. **Cuts warmth on sight.** He drafts emotional phrases, then removes every
+   one: "I love," "I admire," "my sincere goal," "fed my hunger," "I know
+   what it's like," and finally "changed my life." Final pages carry zero
+   emotional notes. Draft cool from the start; don't make him do the cutting.
+2. **Kills meta-framing wrappers.** "The common theme in my research is
+   predicting..." → "My research predicts..." State the thing; never
+   announce that you are about to state it.
+3. **Shows, never claims.** He deleted the "My expertise is in laboratory
+   experimental design" sentence outright. Credentials appear as facts
+   (award, coauthors, federally sponsored projects), not self-description.
+4. **Thinks in process pipelines.** His own rebuild of the research para is
+   a stepwise sequence: theory → distill → sharp predictions → test →
+   results either way → feed back into theory. Prefer narrative order over
+   thematic grouping.
+5. **Watches I-density.** Asked for a non-I sentence opener unprompted.
+   Vary subjects: My classes / The courses / My research.
+6. **Treats every word as a truth claim.** "skill"→"work" because skill
+   implies innate ability and he believes effort suffices; "changed my
+   life" cut as factually inaccurate. Check what a word IMPLIES, not just
+   what it means.
+7. **Cuts nuance rather than managing it.** Loss aversion / contingent
+   thinking were accurate but needed careful framing — he removed them
+   instead. Front-page claims must stand alone in one sentence.
+8. **Compression is directional.** Spell out details when the detail is the
+   point (UG, MS, PhD levels); stay general when specifics invite questions
+   ("federal disclosure policies" rather than naming the CFPB).
 
 
 
