@@ -136,3 +136,53 @@ Alex approved or rejected, and why.
   after the spelled-out name.
 - About text still NOT placed in index.html — STOP RULE: awaiting Alex's
   approval of the final wording.
+
+## 2026-08-22 — Phase 1 CLOSED (logged retroactively)
+
+- Final About/Teaching text placed in index.html and AMA award featured in
+  commits e944d93 + 08a6c94 (prior Cowork chat); CV gained Honors and Awards
+  section, PDF synced to assets/. The About and Teaching text is FINAL,
+  approved word-by-word: carry verbatim forever, never rewrite or regenerate.
+
+## 2026-08-22 — Phase 2 executed (Alex approved)
+
+- Open decision #5 resolved: SEPARATE PAGES. index.html (home + about +
+  contact section), research.html, teaching.html, students.html — plus
+  cv.html, added mid-phase when Alex flagged that a bare nav→PDF link loses
+  the site header (reverses the initial direct-link choice). Shared
+  assets/css/site.css and assets/js/filters.js; favicon.svg placeholder
+  (restyle in Phase 3); sitemap.xml with 5 canonical URLs.
+- All ten Phase 2 requirements met: semantic landmarks, one h1/page,
+  keyboard-operable filters with focus-visible, AA contrast fixes (grays
+  #888/#999 darkened; gold-as-text → #b45309), 320px reflow with wrapped nav
+  (no hamburger needed), prefers-reduced-motion, per-page title/description/
+  canonical/OG, JSON-LD Person on index, visible Scholar/ORCID/RePEc-IDEAS
+  links (IDEAS verified: ideas.repec.org/f/pbr451.html), sitemap, and all
+  people.tamu.edu paper URLs untouched. W3C validator: 0 messages every page
+  (one info note on cv.html). Frozen About/Teaching text carried verbatim,
+  proven byte-identical by diff.
+- Photos: Alex WAIVED the ask-first rule and authorized self-hosting the
+  remaining student photos ("waive I authorize"). All 9 downloaded and
+  optimized (≤600px) into assets/images/students/; no hotlinks remain.
+  Notes: Liu = right-square crop of his conference photo (only public image
+  he offers); Wang source is only 178px (soft); Je = full-body campus shot
+  from his own site.
+- Research categories (Alex, several rounds): card/filter order = Decisions,
+  Game Theory, Policy, Methods. Renames: "Behavioral Decision Making and
+  Theory" (rejected "Behavioral Decision Theory" as reading non-quantitative;
+  chip stays "Decisions"); "Equilibrium Feasibility, Selection, and Mechanism
+  Design" (filter uses the full title; chip stays "Game Theory"); "Policy
+  Applications". Theme paragraphs rewritten by Alex with Humanizer-checked
+  edits (question-openers, em dash, from-X-to-Y removed); four distinct
+  paragraph openers (These papers / My work / Several projects / Studies in
+  this area). Hero pills now: Behavioral Economics, Experimental Economics,
+  Game Theory, Consumer Behavior, Decision Theory. "and" spelled out in all
+  labels; "&" only in "Texas A&M". cv.html: single Download link above the
+  embedded viewer (viewer hidden ≤700px).
+
+## 2026-08-22 — Working preference (Alex)
+
+- Delegate mechanical/boilerplate build work to subagents on cheaper models
+  to conserve usage; drop down only as far as OPUS. (Set after this
+  session's cv.html subagent ran on Sonnet; future delegation observes the
+  Opus floor.)
