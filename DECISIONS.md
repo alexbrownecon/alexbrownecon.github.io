@@ -232,3 +232,23 @@ Alex approved or rejected, and why.
   pre-existing info note only); desktop/mini/mobile screenshots verified.
 - Next: Pass 3 (layout — stats band judgment call, editorial publication
   list on the home page; cards stay on Research).
+
+## 2026-08-23 — Phase 3, Pass 3 (layout) — Alex approved
+
+- Stats question resolved: the 30+/$3.4M/9+ NUMBERS STAY (they serve search
+  committees and prospective students) but the card chrome is gone —
+  understated band on off-white: Spectral navy numerals, small-caps labels,
+  hairline dividers (vertical on desktop, horizontal stacked on mobile).
+- Selected Publications AND Selected Grants → editorial hairline lists
+  (.pub-list): title left, venue/funder right in italic; grants keep amber
+  amount + team + links lines. feat-card/featured-grid/highlight-* CSS
+  removed (index.html was the only user).
+- Research Themes de-carded: two-column .theme-grid, 3px colored top rule +
+  colored heading per theme, no boxes/hover. Paper cards on research.html
+  untouched per strategy ("cards stay on Research").
+- Sticky nav background made solid #fff (was rgba .97 — scrolled text
+  ghosted through behind the wrapped nav rows on mobile).
+- Checks: frozen About text untouched (diff), W3C 0 messages, 375px no
+  overflow, mobile stacking verified by screenshot.
+- Next: Pass 4 (motion, lowest priority), then Pass 5 (dedicated mobile
+  design pass).
