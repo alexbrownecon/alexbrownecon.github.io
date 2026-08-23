@@ -169,6 +169,7 @@ footer a { color: rgba(255,255,255,0.9); }
 @media (max-width: 880px) {
   nav { height: auto; flex-wrap: wrap; padding: 10px 20px; row-gap: 2px; }
   nav .nav-links { flex-wrap: wrap; gap: 14px; row-gap: 2px; }
+  section[id] { scroll-margin-top: 110px; } /* wrapped nav is two rows tall */
   .hero-content { flex-direction: column-reverse; text-align: center; gap: 24px; padding: 40px 24px; }
   .hero-photo { width: 160px; height: 160px; }
   .hero-mini .hero-content { padding: 28px 24px; }
@@ -177,14 +178,34 @@ footer a { color: rgba(255,255,255,0.9); }
   .stats-band .stat + .stat { border-left: none; border-top: 1px solid #dde3ec; }
   .theme-grid { grid-template-columns: 1fr; }
 }
+/* PASS 5 — designed for phones, not just reflowed */
 @media (max-width: 700px) {
-  nav { padding: 10px 16px; }
-  section { padding: 40px 20px; }
-  .section-alt-wrap { padding: 40px 0; }
+  nav { padding: 8px 16px; }
+  nav .logo { font-size: 1.05rem; }
+  nav .nav-links { gap: 12px; }
+  nav .nav-links a { font-size: 0.8rem; letter-spacing: 0.5px; }
+  section { padding: 36px 20px; }
+  .section-alt-wrap { padding: 36px 0; }
   .landing-grid, .students-two-col { grid-template-columns: 1fr; }
   .pub-row { flex-direction: column; gap: 2px; }
   .pub-venue { text-align: left; max-width: none; }
+  /* Hero: give the first screen back to the content */
+  .hero-content { gap: 18px; padding: 32px 20px 36px; }
+  .hero-photo { width: 120px; height: 120px; }
   .hero-text h1 { font-size: 2.1rem; }
+  .hero-text .subtitle { font-size: 1rem; margin-bottom: 14px; }
+  .hero-text .interests { font-size: 0.82rem; }
+  /* Stats band: tighter rhythm when stacked */
+  .stats-band .stat { padding: 12px 0; }
+  .stats-band p { font-size: 0.82rem; }
+  .theme-grid { gap: 24px; }
+  /* Students: horizontal rows instead of giant full-width squares */
+  .students-two-col { gap: 12px; }
+  .student-card-sq { display: flex; align-items: center; }
+  .student-card-sq .student-photo-sq { width: 96px; aspect-ratio: auto; flex-shrink: 0; align-self: stretch; }
+  .student-card-sq .student-body { padding: 12px 14px; }
+  .current-badge { display: none; } /* redundant under the Current Students heading */
+  .filter-btn { padding: 6px 14px; font-size: 0.8rem; }
   footer { padding: 24px 20px; }
 }
 

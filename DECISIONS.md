@@ -273,3 +273,20 @@ Alex approved or rejected, and why.
   hidden; stat-band fix was verified by measuring rendered geometry
   (getClientRects) instead.
 - Next: Pass 5 (dedicated mobile design pass) closes Phase 3.
+
+## 2026-08-23 — Phase 3, Pass 5 (mobile) — Alex approved; PHASE 3 CLOSED
+
+- Phone-width (≤700px) design pass, CSS-only: hero photo 120px + tighter
+  spacing (About text now starts on the first 812px screen); nav type/gaps
+  reduced; student cards became horizontal rows (96px photo left, text
+  right) instead of full-width squares; "Current" badge hidden on phones
+  (redundant under the Current Students heading); tighter section/stats/
+  theme spacing; scroll-margin-top 110px ≤880px so anchors clear the
+  wrapped two-row sticky nav.
+- Verified by geometry at 375px and 320px: no horizontal overflow;
+  student rows 122px tall.
+- OPEN ITEM deferred by Alex: research filter buttons keep full category
+  titles on mobile for now (~238px bar at 320px). "Revisit the short
+  labels later" — candidate for the Phase 4 polish loop.
+- All five Phase 3 passes approved and committed. Next: Phase 4 (QA,
+  deploy prep, Alex's WCAG audit; git identity fix before first push).
