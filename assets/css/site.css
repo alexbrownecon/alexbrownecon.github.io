@@ -73,15 +73,12 @@ section h3 { font-size: 1.15rem; color: #1e3a5f; margin: 28px 0 12px; }
 .stats-band h3 a { color: inherit; }
 .stats-band p { font-size: 0.85rem; color: #5f6672; line-height: 1.5; }
 
-/* RESEARCH THEMES — editorial blocks with colored top rules (Pass 3) */
+/* RESEARCH THEMES — editorial blocks, uniform navy rules (color plan A:
+   category colors live only on the research page, where they filter) */
 .theme-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px 40px; margin: 30px 0; }
-.theme-card { border-top: 3px solid #ccc; padding-top: 16px; }
+.theme-card { border-top: 3px solid #1e3a5f; padding-top: 16px; }
 .theme-card h3 { margin: 0 0 8px; font-size: 1.05rem; }
 .theme-card p { font-size: 0.9rem; color: #555; }
-.theme-card.theme-gt { border-top-color: #1d4ed8; }
-.theme-card.theme-dc { border-top-color: #b45309; }
-.theme-card.theme-policy { border-top-color: #047857; }
-.theme-card.theme-methods { border-top-color: #be185d; }
 
 /* SITE PHOTOS (real images replacing placeholders as they arrive) */
 .site-photo { width: 100%; border-radius: 10px; display: block; }
@@ -96,7 +93,7 @@ section h3 { font-size: 1.15rem; color: #1e3a5f; margin: 28px 0 12px; }
 .pub-title { font-weight: 600; font-size: 0.95rem; color: #333; }
 .pub-venue { font-size: 0.85rem; color: #5f6672; font-style: italic; text-align: right; flex-shrink: 0; max-width: 40%; }
 .grant-meta { font-size: 0.85rem; color: #666; margin-top: 4px; }
-.grant-amount { font-weight: 600; color: #b45309; }
+.grant-amount { font-weight: 600; color: #1e3a5f; }
 .grant-links { font-size: 0.82rem; margin-top: 3px; }
 .more-link { margin-top: 18px; font-size: 0.9rem; }
 .more-link a { font-weight: 600; }
@@ -104,13 +101,13 @@ section h3 { font-size: 1.15rem; color: #1e3a5f; margin: 28px 0 12px; }
 /* RESEARCH FILTERS */
 .filter-bar { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; }
 .filter-btn { padding: 8px 20px; border-radius: 25px; border: 1.5px solid #d1d5db; background: #fff; color: #666; font-size: 0.85rem; cursor: pointer; font-weight: 500; transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease; font-family: inherit; }
-.filter-btn:hover { border-color: #2563eb; color: #2563eb; }
-.filter-btn[data-filter="gt"] { border-color: #1d4ed8; color: #1d4ed8; }
+.filter-btn:hover { border-color: #1e3a5f; color: #1e3a5f; }
+.filter-btn[data-filter="gt"] { border-color: #0e7490; color: #0e7490; }
 .filter-btn[data-filter="dc"] { border-color: #b45309; color: #b45309; }
 .filter-btn[data-filter="policy"] { border-color: #047857; color: #047857; }
 .filter-btn[data-filter="methods"] { border-color: #be185d; color: #be185d; }
 .filter-btn.active, .filter-btn[data-filter="all"].active { background: #1e3a5f; color: #fff; border-color: #1e3a5f; }
-.filter-btn[data-filter="gt"].active { background: #1d4ed8; color: #fff; border-color: #1d4ed8; }
+.filter-btn[data-filter="gt"].active { background: #0e7490; color: #fff; border-color: #0e7490; }
 .filter-btn[data-filter="dc"].active { background: #b45309; color: #fff; border-color: #b45309; }
 .filter-btn[data-filter="policy"].active { background: #047857; color: #fff; border-color: #047857; }
 .filter-btn[data-filter="methods"].active { background: #be185d; color: #fff; border-color: #be185d; }
@@ -125,10 +122,10 @@ section h3 { font-size: 1.15rem; color: #1e3a5f; margin: 28px 0 12px; }
 .paper-title { font-size: 0.98rem; font-weight: 600; color: #333; margin-bottom: 4px; }
 .paper-authors { font-size: 0.86rem; color: #666; margin-bottom: 3px; }
 .paper-venue { font-size: 0.86rem; color: #5f6672; font-style: italic; margin-bottom: 8px; }
-.paper-award { font-size: 0.82rem; font-weight: 600; color: #b45309; margin-bottom: 8px; }
+.paper-award { font-size: 0.82rem; font-weight: 600; color: #1e3a5f; margin-bottom: 8px; }
 .paper-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
 .tag { font-size: 0.7rem; padding: 2px 10px; border-radius: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
-.tag-gt { background: #dbeafe; color: #1d4ed8; }
+.tag-gt { background: #cffafe; color: #0e7490; }
 .tag-dc { background: #fef3c7; color: #b45309; }
 .tag-policy { background: #d1fae5; color: #047857; }
 .tag-methods { background: #fce7f3; color: #be185d; }
@@ -153,7 +150,7 @@ section h3 { font-size: 1.15rem; color: #1e3a5f; margin: 28px 0 12px; }
 .teaching-category { margin-bottom: 32px; }
 .teaching-category h2 { font-size: 1.1rem; color: #1e3a5f; margin-bottom: 12px; padding-bottom: 6px; border-bottom: 2px solid #e8f0fe; }
 .course-card-full { padding: 18px 22px; border-radius: 8px; border: 1px solid #eee; background: #fafbfc; margin-bottom: 12px; }
-.course-card-full .course-num { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 1px; color: #2563eb; font-weight: 700; }
+.course-card-full .course-num { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 1px; color: #1e3a5f; font-weight: 700; }
 .course-card-full .course-name { font-size: 1rem; font-weight: 600; color: #333; margin: 4px 0; }
 .course-card-full .course-desc { font-size: 0.88rem; color: #666; line-height: 1.5; }
 .course-card-full .course-link { font-size: 0.8rem; margin-top: 6px; }

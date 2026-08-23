@@ -443,6 +443,31 @@ Alex approved or rejected, and why.
   Decision Making 20, Equilibrium 23, Methodology 11, Policy
   Applications 7.
 
+## 2026-08-23 — Color plan A applied + About para 2 amended (Alex)
+
+- Color plan A (from the color report card, Alex: "Do your A plan"):
+  category colors now live ONLY on the research page. Home theme rules
+  uniform navy; Equilibrium recolored #1d4ed8 → #0e7490 teal (link-blue
+  collision); award lines + grant amounts amber → navy; course numbers +
+  filter hover off link blue → navy. CLAUDE.md brand rules updated.
+- FROZEN ABOUT PARA 2 AMENDED BY ALEX (new baseline), two sentences:
+  opening → "I use most of the tools of economics, whether theory,
+  econometrics, or experimental design, plus a knowledge of the
+  literature on psychology and human behavior." (Alex's words; grammar
+  patch: added "or" + commas). Award sentence → Option 1: "My coauthors
+  and I received an award for responsible research from the American
+  Marketing Association for our work on consumer financial
+  vulnerability." (Trophy photo IMG_0850 confirms "presented to
+  Alexander L. Brown".)
+- Award photo (IMG_0850.HEIC, trophy shot): Alex decided NOT on the site
+  (he only wanted the engraving read back). Stays in "bad photos?".
+- Distinguished Winner question resolved: AMA's list names the ARTICLE
+  the Distinguished Winner (paper card mirrors that); trophies are
+  presented to each author (About sentence says "my coauthors and I
+  received"). Both phrasings correct; no change.
+- FHWA grant title on index: "ML Use" → "Managed Lane Use" (Alex chose
+  readability over the official abbreviation).
+
 ## 2026-08-23 — Teaching photo: INTERIM version installed
 
 - Alex supplied four classroom shots ("bad photos?" folder in site-2026;
