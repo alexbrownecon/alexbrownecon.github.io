@@ -48,3 +48,41 @@ Read DECISIONS.md at the start of every session before doing anything (safety ra
   `python3 -m http.server` in this folder, not file://.
 - Delegate mechanical build work to subagents on cheaper models — but drop
   down only as far as Opus.
+
+## Environment notes (verified Aug 2026 — save yourself the rediscovery)
+
+- **Preview server:** `python3 -m http.server` in this folder (rail 6; never
+  file://). Port 8213 was used previously — a stale server may still be
+  running; reuse it or pick another port.
+- **Cowork browser pane:** screenshots return blank or time out whenever the
+  pane is hidden in the user's UI (the page stops compositing). Front the tab
+  or resize the viewport to wake it; when it stays hidden, verify layout via
+  javascript_tool computed styles/scrollWidth instead of screenshots. To
+  paint a whole page in one screenshot, set a very tall viewport. Editing an
+  HTML file auto-opens pinned file:// preview tabs that cannot navigate —
+  keep one dedicated localhost tab for testing. Widths <768 emulate mobile
+  (touch, mobile UA).
+- **Stale CSS:** after editing site.css, a plain reload may serve the cached
+  file — cache-bust (`site.css?v=N`) or confirm via computed styles before
+  concluding a fix failed.
+- **Safari PDF embeds:** Safari destroys a CSS-hidden PDF viewer and never
+  restores it on unhide. cv.html therefore uses an <iframe> plus a matchMedia
+  script that reloads the frame when the viewport crosses back above 700px.
+  Do not regress to <object> or bare display:none. Alex tests in Safari —
+  Chrome-only verification is not enough.
+- **Toolchain gaps:** pdflatex works (CV recompiles: run twice, then copy
+  cv_brown.pdf to assets/). poppler is NOT installed — no pdftotext or PDF
+  page rendering; verify PDF text via python zlib stream extraction, or ask
+  Alex to eyeball. `sips` handles image resizing (no ImageMagick) — beware:
+  `sips -Z` happily UPSCALES small images; check source dimensions first.
+- **Frozen-text guard:** before touching index.html or teaching.html, snapshot
+  the About/Teaching paragraphs from git HEAD and diff after editing (the
+  amended award sentence in DECISIONS.md 2026-08-23 is the current baseline).
+- **W3C validation:** `curl --data-binary @page.html
+  "https://validator.w3.org/nu/?out=json"` works fine from this machine.
+- **BEFORE FIRST GITHUB PUSH:** commits are authored as
+  abrown@Alexs-MacBook-Pro-8.local (auto-configured). Set the real identity
+  (`git config --global user.name "Alex Brown"`,
+  `user.email "abrown.tx@gmail.com"`) and re-author existing commits
+  (`git rebase -r --root --exec "git commit --amend --reset-author
+  --no-edit"`). Alex asked to be reminded proactively at deploy time.
