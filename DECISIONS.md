@@ -343,6 +343,53 @@ Alex approved or rejected, and why.
   (matches the 2935 Research Parkway address), 881x496, recompressed to
   assets/images/wcssb.jpg (120 KB), filling BOTH campus/office slots on
   index (sidebar + contact). Remaining photo need: Alex teaching.
+## 2026-08-23 — Alex's review batch (9 items, his wording where given)
+
+- Stats band, publications: journals spelled out — Quarterly Journal of
+  Economics, Journal of Economic Literature, Journal of Economic Theory
+  (added), AEJ: Microeconomics (per Alex, not plain "AEJ"), Nature Human
+  Behaviour, Management Science, Journal of Marketing (added), Strategic
+  Management Journal (added).
+- Stats band, students: CFPB placement claim REMOVED — Alex: "I never
+  placed a student at the CFPB" (corrects the Phase 2-era copy). Current-
+  students clause replaced with Alex's exact wording: "current students
+  working on topics from decision theory, non-choice processes and game
+  theory".
+- Research theme colors: Alex says the four colors were always arbitrary
+  and colored HEADINGS aren't differentiable. Theme h3s now ink navy;
+  colored top rules kept (tie to research-page filter colors). Full color
+  removal offered as follow-up.
+- Research in Progress: now its own section on research.html (was inside
+  Working Papers); ALERT (Brown and Hegarty) moved there; "request copy"
+  mailto and redundant venue line removed per Alex.
+- TEACHING TEXT AMENDED BY ALEX (new frozen baseline): parenthetical
+  "(Prospective students should know...)" cut; "my first paper, Brown and
+  Kagel (2009), and set" → "my first paper and set" with "paper" linked
+  to doi.org/10.1007/s10436-007-0092-0 (Annals of Finance 2009).
+- Econ 459 description: "evolutionary refinements" removed (Alex).
+- Duplicate photos resolved: the two photos at the top of index REMOVED
+  (About-column teaching photo, sidebar building photo). Building photo
+  now only in Contact; teaching photo only on teaching.html.
+- Drop caps: Alex asked about "My work requires" (index para 2) and the
+  teaching page. Decision: one drop cap per page opening — teaching.html
+  first para gets the big I; "My work requires" does NOT (mid-page,
+  second cap would dilute the device). Alex to veto if he disagrees.
+
+## 2026-08-23 — Review batch 2 (Alex)
+
+- Hero name: mixed-weight "Alexander"(600)/rest(300) treatment REMOVED
+  ("extra bold for Alexander is weird") — whole name now Spectral 500;
+  span markup dropped.
+- Stats band, students (supersedes batch 1 wording): "current students
+  focus on topics in decision theory and analysis of behavioral economic
+  concepts using biometric data" (Alex's exact words).
+- AWARD SENTENCE AMENDED BY ALEX (new frozen About baseline): "Along
+  those lines, a recent paper of mine on consumer financial vulnerability
+  won an award for responsible research from the American Marketing
+  Association." → "A recent paper on consumer financial vulnerability
+  received a responsible research award from the American Marketing
+  Association."
+
 ## 2026-08-23 — Teaching photo: INTERIM version installed
 
 - Alex supplied four classroom shots ("bad photos?" folder in site-2026;
