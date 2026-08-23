@@ -30,21 +30,21 @@ nav .nav-links { display: flex; gap: 28px; }
 nav .nav-links a { font-size: 0.9rem; font-weight: 500; color: #555; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; padding: 4px 0; border-bottom: 2px solid transparent; transition: all 0.2s; }
 nav .nav-links a:hover, nav .nav-links a[aria-current="page"] { color: #1e3a5f; border-bottom-color: #f59e0b; text-decoration: none; }
 
-/* HERO */
-.hero { min-height: 400px; background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 35%, #3b82a0 70%, #4db6ac 100%); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
-.hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 80% 20%, rgba(245,158,11,0.12) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(255,255,255,0.06) 0%, transparent 40%); }
-.hero-content { position: relative; z-index: 1; display: flex; align-items: center; gap: 50px; max-width: 940px; padding: 40px; }
-.hero-photo { width: 220px; height: 220px; border-radius: 50%; border: 4px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.5); font-size: 0.8rem; text-align: center; flex-shrink: 0; overflow: hidden; }
-.hero-photo img { width: 100%; height: 100%; object-fit: cover; }
+/* HERO (Pass 2): flat deep navy, editorial title-page treatment.
+   Single gold rule at the band's base is the one accent (decorative,
+   on navy — not an essential indicator). */
+.hero { background: linear-gradient(180deg, #23456b 0%, #1e3a5f 55%); border-bottom: 3px solid #f59e0b; }
+.hero-content { display: flex; align-items: center; justify-content: space-between; gap: 50px; max-width: 940px; margin: 0 auto; padding: 72px 40px; }
+.hero-photo { width: 210px; height: 210px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.35); flex-shrink: 0; overflow: hidden; }
+.hero-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .hero-text { color: #fff; }
-.hero-text h1 { font-size: 2.8rem; font-weight: 300; margin-bottom: 6px; }
+.hero-text h1 { font-size: 3rem; font-weight: 300; margin-bottom: 8px; }
 .hero-text h1 span { font-weight: 600; }
-.hero-text .subtitle { font-size: 1.1rem; opacity: 0.85; margin-bottom: 14px; font-weight: 300; }
-.hero-text .interests { display: flex; flex-wrap: wrap; gap: 8px; }
-.hero-text .interests span { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25); padding: 5px 16px; border-radius: 20px; font-size: 0.82rem; color: rgba(255,255,255,0.92); }
+.hero-text .subtitle { font-size: 1.1rem; color: rgba(255,255,255,0.88); margin-bottom: 22px; font-weight: 300; }
+.hero-text .interests { font-size: 0.88rem; letter-spacing: 0.04em; color: rgba(255,255,255,0.78); }
 
-/* MINI HERO (sub-pages) */
-.hero-mini { height: 140px; min-height: 140px; }
+/* MINI HERO (sub-pages): same band, smaller */
+.hero-mini .hero-content { padding: 36px 40px; }
 .hero-mini .hero-text h1 { font-size: 2rem; }
 
 /* SECTIONS — optimized width for readability (940px gives ~65 characters per line at 18px body text, within the ideal 60-70 range) */
@@ -162,9 +162,9 @@ footer a { color: rgba(255,255,255,0.9); }
 @media (max-width: 880px) {
   nav { height: auto; flex-wrap: wrap; padding: 10px 20px; row-gap: 2px; }
   nav .nav-links { flex-wrap: wrap; gap: 14px; row-gap: 2px; }
-  .hero-content { flex-direction: column; text-align: center; gap: 24px; padding: 32px 24px; }
+  .hero-content { flex-direction: column-reverse; text-align: center; gap: 24px; padding: 40px 24px; }
   .hero-photo { width: 160px; height: 160px; }
-  .hero-text .interests { justify-content: center; }
+  .hero-mini .hero-content { padding: 28px 24px; }
   .highlight-row { grid-template-columns: 1fr; }
   .highlight-row.two-col { grid-template-columns: 1fr; }
 }
@@ -174,7 +174,6 @@ footer a { color: rgba(255,255,255,0.9); }
   .section-alt-wrap { padding: 40px 0; }
   .landing-grid, .featured-grid, .students-two-col { grid-template-columns: 1fr; }
   .hero-text h1 { font-size: 2.1rem; }
-  .hero-mini { height: auto; min-height: 110px; }
   footer { padding: 24px 20px; }
 }
 

@@ -213,3 +213,22 @@ Alex approved or rejected, and why.
   cv.html single Download link; CV embed switched to iframe + matchMedia
   reload script (Safari destroys hidden PDF viewers — Alex verified fix).
 - Colors: no new decisions — palette per CLAUDE.md, first visible in Pass 2.
+
+## 2026-08-23 — Phase 3, Pass 2 (hero) — Alex approved
+
+- Gradient hero replaced: flat deep navy band (#1e3a5f, subtle same-hue
+  lightening at top), thin gold rule at the band's base (the one accent,
+  echoing the nav's active-link underline). Name in Spectral aligned to the
+  940px content edge; subtitle one line (comma, not bullet); interest pills
+  collapsed to one quiet middot-separated text line. Headshot moved to the
+  RIGHT in a hairline-ring circle — Alex explicitly approved photo-right and
+  the gold rule.
+- Sub-pages get the same compact navy band + gold rule; inline h1
+  font-size styles removed (stylesheet rules them now).
+- Phase 0 image flag resolved: hero + og:image now use newhead4-1200.jpg
+  (216 KB, 960x1200, sips-downscaled from the 11.7 MB original, which stays
+  untouched). Alt text fixed to "Alexander L. Brown".
+- Frozen About/Teaching text proven byte-identical; W3C 0 messages (cv.html
+  pre-existing info note only); desktop/mini/mobile screenshots verified.
+- Next: Pass 3 (layout — stats band judgment call, editorial publication
+  list on the home page; cards stay on Research).
