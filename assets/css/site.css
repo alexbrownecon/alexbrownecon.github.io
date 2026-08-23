@@ -2,7 +2,13 @@
    mockup in Phase 2; content styles unchanged except accessibility fixes). */
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
+html { font-size: 18px; }
 body { font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; color: #333; background: #fff; line-height: 1.65; }
+
+/* TYPOGRAPHY (Pass 1): Spectral for headings, clean sans for body */
+h1, h2, h3, nav .logo { font-family: 'Spectral', Georgia, 'Times New Roman', serif; }
+h1, h2, h3 { line-height: 1.25; letter-spacing: -0.01em; }
+.about-sidebar .info-block h3 { font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; letter-spacing: 1.5px; }
 a { color: #2563eb; text-decoration: none; }
 a:hover { color: #1d4ed8; text-decoration: underline; }
 
@@ -19,7 +25,7 @@ section[id] { scroll-margin-top: 80px; }
 /* NAV (sticky, wraps on small screens — no hamburger needed) */
 header { position: sticky; top: 0; z-index: 100; }
 nav { background: rgba(255,255,255,0.97); border-bottom: 1px solid #e0e0e0; display: flex; justify-content: space-between; align-items: center; padding: 0 40px; height: 60px; }
-nav .logo { font-size: 1.15rem; font-weight: 700; color: #1e3a5f; letter-spacing: 0.5px; }
+nav .logo { font-size: 1.15rem; font-weight: 700; color: #1e3a5f; letter-spacing: 0.5px; white-space: nowrap; }
 nav .nav-links { display: flex; gap: 28px; }
 nav .nav-links a { font-size: 0.9rem; font-weight: 500; color: #555; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; padding: 4px 0; border-bottom: 2px solid transparent; transition: all 0.2s; }
 nav .nav-links a:hover, nav .nav-links a[aria-current="page"] { color: #1e3a5f; border-bottom-color: #f59e0b; text-decoration: none; }
@@ -154,7 +160,8 @@ footer a { color: rgba(255,255,255,0.9); }
 
 /* RESPONSIVE */
 @media (max-width: 880px) {
-  nav { padding: 0 20px; }
+  nav { height: auto; flex-wrap: wrap; padding: 10px 20px; row-gap: 2px; }
+  nav .nav-links { flex-wrap: wrap; gap: 14px; row-gap: 2px; }
   .hero-content { flex-direction: column; text-align: center; gap: 24px; padding: 32px 24px; }
   .hero-photo { width: 160px; height: 160px; }
   .hero-text .interests { justify-content: center; }
@@ -162,8 +169,7 @@ footer a { color: rgba(255,255,255,0.9); }
   .highlight-row.two-col { grid-template-columns: 1fr; }
 }
 @media (max-width: 700px) {
-  nav { height: auto; flex-wrap: wrap; padding: 10px 16px; row-gap: 2px; }
-  nav .nav-links { flex-wrap: wrap; gap: 14px; row-gap: 2px; }
+  nav { padding: 10px 16px; }
   section { padding: 40px 20px; }
   .section-alt-wrap { padding: 40px 0; }
   .landing-grid, .featured-grid, .students-two-col { grid-template-columns: 1fr; }

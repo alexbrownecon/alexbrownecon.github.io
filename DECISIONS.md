@@ -186,3 +186,28 @@ Alex approved or rejected, and why.
   to conserve usage; drop down only as far as OPUS. (Set after this
   session's cv.html subagent ran on Sonnet; future delegation observes the
   Opus floor.)
+
+## 2026-08-23 — Phase 3 setup + Pass 1 (typography) — Alex approved
+
+- frontend-design skill installed (repo-archive fallback, ~/.claude/skills/).
+  CLAUDE.md created in site-2026 with the strategy's design rules + carried
+  non-negotiables. References confirmed: kirbyknielsen.com (Kirby Nielsen,
+  Caltech, experimental econ — restraint/structure) and anaikowl.com
+  (Akshata Naik, Owlstown award winner — warmth/whitespace). Blend, never clone.
+- Heading font: SPECTRAL (Alex picked from Fraunces/Spectral/Source Serif 4
+  specimens). 18px root size; serif h1-h3 + nav wordmark; sans body kept.
+- Site identity flipped to "Alexander L. Brown" (hero, wordmark, footer,
+  titles, metadata; JSON-LD alternateName "Alex Brown"). "Publishes as" line
+  removed. PENDING: where "I go by Alex" appears (Contact section; Alex to
+  approve wording). Nav wraps ≤880px so the wordmark never splits.
+- About restructure (Alex liked): para 1 alone in the About column; para 2
+  moved verbatim to full width below the grid. AMENDMENT by Alex: the award
+  sentence in para 2 SHORTENED to "Along those lines, a recent paper of mine
+  on consumer financial vulnerability won an award for responsible research
+  from the American Marketing Association." — this amended text is the new
+  frozen baseline. Full award citation stays on the Beyond Income paper card.
+- Fixes: Management Science CARD Act → "forthcoming" (site + cv_brown.tex
+  recompiled and synced to assets/); paper chips "Game Theory"→"Games";
+  cv.html single Download link; CV embed switched to iframe + matchMedia
+  reload script (Safari destroys hidden PDF viewers — Alex verified fix).
+- Colors: no new decisions — palette per CLAUDE.md, first visible in Pass 2.
