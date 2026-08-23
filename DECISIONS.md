@@ -198,8 +198,10 @@ Alex approved or rejected, and why.
   specimens). 18px root size; serif h1-h3 + nav wordmark; sans body kept.
 - Site identity flipped to "Alexander L. Brown" (hero, wordmark, footer,
   titles, metadata; JSON-LD alternateName "Alex Brown"). "Publishes as" line
-  removed. PENDING: where "I go by Alex" appears (Contact section; Alex to
-  approve wording). Nav wraps ≤880px so the wordmark never splits.
+  removed. Alex decided (Aug 23) the site will NOT carry an "I go by Alex"
+  line anywhere — the alternateName metadata is the only informal-name
+  reference; do not resurrect. Nav wraps ≤880px so the wordmark never splits.
+- Next up when work resumes: Phase 3, Pass 2 (see strategy).
 - About restructure (Alex liked): para 1 alone in the About column; para 2
   moved verbatim to full width below the grid. AMENDMENT by Alex: the award
   sentence in para 2 SHORTENED to "Along those lines, a recent paper of mine
