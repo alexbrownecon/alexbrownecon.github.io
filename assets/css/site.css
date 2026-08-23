@@ -98,7 +98,14 @@ section h3 { font-size: 1.15rem; color: #1e3a5f; margin: 28px 0 12px; }
 .more-link { margin-top: 18px; font-size: 0.9rem; }
 .more-link a { font-weight: 600; }
 
-/* RESEARCH FILTERS */
+/* RESEARCH FILTERS — full category titles on desktop, chip-length
+   labels on phones (Pass 5 deferred item, resolved 2026-08-23) */
+.filter-btn .label-short { display: none; }
+@media (max-width: 700px) {
+  .filter-btn .label-full { display: none; }
+  .filter-btn .label-short { display: inline; }
+}
+
 .filter-bar { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; }
 .filter-btn { padding: 8px 20px; border-radius: 25px; border: 1.5px solid #d1d5db; background: #fff; color: #666; font-size: 0.85rem; cursor: pointer; font-weight: 500; transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease; font-family: inherit; }
 .filter-btn:hover { border-color: #1e3a5f; color: #1e3a5f; }
