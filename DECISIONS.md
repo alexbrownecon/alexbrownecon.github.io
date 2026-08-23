@@ -290,3 +290,29 @@ Alex approved or rejected, and why.
   labels later" — candidate for the Phase 4 polish loop.
 - All five Phase 3 passes approved and committed. Next: Phase 4 (QA,
   deploy prep, Alex's WCAG audit; git identity fix before first push).
+
+## 2026-08-23 — Phase 3 RE-RUN authorized (Alex: "full, not a reskin")
+
+- Alex identified a process failure: the strategy's four polish-loop
+  techniques (8-pillar self-grade, batch-with-intent, ruthless comparison
+  vs kirbyknielsen.com + anaikowl.com, Alex's manual flat-section pass)
+  were written as prompts for Alex to fire while driving; when execution
+  shifted to Claude marching the numbered passes, they lost their trigger
+  and never ran. Claude also read the paragraph during this session and
+  failed to schedule them. LESSON: convert loop techniques into scheduled,
+  owned steps; unnumbered plan items silently read as done.
+- Result: the Phase 3 passes restyled the March mockup's structure rather
+  than redesigning against the references. Alex judged it "too much like
+  the march site" and rejected an incremental Pass 6 in favor of a full
+  structural re-run of Phase 3 ON A BRANCH (`redesign`); main keeps the
+  approved pass 1-5 site as fallback until Alex picks a winner
+  side-by-side.
+- Re-run process: (1) ruthless-comparison brief (references studied for
+  real this time) + 8-pillar self-grade of the current site; (2) design
+  plan with structure on the table, approved BEFORE code; (3) build all
+  five pages on the branch with stop-gates; (4) Alex's side-by-side pick,
+  then his flat-section scroll on the winner.
+- Survives regardless (settled, not design): frozen About/Teaching text
+  verbatim, Spectral, navy/gold rules, four research categories + colors
+  as wayfinding, all content decisions, people.tamu.edu URLs, Phase 2
+  accessibility requirements.
