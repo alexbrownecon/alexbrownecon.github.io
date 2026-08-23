@@ -252,3 +252,24 @@ Alex approved or rejected, and why.
   overflow, mobile stacking verified by screenshot.
 - Next: Pass 4 (motion, lowest priority), then Pass 5 (dedicated mobile
   design pass).
+
+## 2026-08-23 — Phase 3, Pass 4 (motion) + stats-band rework — Alex approved
+
+- Motion, subtle only: paper cards fade in (0.25s, 4px rise, pure CSS
+  keyframe — filters.js untouched) when research filters reveal them;
+  blanket `transition: all` replaced with targeted color/border/shadow
+  transitions site-wide; smooth scrolling for in-page anchors. No scroll
+  reveals. prefers-reduced-motion block still kills everything.
+- Sticky nav background made fully opaque (see Pass 3 entry).
+- Stats band REWORKED after Alex flagged the stacked layout ("30+ on an
+  island", label on a new line in a different color): each stat is now ONE
+  phrase on one line, all Spectral navy — number 1.5rem, label 1rem, shared
+  baseline via flex; "+" set as a raised superior figure (0.62em) because
+  Spectral's serif plus sits low next to lining figures. First attempt
+  wrapped "Grant Funding" at desktop widths — type scale tightened until all
+  three phrases measure one line in a 287px column. Alex: "very different
+  now but connected" — approved.
+- Lesson recorded: browser-pane screenshots return blank while the pane is
+  hidden; stat-band fix was verified by measuring rendered geometry
+  (getClientRects) instead.
+- Next: Pass 5 (dedicated mobile design pass) closes Phase 3.
