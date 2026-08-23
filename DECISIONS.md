@@ -316,3 +316,35 @@ Alex approved or rejected, and why.
   verbatim, Spectral, navy/gold rules, four research categories + colors
   as wayfinding, all content decisions, people.tamu.edu URLs, Phase 2
   accessibility requirements.
+
+## 2026-08-23 — Redesign forks, build, and side-by-side VERDICT
+
+- Forks resolved by Alex (logged in full on branch `redesign`): LIGHT
+  ground; placeholders hidden; signature = option c (typographic), with
+  agreed fallback to option a at full scope (~37 finding lines in Alex's
+  voice) if c doesn't land. Only two photos ever needed: Alex teaching,
+  and a campus/building shot.
+- Redesign built on branch `redesign` (bd1fcbe): comparison brief
+  (references MEASURED — kirbyknielsen.com is dark charcoal, serif body,
+  type-as-structure, haiku signature; earlier secondhand summaries were
+  wrong), design plan, full five-page "title page" build. Frozen text
+  byte-verified, W3C clean, 320/375px verified.
+- VERDICT (Alex, comparing :8213 redesign vs :8215 main): "I most like
+  the big M under about... otherwise the old version is better." The
+  pass 1-5 design STAYS. Drop cap ported to main (.dropcap on the About
+  first paragraph, 2.6em mobile). Branch `redesign` kept for reference —
+  do not delete without Alex. Signature question now OPEN: does the drop
+  cap alone suffice, or invoke the option-a fallback on the old design?
+- Teaching page (Alex, same session): frozen paragraphs MOVED verbatim
+  (verified, single copy) from below the course list to the top; photo
+  placeholder now sits between text and courses.
+- Building photo installed (Alex requested): ECON.jpeg from
+  artsci.tamu.edu/economics — West Campus Social Sciences Building
+  (matches the 2935 Research Parkway address), 881x496, recompressed to
+  assets/images/wcssb.jpg (120 KB), filling BOTH campus/office slots on
+  index (sidebar + contact). Remaining photo need: Alex teaching.
+- Environment lessons (added to CLAUDE.md): hidden browser pane FREEZES
+  CSS transitions — computed styles stick at the transition's start value
+  after runtime class changes; and a reused port may be a stale server
+  from an old session serving the wrong directory — verify content, not
+  just a 200.
