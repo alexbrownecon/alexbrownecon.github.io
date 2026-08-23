@@ -468,6 +468,37 @@ Alex approved or rejected, and why.
 - FHWA grant title on index: "ML Use" → "Managed Lane Use" (Alex chose
   readability over the official abbreviation).
 
+## 2026-08-23 — Working papers: completeness check, tags, RIP removed
+
+- Cross-check (site vs cv_brown.tex vs old live site vs Google Scholar,
+  all fetched 2026-08-23): two working papers were missing from the new
+  site and are now ADDED — "Empirical Bias of Extreme-Price Auctions:
+  Analysis" (Velez and Brown, arXiv 1905.08234, placed beside its
+  Experimental Evidence companion) and "Empirical Strategy-Proofness"
+  (Velez and Brown, people.tamu.edu/~alexbrown/papers/ESP-June142022.pdf).
+- Old-site comment forensics: the old site VISIBLY lists only 4 Research
+  in Progress items; 9 more (incl. "The Paradox of Monotone Structural
+  QRE") are commented out in its HTML — QRE is not missing anywhere, it
+  is retired. Scholar's odd titles are old names of existing papers.
+- Working-paper venue lines ("Working paper"/"Under review") removed —
+  Alex: unnecessary.
+- Working-paper tags went through two Alex decisions same session: first
+  "only the Liu paper, Methodology"; then superseded by a full per-paper
+  assignment (his list): AI dc,gt · Peer Evaluations dc,gt · Biometric gt
+  · Oil/Coasian gt,policy · Benign dc · Lies-Labels dc,gt ·
+  Extreme-Price Experimental gt · Extreme-Price Analysis gt ·
+  Disequilibrium gt · ESP gt; Liu paper keeps methods. (This also
+  reversed the earlier oil+biometric policy-tag request in part:
+  biometric ended gt only.) Journal-section tags verified byte-identical
+  through it all.
+- RESEARCH IN PROGRESS SECTION REMOVED entirely, including ALERT — Alex:
+  "co-authorship is tricky." The a/b/c old-site candidates (Artifactual
+  Social Learning; Vaccination Ambiguity; Debt Snowball) were reviewed
+  and NOT added. If ALERT returns later, its authorship needs Alex's
+  explicit sign-off first.
+- Grants line: "ML Use" → "Managed Lane Use" (also in this batch: oil +
+  biometric interim tags, superseded above).
+
 ## 2026-08-23 — Teaching photo: INTERIM version installed
 
 - Alex supplied four classroom shots ("bad photos?" folder in site-2026;
