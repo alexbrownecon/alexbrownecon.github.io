@@ -78,6 +78,8 @@ section h3 { font-size: 1.15rem; color: #1e3a5f; margin: 28px 0 12px; }
 .theme-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px 40px; margin: 30px 0; }
 .theme-card { border-top: 3px solid #1e3a5f; padding-top: 16px; }
 .theme-card h3 { margin: 0 0 8px; font-size: 1.05rem; }
+.theme-card h3 a { color: inherit; text-decoration: none; }
+.theme-card h3 a:hover { color: inherit; text-decoration: underline; }
 .theme-card p { font-size: 0.9rem; color: #555; }
 
 /* SITE PHOTOS (real images replacing placeholders as they arrive) */
@@ -91,6 +93,8 @@ section h3 { font-size: 1.15rem; color: #1e3a5f; margin: 28px 0 12px; }
 .pub-list li { padding: 14px 2px; border-bottom: 1px solid #e3e7ee; }
 .pub-row { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; }
 .pub-title { font-weight: 600; font-size: 0.95rem; color: #333; }
+.pub-title a { color: inherit; text-decoration: none; }
+.pub-title a:hover { color: #1d4ed8; text-decoration: underline; }
 .pub-venue { font-size: 0.85rem; color: #5f6672; font-style: italic; text-align: right; flex-shrink: 0; max-width: 40%; }
 .grant-meta { font-size: 0.85rem; color: #666; margin-top: 4px; }
 .grant-amount { font-weight: 600; color: #1e3a5f; }
@@ -126,6 +130,8 @@ section h3 { font-size: 1.15rem; color: #1e3a5f; margin: 28px 0 12px; }
 @keyframes card-in { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
 .paper-card:hover { border-color: #bfdbfe; box-shadow: 0 2px 8px rgba(37,99,235,0.06); }
 .paper-card.hidden { display: none; }
+.paper-card[id] { scroll-margin-top: 90px; } /* deep links from the home page clear the sticky nav */
+.paper-card:target { border-color: #1e3a5f; }
 .paper-title { font-size: 0.98rem; font-weight: 600; color: #333; margin-bottom: 4px; }
 .paper-authors { font-size: 0.86rem; color: #666; margin-bottom: 3px; }
 .paper-venue { font-size: 0.86rem; color: #5f6672; font-style: italic; margin-bottom: 8px; }

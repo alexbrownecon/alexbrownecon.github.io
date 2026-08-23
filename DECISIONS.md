@@ -529,6 +529,24 @@ Alex approved or rejected, and why.
   Safari + phone, every filter, every PDF link), Alex's WCAG audit,
   deploy prep (git identity re-author, exclude "bad photos?", DNS).
 
+## 2026-08-23 — Prune + home-page deep links (Alex)
+
+- PRUNE approved and done: 14 unreferenced Phase 0 legacy images removed
+  from assets/images (11.7 MB original headshot, abrown.png, banners,
+  TAM logos, newhead 1-3) + Thumbs.db. All remain in git history.
+  assets/images now 1.2 MB; whole publishable site ~1.5 MB.
+- Home-page theme headings now LINK to the research page with that
+  category's filter pre-applied (research.html?filter=dc|gt|policy|
+  methods). filters.js refactored: filtering logic into apply(btn),
+  click handlers unchanged, plus a URLSearchParams preselect on load.
+  filters.js now referenced as ?v=2 (cache-bust; a stale cached script
+  ate the first test — the CLAUDE.md stale-CSS lesson applies to JS too).
+- Selected Recent Publications titles now link to their entries on the
+  research page via anchor ids (pub-card-act, pub-resolution,
+  pub-loss-aversion, pub-beyond-income, pub-bargaining); anchored cards
+  get scroll-margin under the sticky nav and a navy border via :target.
+- Link styling: theme/pub title links inherit color, underline on hover.
+
 ## 2026-08-23 — Teaching photo: INTERIM version installed
 
 - Alex supplied four classroom shots ("bad photos?" folder in site-2026;

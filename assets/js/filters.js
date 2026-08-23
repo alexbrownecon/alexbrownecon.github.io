@@ -3,8 +3,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   var buttons = document.querySelectorAll('.filter-btn');
   var cards = document.querySelectorAll('.paper-card');
-  buttons.forEach(function (btn) {
-    btn.addEventListener('click', function () {
+  function apply(btn) {
       var tag = btn.getAttribute('data-filter');
       buttons.forEach(function (b) {
         b.classList.toggle('active', b === btn);
@@ -15,6 +14,15 @@ document.addEventListener('DOMContentLoaded', function () {
         var t = card.getAttribute('data-tags');
         card.classList.toggle('hidden', !(t && t.split(',').indexOf(tag) !== -1));
       });
-    });
+  }
+  buttons.forEach(function (btn) {
+    btn.addEventListener('click', function () { apply(btn); });
   });
+  // Deep link: research.html?filter=dc|gt|policy|methods preselects a filter
+  // (home-page theme headings link here this way).
+  var pre = new URLSearchParams(window.location.search).get('filter');
+  if (pre) {
+    var target = document.querySelector('.filter-btn[data-filter="' + pre + '"]');
+    if (target) { apply(target); }
+  }
 });
