@@ -499,6 +499,36 @@ Alex approved or rejected, and why.
 - Grants line: "ML Use" → "Managed Lane Use" (also in this batch: oil +
   biometric interim tags, superseded above).
 
+## 2026-08-23 — Phase 4 step 1: automated QA sweep (results + fixes)
+
+- Lighthouse unavailable (no node/npm in sandbox, as strategy predicted);
+  covered equivalently: W3C, full link check, weight audit, structural
+  a11y audit.
+- W3C: 0 messages all pages (cv.html keeps its known single info note).
+- A11y structure: every page has exactly one h1, all imgs have alt,
+  lang/skip-link/nav-aria/canonical/title/description all present.
+- FIXED during sweep: (1) double hairline under Selected Publications/
+  Grants headings (pub-list border-top removed — Alex spotted it);
+  (2) all four sub-pages' og:image still pointed at the 11.7 MB original
+  headshot (the -1200 fix had only landed on the redesign branch) — now
+  newhead4-1200 everywhere; (3) one http:// SSRN link upgraded to https;
+  (4) TTI technical report link was genuinely DEAD — case bug, server
+  wants 0-6907-R1.pdf capital R; fixed and verified serving.
+- Link check, 123 hrefs: local files all exist; 75 external 200 OK;
+  5 alexbrownecon.com canonicals unreachable (domain parked — expected
+  until deploy); 2 font-preconnect 404s (normal, bare origins); ~29
+  publisher 403s are bot-walls (DOI/SSRN/TTI-class verified fine in a
+  real browser; rosap.ntl.bts.gov loads). ONE inconclusive: e-elgar.com
+  Handbook page sits behind Cloudflare — Alex should click it once.
+- Weight: published site would be 1.44 MB total IF unused Phase 0 images
+  are pruned — assets/images still carries ~17 MB of unreferenced legacy
+  files (newhead4.jpg 11.7 MB, abrown.png 4 MB, banners, TAM logos,
+  newhead 1-3, Thumbs.db). PENDING ALEX: approve pruning before deploy.
+- Sitemap: 5 URLs, matches pages.
+- Still to do in Phase 4: manual checks (keyboard-only, 200% zoom,
+  Safari + phone, every filter, every PDF link), Alex's WCAG audit,
+  deploy prep (git identity re-author, exclude "bad photos?", DNS).
+
 ## 2026-08-23 — Teaching photo: INTERIM version installed
 
 - Alex supplied four classroom shots ("bad photos?" folder in site-2026;

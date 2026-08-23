@@ -87,7 +87,7 @@ section h3 { font-size: 1.15rem; color: #1e3a5f; margin: 28px 0 12px; }
 .photo-placeholder { width: 100%; height: 220px; background: linear-gradient(135deg, #f0f4ff 0%, #e8f0fe 100%); border: 2px dashed #bfdbfe; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #4a6fa5; font-style: italic; font-size: 0.9rem; }
 
 /* EDITORIAL LISTS — publications & grants on the landing page (Pass 3) */
-.pub-list { list-style: none; margin: 0; border-top: 1px solid #e3e7ee; }
+.pub-list { list-style: none; margin: 0; }
 .pub-list li { padding: 14px 2px; border-bottom: 1px solid #e3e7ee; }
 .pub-row { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; }
 .pub-title { font-weight: 600; font-size: 0.95rem; color: #333; }
