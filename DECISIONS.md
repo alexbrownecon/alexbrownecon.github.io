@@ -343,6 +343,31 @@ Alex approved or rejected, and why.
   (matches the 2935 Research Parkway address), 881x496, recompressed to
   assets/images/wcssb.jpg (120 KB), filling BOTH campus/office slots on
   index (sidebar + contact). Remaining photo need: Alex teaching.
+## 2026-08-23 — Teaching photo: INTERIM version installed
+
+- Alex supplied four classroom shots ("bad photos?" folder in site-2026;
+  room clutter concerns). Chosen: IMG_9850's angle (Alex rejected the
+  9848/9849 angle — door behind him). Alex re-exported a better Live
+  Photo frame (IMG_9850_mod.HEIC, mouth closed, eyes to camera —
+  independently verified better than the original mid-word frame).
+- Processing: cropped to body + smartboard (kills cart/outlet/ceiling
+  wires), then the under-tray cables ERASED via Python/Pillow diffusion
+  inpainting with wall grain cloned back (several iterations; lessons:
+  wire path must be measured not assumed, the wall's drywall-seam shadow
+  is a real feature to keep, and the grain-donor strip must not overlap
+  a cable). Result: assets/images/teaching.jpg (1400px, 257 KB), on
+  index About column + teaching.html.
+- STATUS: Alex calls it "ok, maybe a placeholder... better than before."
+  INTERIM — he will try for a better shot when teaching starts Tuesday
+  2026-08-25 (same angle as 9850 recommended; regular photo beats Live
+  Photo frame for sharpness). Rerun = same crop + inpaint recipe.
+- Live Photo option documented: export Unmodified Original gives
+  .heic + .mov; no ffmpeg on this Mac but Swift/AVFoundation can dump
+  frames; best workflow is pick-moment-from-video then set key photo in
+  Photos for a full-quality export.
+- DEPLOY FLAG: the untracked "bad photos?" folder sits INSIDE site-2026 —
+  exclude or relocate it before Phase 4 deploy so personal source photos
+  never get published.
 - Environment lessons (added to CLAUDE.md): hidden browser pane FREEZES
   CSS transitions — computed styles stick at the transition's start value
   after runtime class changes; and a reused port may be a stale server
