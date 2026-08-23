@@ -147,7 +147,7 @@ section h3 { font-size: 1.15rem; color: #1e3a5f; margin: 28px 0 12px; }
 .student-card-sq .student-body h3 a { color: #2563eb; }
 .student-card-sq .student-body .student-title { font-size: 0.82rem; color: #666; }
 .student-card-sq .student-body .student-affil { font-size: 0.82rem; color: #5f6672; margin-top: 2px; }
-.current-badge { position: absolute; top: 10px; right: 10px; background: #dc2626; color: #fff; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; padding: 3px 10px; border-radius: 4px; }
+.market-badge { position: absolute; top: 10px; right: 10px; background: #dc2626; color: #fff; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; padding: 3px 10px; border-radius: 4px; }
 
 /* TEACHING — category cards */
 .teaching-category { margin-bottom: 32px; }
@@ -206,7 +206,7 @@ footer a { color: rgba(255,255,255,0.9); }
   .student-card-sq { display: flex; align-items: center; }
   .student-card-sq .student-photo-sq { width: 96px; aspect-ratio: auto; flex-shrink: 0; align-self: stretch; }
   .student-card-sq .student-body { padding: 12px 14px; }
-  .current-badge { display: none; } /* redundant under the Current Students heading */
+  .market-badge { font-size: 0.62rem; padding: 2px 8px; } /* carries real info (job market) — stays visible on phones */
   .filter-btn { padding: 6px 14px; font-size: 0.8rem; }
   .dropcap::first-letter { font-size: 2.6em; }
   footer { padding: 24px 20px; }

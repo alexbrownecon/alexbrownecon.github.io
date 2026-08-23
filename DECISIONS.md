@@ -390,6 +390,59 @@ Alex approved or rejected, and why.
   received a responsible research award from the American Marketing
   Association."
 
+## 2026-08-23 — Students page: badges + full status verification (3 agents)
+
+- "Current" badge → red "On Market" badge (Alex): on BOTH Zhang and
+  Hegarty (Alex confirmed Colin is on market). Badge now shows on mobile
+  too (it carries recruiter-relevant info; the old hide rule was for the
+  redundant "Current"). Class renamed .market-badge.
+- Colin photo: no better one exists publicly — TAMU's own profile uses
+  the same t-shirt shot; no personal site found. Ask Colin for a market
+  headshot this fall.
+- All 9 former students verified via 3 parallel web-research agents
+  (2026-08-23). CORRECTED: Vitaku → Assistant Professor, American
+  University of Sharjah (own site/CV; AUS directory not yet updated —
+  "incoming" Fall 2026); Stephenson → Associate Professor, Virginia
+  Commonwealth University (was wrongly "Professor, Texas A&M" — he never
+  left VCU; stale Chapman CV + RateMyProfessors artifacts explain the
+  confusion); Viriyavipart → Associate Professor, Chulalongkorn
+  University (left AUS 2024; Chula directory + PIER + own site);
+  Castillo Garcia → "Associate Professor, ESPOL (Ecuador); formerly Vice
+  Minister of Economy and Finance" — ESPOL's official HR CV shows Vice
+  Minister ended 2022-07-05 and the IADB board post ended 2025-07-07, so
+  the earlier "Ex-" was right after all (Alex's same-day de-"Ex-" edit
+  reverted on evidence); Je confirmed Assistant Professor, University of
+  Seoul. CONFIRMED UNCHANGED: Liu (Shandong), Kovaliukaite (Vienna
+  postdoc — medium confidence, two official UniVie person records now
+  404; recheck at next maintenance pass), Williams (Assoc Prof + Chair,
+  PSU). Wang: rank CONFIRMED Assistant Professor — the UESTC faculty page
+  loaded for Alex locally and still lists it (2026-08-23). The page is
+  blank from US browsers (anti-bot/geo), so Wang's name link stays on his
+  reliable personal WordPress site rather than the UESTC page.
+- Link fixes: Jose's dead LinkedIn pub-URL → his Google Scholar profile;
+  Williams → the PSU dept page that carries the Chair title.
+- Also: Methods tag added to the Plott and Zeiler generalization paper
+  (Alex).
+
+## 2026-08-23 — Research tag system overhaul (Alex)
+
+- Chip renames: Decisions → "Decision Making" (Alex's catch-all for
+  decision theory + behavioral biases in individual choice; his interim
+  pick "Behavioral" was superseded same-session as not fitting the
+  uncertainty-resolution papers), Games → "Equilibrium", Policy →
+  "Policy Applications", Methods → "Methodology" (strict sense fits: the
+  category's papers STUDY methods; also matches his frozen About/Teaching
+  wording "experimental methodology").
+- Full category title "Experimental Methods" → "Experimental
+  Methodology" everywhere: research filter button, index theme heading,
+  research meta description.
+- Retags: loss-aversion meta-analysis + Methodology; the three
+  policy-tagged traffic/travel papers (Express Lanes nudges, COVID
+  transit, Managed Lane users) + Decision Making. Plott-Zeiler
+  generalization + Methodology (earlier same session). Final chip counts:
+  Decision Making 20, Equilibrium 23, Methodology 11, Policy
+  Applications 7.
+
 ## 2026-08-23 — Teaching photo: INTERIM version installed
 
 - Alex supplied four classroom shots ("bad photos?" folder in site-2026;
