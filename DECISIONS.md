@@ -678,3 +678,28 @@ Alex approved or rejected, and why.
   https://alexbrownecon.com; better teaching photo (after class Tue
   2026-08-25); Colin Hegarty headshot; OPTIONAL Alex-approved-only TAMU
   homepage redirect (papers stay at people.tamu.edu forever).
+
+## 2026-08-24 — FROZEN ABOUT TEXT REPLACED BY ALEX (new baseline, both paragraphs)
+
+- Alex personally rewrote both About paragraphs in `index.html` and supplied
+  complete replacement wording. The new text was inserted VERBATIM — no
+  editing, rephrasing, reformatting, or text-improvement tooling of any kind.
+  Byte-for-byte match against Alex's supplied text was verified before commit.
+- Markup untouched: paragraph 1 keeps `<p class="dropcap">` at the same
+  position in the About column; paragraph 2 keeps the bare `<p>` full-width
+  below the landing grid. Neither paragraph contained (or now contains) any
+  inline HTML. The drop-cap letter is unchanged — the new paragraph 1 also
+  begins with "H" ("How"), so the `dropcap` class renders exactly as before.
+- `git diff` touched only those two lines. W3C Nu validator: zero messages.
+- THIS IS THE NEW FROZEN BASELINE. Future diffs of the About text must be
+  taken against the two paragraphs reproduced in full below. The
+  non-negotiable in CLAUDE.md still applies: never rewrite, rephrase, or
+  regenerate this text.
+
+NEW FROZEN PARAGRAPH 1 (About column, `<p class="dropcap">`):
+
+How do behavioral impulses and cognitive limitations interact with the economic incentives that push people toward optimization? My research uses the formal framework of economic theory to predict and explain human behavior in novel ways. It sits between purely empirical work that documents deviations from theory and purely theoretical work that derives predictions without testing them. While I have written papers at both ends of this spectrum, my broader goal is a unified theory of human behavior with the formality of economics.
+
+NEW FROZEN PARAGRAPH 2 (full-width, below the landing grid, `<p>`):
+
+I use most of the tools of economics, whether theory, econometrics, or experimental design, along with knowledge of the literature on psychology and human behavior. My research often begins with formal economic theory, which I distill into sharp predictions that can be tested in the lab. From there I follow the scientific approach: results either support the theory or do not, and those insights feed back into further theoretical development. I also aim to apply behavioral economic theory outside traditional economic settings. I have collaborated on federally sponsored projects to improve traffic and electricity systems and to study disclosure policies aimed at consumer protection. More recently, my coauthors and I received an award for responsible research from the American Marketing Association for work on consumer financial vulnerability.
