@@ -919,3 +919,44 @@ These studies examine the tools of experimental economics themselves, especially
   fix (nav .logo a{color:inherit}) would change desktop too; his call.
 - Subagent also chose not to pad the wordmark to 44px (passes WCAG 2.5.8,
   duplicates Home, would grow the 149px phone nav).
+- Approved by Alex ("good") + wordmark fix ordered: nav .logo a
+  {color:inherit} — wordmark now navy everywhere (was link-blue, a
+  pre-existing bug at all widths). site.css ?v=8. Committed 8e39519.
+- Phone-preview how-to for Alex: http://alexs-macbook-pro-8.local:8213
+  or http://192.168.0.113:8213 (same Wi-Fi; python server binds all
+  interfaces; macOS firewall may need one "Allow").
+
+## 2026-08-24 — Phase 5 add-ons: contact.html + monochrome tags (built; at gate)
+
+- CONTACT PAGE: new contact.html (sixth page) mirroring the sub-page
+  skeleton — hero-mini "Contact", canonical/OG for
+  alexbrownecon.com/contact.html, .landing-grid transplanted
+  BYTE-IDENTICAL from index (email/phone/office/mailing + wcssb.jpg);
+  the h2 dropped (hero h1 covers it); content wrapper is .page-column
+  (research.html precedent) for W3C zero messages. Contact section
+  DELETED from index.html; all six navs point at contact.html
+  (aria-current on the new page); zero "#contact" strings remain
+  sitewide; sitemap now 6 URLs (parses clean). Frozen About paragraphs
+  proven byte-identical (md5 both sides). Homepage is shorter as a
+  side-benefit (GPT critique #3).
+- MONOCHROME RESEARCH PAGE: 9 category-color rules deleted (per-category
+  filter-button default/active fills + 4 chip fills). Chips: one shared
+  quiet treatment — #5f6672 text, hairline #dde3ec border (existing
+  stats-band hairline), no fill; AA verified (5.58:1 on the #fafbfc
+  card). Filter buttons all fill navy #1e3a5f/white when active; new
+  .filter-btn.active:hover #23456b (existing lighter navy) so active
+  buttons still respond — flag if unwanted. The four category hexes now
+  appear NOWHERE (grep-verified, incl. pastel fills). CLAUDE.md brand
+  rules updated to match.
+- Checks: W3C 0 messages (contact/index/research); counts dc 31/gt 24/
+  policy 7/methods 7 intact; 320px zero overflow both new/changed pages;
+  site.css ?v=9 on all six pages; index.html diff = exactly nav line +
+  section removal + version bump.
+- Corrections/observations logged by the subagent: (1) old CSS comments
+  claim #5f6672 is 6.3:1 — actually 5.78:1 on white (still AA); fix
+  comments sometime. (2) chips now match .jump-links' visual voice —
+  two different things, one treatment, watch it. (3) short pages
+  (contact, cv) leave the footer mid-screen on tall windows — no
+  min-height mechanism sitewide; Alex's call if it bothers him.
+- Alex should eyeball the active-filter navy fill once in Safari (the
+  hidden-pane transition quirk forced scripted verification).

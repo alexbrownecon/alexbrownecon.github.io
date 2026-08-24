@@ -9,13 +9,12 @@ Read DECISIONS.md at the start of every session before doing anything (safety ra
   indicators (it fails contrast on light backgrounds). Amber `#b45309` is the
   text-safe warm tone already in use.
 - Off-white `#f8f9fc` for alternate sections.
-- Research-category colors (2026-08-23 color plan A, Alex-approved): they
-  appear ONLY on the research page (filter buttons + tag chips), where
-  they pair papers with filters. `#0e7490` (equilibrium — changed from
-  #1d4ed8, which collided with link blue), `#b45309` (decision making),
-  `#047857` (policy), `#be185d` (methodology). Amber #b45309 belongs to
-  the category alone: award lines and grant amounts are navy. Home-page
-  theme rules are uniform navy, never category-colored.
+- Research-category colors REMOVED (2026-08-24 Phase 5 add-on, Alex-approved;
+  supersedes the 2026-08-23 color plan A): the research page is monochrome —
+  tag chips share one muted-gray treatment, filter buttons fill navy when
+  active. The four category hexes (#0e7490, #b45309, #047857, #be185d) must
+  not reappear anywhere. Award lines and grant amounts are navy. Home-page
+  theme rules are uniform navy.
 
 ## Typography
 
