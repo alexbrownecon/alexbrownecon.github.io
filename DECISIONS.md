@@ -763,3 +763,9 @@ Several projects apply experimental and behavioral results to policy. Examples i
 **Experimental Methodology** (`research.html?filter=methods`)
 
 These studies examine the tools of experimental economics themselves, especially whether elicitation methods accurately measure underlying preferences. One paper also finds consistent bargaining and trade results across 2,000 classroom experiments.
+
+## 2026-08-24 — Stats band: "NSF" spelled out (Alex)
+
+- Grant-funding stat description now reads "National Science Foundation,
+  Federal Highway Administration, ..." (was "NSF, ..."). Only occurrence
+  of "NSF" sitewide. Verified live.
