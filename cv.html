@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@300;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/site.css?v=9">
+<link rel="stylesheet" href="assets/css/site.css?v=11">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
@@ -34,10 +34,13 @@
 </header>
 <main id="main">
 <div class="hero hero-mini"><div class="hero-content"><div class="hero-text"><h1>Curriculum Vitae</h1></div></div></div>
-<section>
+<!-- The h1 lives in the hero band above, so this wrapper is a .page-column
+     div, not a <section> (a headingless <section> draws a W3C info note; same
+     resolution as research.html and contact.html). -->
+<div class="page-column">
   <p class="cv-actions"><a href="assets/cv_brown.pdf" download>Download CV (PDF)</a></p>
   <iframe class="cv-embed" src="assets/cv_brown.pdf" title="Embedded CV (PDF); use the download link above if it does not display"></iframe>
-</section>
+</div>
 </main>
 <script>
 // Safari destroys an embedded PDF viewer when CSS hides it (window narrowed

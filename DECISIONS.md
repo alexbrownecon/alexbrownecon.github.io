@@ -973,3 +973,55 @@ These studies examine the tools of experimental economics themselves, especially
   first and point it at the live site).
 - Response doc saved OUTSIDE the deployable folder (web/, not
   site-2026/) so it can never be published by GitHub Pages.
+
+## 2026-08-24 — Phase 6: GPT re-review verdict + fix batches (Alex approved, committed)
+
+- GPT's second pass VALIDATED Phase 5: retracted its CV-viewer and
+  30+-imprecise claims, endorsed hierarchy/abstracts/filters/labels/
+  monochrome/nav, would not reopen settled decisions. Named 3 blockers
+  + refinements, all built:
+- FIX BATCH: (1) ≤360px filter bar becomes a balanced grid — All spans
+  the row, categories 2×2 equal cells (361px+ untouched; breakpoint by
+  measurement, flex stays clean to ~355px). (2) contact.html email/
+  phone now mailto:/tel: links (+19798457392), ≥44px targets on phones;
+  Maps link stays inline with padded hit area (inline-block stranded
+  "232" on its own line). (3) CV download is a navy button on BOTH
+  desktop and mobile (desktop was a lone text line over the PDF frame;
+  one deliberate desktop delta), ~59px tall mobile. (4) Mobile header
+  trimmed 148.7 → 132.1px (logo line-height was the dead space), still
+  3+3, links ≥44px effective; scroll-margins retuned (145px ≤600, new
+  103px 601-700 band) and anchor landings re-verified. cv.html also
+  swapped its headingless <section> for .page-column — its last W3C
+  info note is gone; ALL SIX pages now validate with zero messages.
+- TITLES (Alex picked "Both"): quotes stripped from all 45 titles;
+  43 titles now link (WP → PDF, journal → published version/DOI, Other
+  → full report/publisher page/encyclopedia version); the 2 request-
+  copy-only cards (Coasian oilfield, Lies-Labels) stay unlinked.
+  .paper-title now navy #1e3a5f; title links inherit, underline on
+  hover/focus. Button rows unchanged beneath.
+- COAUTHOR LINKS ported from the old site (Alex: port and verify):
+  96 occurrences/67 people from the archive map + 13 more added after
+  Alex's follow-up = Ashraf → linkedin.com/in/sruthiashraf (Alex:
+  "look for sruthi on linkedin"; profile verified via WSP/TTI match),
+  Medina → Bauer College UH directory profile (Alex: "at houston
+  bauer"), Wang → xwangsite.wordpress.com/about (same as students
+  page, per Alex), Imai → taisukeimai.com root, Stephenson →
+  danielgstephenson.com, Williams → PSU page (the students-page URLs).
+  Styling: inherit color + hairline #d1d5db underline, navy on hover —
+  deliberately quieter than titles. Alexander L. Brown bold and
+  UNLINKED everywhere (verified: no <a> inside any <strong>).
+  Flagged-but-kept: 403 bot-walls (Lovallo, Hill, Huey) + LinkedIn
+  999s; soft-200s: Bardolet → generic Bocconi listing, Lin → MobLab
+  about page. Old-site names with no URL stay plain.
+- COLOR POLISH (Alex picked both; gold focus rings DECLINED — CLAUDE.md
+  bars gold as thin essential indicator): chips now pale slate #eef2f7
+  fill, desaturated-navy #3b4d66 text (7.66:1), border dropped; global
+  link blue #2563eb → #1d4ed8 sitewide (6.7:1 white), hovers → navy
+  #1e3a5f; focus outlines stay #1d4ed8.
+- QUOTES also removed from index.html Selected Publications (5, Alex
+  ordered) AND Selected Grants (4 — judgment call for same-page
+  consistency; revert on request). Frozen About + theme paragraphs
+  proven byte-identical vs HEAD after the edit.
+- site.css at ?v=11. All six pages W3C zero messages. Alex reviewed
+  ("looks good to me") — committed. Next: GPT's final pass, then the
+  deploy decision (still nothing pushed since Phase 5 began).
