@@ -85,9 +85,9 @@ Read DECISIONS.md at the start of every session before doing anything (safety ra
   amended award sentence in DECISIONS.md 2026-08-23 is the current baseline).
 - **W3C validation:** `curl --data-binary @page.html
   "https://validator.w3.org/nu/?out=json"` works fine from this machine.
-- **BEFORE FIRST GITHUB PUSH:** commits are authored as
-  abrown@Alexs-MacBook-Pro-8.local (auto-configured). Set the real identity
-  (`git config --global user.name "Alex Brown"`,
-  `user.email "abrown.tx@gmail.com"`) and re-author existing commits
-  (`git rebase -r --root --exec "git commit --amend --reset-author
-  --no-edit"`). Alex asked to be reminded proactively at deploy time.
+- **Git identity: DONE 2026-08-23** — global identity set to Alex Brown
+  <abrown.tx@gmail.com> and all of main re-authored (dates preserved,
+  tree hashes identical). Do NOT re-run the rebase. Branch `redesign`
+  still carries the old machine identity and no longer shares history
+  with main — fine as a local reference; re-author it only if it would
+  ever be pushed. No git remote is configured yet (added at deploy).

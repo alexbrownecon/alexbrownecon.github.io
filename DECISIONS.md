@@ -624,3 +624,26 @@ Alex approved or rejected, and why.
 - NEXT: deploy gate, each on Alex's explicit go-ahead — git identity
   re-author BEFORE first push, "bad photos?" exclusion, GitHub Pages +
   Cloudflare DNS.
+
+## 2026-08-23 — Deploy prep steps 1+2 done (Alex: "do 1 and 2", delegated to Opus)
+
+- Git identity fixed BEFORE first push: global user.name "Alex Brown" /
+  user.email abrown.tx@gmail.com; all 30 main commits re-authored via
+  rebase -r --root with original author dates PRESERVED (date-passing
+  exec variant, an upgrade over the plain recipe in CLAUDE.md). Verified:
+  single author across history, commit count unchanged, tree hash
+  byte-identical (metadata-only), status clean. Old HEAD 9e9888c → new
+  HEAD f5335ed; all hashes changed as expected.
+- Branch `redesign` untouched (still bd1fcbe, old identity, now shares
+  no history with rewritten main). Local reference only — re-author only
+  if it would ever be pushed. CLAUDE.md push-reminder replaced with a
+  DONE note so no future session re-runs the rebase.
+- "bad photos?" exclusion: .gitignore already existed and already ignored
+  the folder, but with an unescaped `?` (glob wildcard — also matched
+  "bad photosX"). Tightened to literal `bad photos\?/`; verified the
+  folder and its contents are ignored, nothing from it is tracked or in
+  history, and the negative control (bad photosX) is NOT ignored.
+  Committed as 66c679f (first commit under the new identity).
+- No git remote configured yet — created at deploy (step 3).
+- REMAINING deploy gate (Alex go-ahead needed): GitHub repo + Pages +
+  Cloudflare DNS for alexbrownecon.com per GitHub's checklist.
