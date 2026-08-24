@@ -32,6 +32,7 @@ section[id] { scroll-margin-top: 80px; }
 header { position: sticky; top: 0; z-index: 100; }
 nav { background: #fff; border-bottom: 1px solid #e0e0e0; display: flex; justify-content: space-between; align-items: center; padding: 0 40px; height: 60px; }
 nav .logo { font-size: 1.15rem; font-weight: 700; color: #1e3a5f; letter-spacing: 0.5px; white-space: nowrap; }
+nav .logo a { color: inherit; } /* wordmark is identity, not a link cue — global link blue must not win */
 nav .nav-links { display: flex; gap: 28px; }
 nav .nav-links a { font-size: 0.9rem; font-weight: 500; color: #555; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; padding: 4px 0; border-bottom: 2px solid transparent; transition: color 0.15s ease, border-bottom-color 0.15s ease; }
 nav .nav-links a:hover, nav .nav-links a[aria-current="page"] { color: #1e3a5f; border-bottom-color: #f59e0b; text-decoration: none; }
@@ -212,7 +213,8 @@ footer a { color: rgba(255,255,255,0.9); }
 @media (max-width: 880px) {
   nav { height: auto; flex-wrap: wrap; padding: 10px 20px; row-gap: 2px; }
   nav .nav-links { flex-wrap: wrap; gap: 14px; row-gap: 2px; }
-  section[id] { scroll-margin-top: 110px; } /* wrapped nav is two rows tall */
+  /* Nav is still a single 58px row down to ~750px (see the 800px block). */
+  section[id], .paper-card[id] { scroll-margin-top: 75px; }
   .hero-content { flex-direction: column-reverse; text-align: center; gap: 24px; padding: 40px 24px; }
   .hero-photo { width: 160px; height: 160px; }
   .hero-mini .hero-content { padding: 28px 24px; }
@@ -221,12 +223,32 @@ footer a { color: rgba(255,255,255,0.9); }
   .stats-band .stat + .stat { border-left: none; border-top: 1px solid #dde3ec; }
   .theme-grid { grid-template-columns: 1fr; }
 }
+/* HEADER STACK (Phase 5, Pass 4) — the wordmark plus six links stop fitting
+   on one line at about 750px, and below that the browser's own wrap read as
+   an accident: the link row hung left under the wordmark, and the nav even
+   flipped back to one row between 651 and 700px where the phone type scale
+   kicks in. From 800px down the two rows are therefore composed on purpose —
+   wordmark centered on its own line, hairline under it, link row centered
+   beneath — so the header reads as a deliberate stack at every width below the
+   breakpoint. 801px and up is untouched (still the single 58-60px row). */
+@media (max-width: 800px) {
+  nav { flex-direction: column; flex-wrap: nowrap; align-items: center; justify-content: center; padding: 8px 20px 6px; row-gap: 0; }
+  nav .logo { width: 100%; text-align: center; letter-spacing: 0.8px; padding-bottom: 5px; border-bottom: 1px solid #e6eaf0; }
+  nav .nav-links { width: 100%; justify-content: center; margin-top: 5px; row-gap: 0; }
+  nav .nav-links a { letter-spacing: 1.2px; }
+  /* Stacked nav measures 97-99px through this band. */
+  section[id], .paper-card[id] { scroll-margin-top: 115px; }
+}
 /* PASS 5 — designed for phones, not just reflowed */
 @media (max-width: 700px) {
-  nav { padding: 8px 16px; }
+  /* Nav: the stack from the 800px block, tightened, with ~46px tap rows.
+     Padding is top-heavy (15/5) so the active link's gold rule stays about
+     where it sits on desktop — 5px under the word, not adrift at the bottom
+     of a tall box. */
+  nav { padding: 6px 16px 5px; }
   nav .logo { font-size: 1.05rem; }
-  nav .nav-links { gap: 12px; }
-  nav .nav-links a { font-size: 0.8rem; letter-spacing: 0.5px; }
+  nav .nav-links { gap: 4px; margin-top: 4px; }
+  nav .nav-links a { font-size: 0.8rem; letter-spacing: 0.8px; padding: 15px 8px 5px; }
   section, .page-column { padding: 36px 20px; }
   .section-alt-wrap { padding: 36px 0; }
   .landing-grid, .students-two-col { grid-template-columns: 1fr; }
@@ -248,9 +270,39 @@ footer a { color: rgba(255,255,255,0.9); }
   .student-card-sq .student-photo-sq { width: 96px; aspect-ratio: auto; flex-shrink: 0; align-self: stretch; }
   .student-card-sq .student-body { padding: 12px 14px; }
   .market-badge { font-size: 0.62rem; padding: 2px 8px; } /* carries real info (job market) — stays visible on phones */
-  .filter-btn { padding: 6px 14px; font-size: 0.8rem; }
+  /* TOUCH TARGETS (Pass 4) — every interactive control on a phone gets a
+     tap box of at least 44px. Only the vertical padding grows; the
+     horizontal padding is deliberately left alone on .filter-btn, because
+     widening the pills repacks the filter bar from three rows to four. */
+  .filter-btn { padding: 12px 14px; font-size: 0.8rem; }
+  .paper-links a { padding: 10px 12px; }
+  .jump-links { margin-bottom: 0; }
+  .jump-links a { display: inline-block; padding: 11px 2px; }
+  .filter-status { margin-bottom: 4px; }
+  .paper-abstract { margin-top: 2px; }
+  .paper-abstract summary { padding: 10px 0; }
   .dropcap::first-letter { font-size: 2.6em; }
   footer { padding: 24px 20px; }
+}
+/* JUMP LINKS, STACKED — the three labels need about 600px to share one line.
+   Below that they wrapped one per row anyway, leaving the middots dangling
+   at the ends of lines. Zeroing the container's font-size collapses those
+   separator text nodes (the links carry their own size) and the links go
+   block-level: a clean stacked index of three full-width 46px rows. */
+@media (max-width: 640px) {
+  .jump-links { font-size: 0; }
+  .jump-links a { display: block; font-size: 0.8rem; }
+}
+/* NARROW PHONES — the six links need ~500px of row and only ~288px is
+   available at 320px, so they must wrap. Capping the row at 300px makes the
+   break land in the same place at every width from 600px down to 320px: a
+   balanced, centered 3 + 3 block instead of the ragged 5 + 1 / 4 + 2 splits
+   free wrapping produces. The hairline belongs to the wordmark row, so it
+   stays full width regardless of this cap. */
+@media (max-width: 600px) {
+  nav .nav-links { max-width: 300px; }
+  /* Stacked nav measures 149px here. */
+  section[id], .paper-card[id] { scroll-margin-top: 162px; }
 }
 
 /* REDUCED MOTION */

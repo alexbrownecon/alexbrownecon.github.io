@@ -887,3 +887,35 @@ These studies examine the tools of experimental economics themselves, especially
   verified exactly one per card, no other Browns exist in any list.
 - site.css ?v=6 all five pages; W3C zero messages; 320px no overflow;
   filters unaffected; hrefs byte-identical (text-only replacements).
+- Approved by Alex ("looks good keep going"); committed 63aeb4a.
+
+## 2026-08-24 — Phase 5 Pass 4: mobile nav polish (built; at gate)
+
+- CSS-only, ≤800px: nav becomes a deliberate centered stack — wordmark
+  centered with a hairline (#e6eaf0) under its row, link row centered
+  beneath; ≤600px the links break as a balanced 3+3 block (max-width
+  300px) instead of ragged 5+1/4+2 wraps. Desktop >880px verified
+  PIXEL-IDENTICAL before/after; 801-880px left as its clean single row
+  (real wrap threshold measured at ~748px — stacking tablets would waste
+  sticky-nav height for nothing).
+- Touch targets at ≤700px, all ≥44px effective (measured at 375px): nav
+  links 45.8, filter buttons 44.5, paper links 45.8, jump links 45.8,
+  abstract summaries 45.2. Desktop sizing untouched. Jump links go one
+  per line below 640px (middot separators collapse via font-size:0 —
+  they dangled at line ends otherwise).
+- Filter-bar note: label-short was ALREADY live on phones (2d3f766 had
+  closed the Pass 5 deferred item; the DECISIONS open item was stale).
+  Bar at 320px: 117.5px inherited → 153.5px with 44px targets (vs 297.5
+  had full labels still been on).
+- Anchor-offset bug FIXED: scroll-margins retuned per breakpoint (75px
+  ≤880, 115px ≤800, 162px ≤600, now covering section[id] AND
+  .paper-card[id]) — all jump links, home deep links, and #contact land
+  with ~13-18px clearance at every width; verified at 320px.
+- Checks: W3C zero messages (research + index); zero horizontal overflow
+  at 320px on all five pages (abstracts open, filters applied);
+  focus-visible rules intact; no new motion; site.css ?v=7.
+- FLAG for Alex (pre-existing, all widths): the nav wordmark renders
+  link-blue #2563eb, not navy — global a-color beats nav .logo. One-line
+  fix (nav .logo a{color:inherit}) would change desktop too; his call.
+- Subagent also chose not to pad the wordmark to 44px (passes WCAG 2.5.8,
+  duplicates Home, would grow the 149px phone nav).
