@@ -547,6 +547,21 @@ Alex approved or rejected, and why.
   get scroll-margin under the sticky nav and a navy border via :target.
 - Link styling: theme/pub title links inherit color, underline on hover.
 
+## 2026-08-23 — About para 1 amended (Alex); manual QA underway
+
+- FROZEN ABOUT PARA 1 AMENDED BY ALEX (new baseline): now OPENS with his
+  question "How do we balance behavioral impulses and cognitive
+  limitations with the strong pull from the economic incentives of
+  optimization?" (his sentence; grammar patch ","→"and"), and "predicts"
+  softened to "aims to predict" (his call). Rest verbatim. Drop cap is
+  now the H. Approved via his qa-checklist checkmark ("reads right to
+  your ear").
+- qa-checklist.md created in-repo (also for semester maintenance).
+  Alex's progress: section A (Safari click-through, incl. Elgar link,
+  Safari CV-viewer resize, theme/pub deep links) ALL CHECKED; section C
+  (200%/400% zoom) CHECKED. Remaining: B (keyboard-only), D (iPhone),
+  E (reduced motion, optional). Then WCAG audit, then deploy.
+
 ## 2026-08-23 — Teaching photo: INTERIM version installed
 
 - Alex supplied four classroom shots ("bad photos?" folder in site-2026;
