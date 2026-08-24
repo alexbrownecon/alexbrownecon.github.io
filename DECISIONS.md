@@ -794,3 +794,45 @@ These studies examine the tools of experimental economics themselves, especially
   monochrome — supersedes color plan A's category colors; Alex had called
   the colors arbitrary) and Contact as its own page (contact.html, sixth
   page). Featured-papers block DECLINED (would require Alex-written blurbs).
+
+## 2026-08-24 — Phase 5 Pass 1 done: research hierarchy + WP abstracts (Alex approved)
+
+- research.html reordered: Working Papers (11) → Journal Publications (31)
+  → Other Publications (3). Filter bar stays on top; all 45 cards verified
+  byte-identical through the move. The three groups are now nested
+  <section id="working-papers|journal-publications|other-publications">
+  elements inside .paper-list (they inherit the existing section[id]
+  scroll-margins); the old outer wrapper section became <div class="page-
+  column"> (needed for W3C zero-messages), with the section CSS extended
+  to cover it.
+- Jump-link index line added under the filter bar. First version ("Jump
+  to:" + muted middots) judged "not all that professional" by Alex;
+  restyled to a small uppercase letterspaced navy line, no prefix:
+  WORKING PAPERS · JOURNAL PUBLICATIONS · OTHER PUBLICATIONS.
+- ABSTRACTS added to all 11 working papers (Alex asked mid-pass),
+  collapsed <details class="paper-abstract"> per card — native toggle, no
+  JS, no motion. Method: VERBATIM from each paper's own source (SSRN/
+  arXiv/people.tamu.edu PDF via PyMuPDF — which IS installed, despite no
+  poppler); only extraction repairs (ligatures, line-break hyphenation,
+  whitespace). Two had no public source; Alex pasted both (Coasian
+  oilfield; Lies-Labels).
+- Delegated calls (Alex: "your calls on 1-3 are fine"): two typos in
+  Alex's Coasian paste fixed ("not known commonly known" → "not commonly
+  known"; "this explanations" → "this explanation"); BDM abstract's
+  literal LaTeX "---" ×2 normalized to em dashes (curly quotes kept —
+  correct typography); Disequilibrium Dynamics KEPT as-is: card title
+  matches the 2016 draft/CV, abstract taken from the 2017 "most recent
+  version" PDF whose title differs ("Predicting Behavior in
+  Disequilibrium in Continuous Space and Time...") — KNOWN MISMATCH,
+  pre-existing in the links, revisit if Alex retitles.
+- site.css ?v=4 (v3 was the mid-pass state); W3C zero messages; 320px
+  no-overflow verified with all abstracts open; home-page deep-link
+  anchors intact; filters unaffected.
+- Pre-existing bug logged for Pass 4: at 320px the wrapped nav is 130px
+  tall but scroll-margins are 90-110px, so anchor jumps land slightly
+  under the nav. Fix in Pass 4 (nav height may change there).
+- Request-copy mailto subjects (Alex asked): all three now carry the PAPER
+  TITLE in quotes instead of the bare author list — Coasian oilfield,
+  Lies-Labels, and "Experiments in Continuous Time" (Brown and
+  Stephenson, Other Publications).
+- NOT pushed — live site unchanged until Alex says deploy.
