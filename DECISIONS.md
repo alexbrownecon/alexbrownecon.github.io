@@ -1023,5 +1023,25 @@ These studies examine the tools of experimental economics themselves, especially
   consistency; revert on request). Frozen About + theme paragraphs
   proven byte-identical vs HEAD after the edit.
 - site.css at ?v=11. All six pages W3C zero messages. Alex reviewed
-  ("looks good to me") — committed. Next: GPT's final pass, then the
-  deploy decision (still nothing pushed since Phase 5 began).
+  ("looks good to me") — committed e17a762. GPT's final pass then ran.
+
+## 2026-08-24 — GPT final verdict: DEPLOY. Alex's closing decisions
+
+- GPT round 3: "I would deploy this version. No new blocker or
+  embarrassing regression surfaced." Independently verified: v11 CSS on
+  all six pages, no overflow at any width, 45 cards (11/31/3), all
+  abstracts open, filter counts + URLs correct, anchors clear header,
+  zero quoted titles, 43+2 title links, 109 coauthor occurrences with
+  Brown bold/unlinked, blockers fixed by its own measurements (filter
+  grid 2x2 51px cells; contact targets 46/46/92px; CV button 59px;
+  header 132px). Caveat: it verified coauthor-link markup/behavior, not
+  a re-crawl of all 109 external URLs over the network.
+- Alex (questionnaire): (1) DEPLOY NOW — approved. (2) Narrow-phone
+  spacing tweak (<360px: 16px gutter + card padding, 12px gap, ~+22px
+  text width) approved POST-deploy — build after push, gate, ship next
+  push. (3) Redundant primary-version buttons KEPT — Alex chose the
+  explicit labels over the ~2,000px mobile saving; GPT's title-arrow
+  affordance idea therefore ALSO dropped (it was contingent on
+  removal). Do not re-propose without new evidence.
+- Card margins: GPT explicitly endorsed desktop card metrics — do not
+  widen desktop cards. Tags stay above titles (its call too).
