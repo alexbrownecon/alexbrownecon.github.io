@@ -727,3 +727,39 @@ I use most of the tools of economics, whether theory, econometrics, or experimen
 NEW FROZEN TEACHING PARAGRAPH (top of teaching.html, `<p class="dropcap">`):
 
 I teach courses in experimental methodology, behavioral financial economics, and game theory. The material is demanding, and a full understanding requires substantial quantitative work. I also provide optional materials for students interested in developing research ideas. I have worked with students at the undergraduate, MS, and PhD levels, several of whom have become coauthors. My own undergraduate research produced my first paper and helped set the direction of my career.
+
+## 2026-08-24 — RESEARCH THEME PARAGRAPHS REPLACED BY ALEX (home page)
+
+- Alex rewrote all four Research Theme paragraphs in the `.theme-grid` section
+  of `index.html`. His wording is FINAL and APPROVED WORD BY WORD; it was
+  inserted VERBATIM (including "2,000" with its comma). No editing,
+  rephrasing, or text tooling was run over it.
+- Scope of the change: ONLY the four `<p>` contents were replaced. The four
+  `<h3>` headings, their `<a>` anchors, and the research-page filter
+  deep-links (`research.html?filter=dc` / `gt` / `policy` / `methods`) are
+  untouched and byte-identical, as are all classes, card wrappers, and
+  everything else on the page. The git diff is exactly four changed lines
+  (4 insertions, 4 deletions), all of them paragraph lines.
+- Verified by strip-tags comparison: each stored paragraph matches Alex's
+  supplied text exactly, and no paragraph contains inline HTML. The W3C Nu
+  validator returns zero messages for `index.html`.
+- THESE FOUR PARAGRAPHS ARE THE NEW BASELINE for the home-page theme cards.
+  Future diffs must be taken against the text reproduced in full below.
+
+NEW THEME PARAGRAPHS (index.html, `.theme-grid`):
+
+**Behavioral Decision Making and Theory** (`research.html?filter=dc`)
+
+These papers study choices under uncertainty, over time, or both. Topics include the robustness of loss aversion, behavioral strategies and impediments to savings and debt reduction, capital allocation within firms, and preferences over ambiguity and the resolution of uncertainty.
+
+**Equilibrium Feasibility, Selection, and Mechanism Design** (`research.html?filter=gt`)
+
+This work asks when equilibrium, the primary solution concept in game theory, is a useful predictor of human behavior. Applications include estimating non-equilibrium models of limited strategic thinking in field settings and testing whether auctions and mechanisms perform as designed.
+
+**Policy Applications** (`research.html?filter=policy`)
+
+Several projects apply experimental and behavioral results to policy. Examples include spillover effects of the CARD Act on student loan borrowing, informing drivers to improve traffic-grid utilization, and measuring and addressing consumer financial vulnerability.
+
+**Experimental Methodology** (`research.html?filter=methods`)
+
+These studies examine the tools of experimental economics themselves, especially whether elicitation methods accurately measure underlying preferences. One paper also finds consistent bargaining and trade results across 2,000 classroom experiments.
