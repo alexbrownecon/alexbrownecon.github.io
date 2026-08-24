@@ -703,3 +703,27 @@ How do behavioral impulses and cognitive limitations interact with the economic 
 NEW FROZEN PARAGRAPH 2 (full-width, below the landing grid, `<p>`):
 
 I use most of the tools of economics, whether theory, econometrics, or experimental design, along with knowledge of the literature on psychology and human behavior. My research often begins with formal economic theory, which I distill into sharp predictions that can be tested in the lab. From there I follow the scientific approach: results either support the theory or do not, and those insights feed back into further theoretical development. I also aim to apply behavioral economic theory outside traditional economic settings. I have collaborated on federally sponsored projects to improve traffic and electricity systems and to study disclosure policies aimed at consumer protection. More recently, my coauthors and I received an award for responsible research from the American Marketing Association for work on consumer financial vulnerability.
+
+## 2026-08-24 — FROZEN TEACHING TEXT REPLACED BY ALEX (new baseline, single paragraph)
+
+- Alex personally rewrote the Teaching statement on `teaching.html`. Inserted
+  VERBATIM, word for word. The new text REPLACES THE ENTIRE prior statement:
+  the previous version was two paragraphs (a `<p class="dropcap">` plus a
+  following plain `<p>`); both are gone, replaced by this ONE paragraph.
+- The drop-cap is UNCHANGED: the single new paragraph carries the same
+  `<p class="dropcap">` markup and still begins with "I", so the big I renders
+  exactly as before.
+- Per Alex ("keep link in paper of my first paper"), the existing anchor on the
+  word "paper" was carried into the new final sentence unchanged —
+  `<a href="https://doi.org/10.1007/s10436-007-0092-0">paper</a>` (Brown's first
+  paper, Annals of Finance 2009). Only its position moved. No other links in
+  the statement.
+- Nothing else in `teaching.html` was touched; the git diff is confined to the
+  statement block, and the W3C Nu validator returns zero messages.
+- THIS IS THE NEW FROZEN BASELINE. Future diffs of the Teaching text must be
+  taken against the paragraph reproduced in full below. The non-negotiable in
+  CLAUDE.md still applies: never rewrite, rephrase, or regenerate this text.
+
+NEW FROZEN TEACHING PARAGRAPH (top of teaching.html, `<p class="dropcap">`):
+
+I teach courses in experimental methodology, behavioral financial economics, and game theory. The material is demanding, and a full understanding requires substantial quantitative work. I also provide optional materials for students interested in developing research ideas. I have worked with students at the undergraduate, MS, and PhD levels, several of whom have become coauthors. My own undergraduate research produced my first paper and helped set the direction of my career.
