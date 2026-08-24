@@ -14,6 +14,12 @@ document.addEventListener('DOMContentLoaded', function () {
         var t = card.getAttribute('data-tags');
         card.classList.toggle('hidden', !(t && t.split(',').indexOf(tag) !== -1));
       });
+      // WCAG 4.1.3: announce the result to screen readers
+      var status = document.getElementById('filter-status');
+      if (status) {
+        var shown = document.querySelectorAll('.paper-card:not(.hidden)').length;
+        status.textContent = 'Showing ' + shown + ' of ' + cards.length + ' papers';
+      }
   }
   buttons.forEach(function (btn) {
     btn.addEventListener('click', function () { apply(btn); });

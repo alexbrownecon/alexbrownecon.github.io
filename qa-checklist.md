@@ -33,14 +33,16 @@ anything odd back in Cowork (screenshots beat descriptions).
 - [X] Nav "Contact" from any page: smooth-scrolls, heading clears the nav
 
 ## B. Keyboard only (no mouse — any browser)
+Safari note: press Option+Tab (plain Tab skips links by Safari default),
+or enable Safari Settings → Advanced → "Press Tab to highlight each item".
 
-- [ ] On Home press Tab once: "Skip to main content" appears top-left;
+- [X] On Home press Tab once: "Skip to main content" appears top-left;
       Enter jumps past the nav
-- [ ] Keep tabbing: every link shows a visible focus outline; order runs
+- [X] Keep tabbing: every link shows a visible focus outline; order runs
       top to bottom sensibly
-- [ ] Research page: Tab to the filter buttons; Enter or Space activates
+- [X] Research page: Tab to the filter buttons; Enter or Space activates
       each; the list updates; focus stays visible on the active button
-- [ ] No dead ends: you can Tab through an entire page without the focus
+- [X] No dead ends: you can Tab through an entire page without the focus
       vanishing or looping
 
 ## C. Zoom
@@ -51,26 +53,32 @@ anything odd back in Cowork (screenshots beat descriptions).
 
 ## D. Your iPhone (Safari)
 
-- [ ] Same Wi-Fi: open http://<your-Mac-name>.local:8213 (ask me for the
+- [X] Same Wi-Fi: open http://<your-Mac-name>.local:8213 (ask me for the
       exact address if it doesn't resolve) — or defer to post-deploy
-- [ ] Home: no sideways scrolling anywhere; hero stacks; stats read as
+- [X] Home: no sideways scrolling anywhere; hero stacks; stats read as
       single lines
-- [ ] Research: filter buttons show the SHORT labels (Decision Making,
+- [X ] Research: filter buttons show the SHORT labels (Decision Making,
       Equilibrium, Policy Applications, Methodology); each is comfortable
       to tap; filtering works
-- [ ] Students: compact horizontal rows, photos left; badges visible
-- [ ] CV: viewer hidden, Download link opens the PDF
-- [ ] Rotate to landscape: nothing breaks
-- [ ] Tap a couple of paper PDFs — they open
+- [X ] Students: compact horizontal rows, photos left; badges visible
+- [X ] CV: viewer hidden, Download link opens the PDF
+- [X ] Rotate to landscape: nothing breaks
+- [X ] Tap a couple of paper PDFs — they open
 
 ## E. Reduced motion (2 minutes, optional but good)
 
-- [ ] macOS: System Settings → Accessibility → Display → Reduce Motion ON,
+- [X] macOS: System Settings → Accessibility → Display → Reduce Motion ON,
       reload: filter changes snap (no fade), anchor jumps are instant
+      (2026-08-23: Alex saw "no/subtle difference" — that IS the pass:
+      the site's only motion is a 0.25s filter fade + smooth scroll, and
+      the CSS kills both under reduced motion; block verified in site.css)
 
 ## After your checks
 
-- [ ] Bring findings back to Cowork (this chat or a fresh one)
-- [ ] Then: the full WCAG audit review (Phase 4 step 3)
+- [X] Bring findings back to Cowork (done 2026-08-23: all sections pass;
+      only note was the Safari Option+Tab quirk, recorded above)
+- [X] Then: the full WCAG audit review (Phase 4 step 3) — done 2026-08-23:
+      2 AA findings fixed (footer focus-ring color guard; aria-live filter
+      status), rel="noopener" added; all contrast pairs computed and pass
 - [ ] Then: deploy go-ahead — reminders queued: git identity re-author,
       "bad photos?" folder excluded (gitignored), GitHub Pages + DNS wiring

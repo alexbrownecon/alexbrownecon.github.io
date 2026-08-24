@@ -592,3 +592,35 @@ Alex approved or rejected, and why.
   after runtime class changes; and a reused port may be a stale server
   from an old session serving the wrong directory — verify content, not
   just a 200.
+
+## 2026-08-23 — Phase 4 steps 2+3: manual QA closed, WCAG audit done (Alex approved fixes)
+
+- Manual QA (qa-checklist.md) COMPLETE: Alex finished B (keyboard — works
+  via Option+Tab; Safari's plain Tab skips links by default, note added to
+  the checklist), D (iPhone, all pass), E (reduced motion — "no visible
+  difference" is the pass: the CSS kills the only two animations; verified).
+- Full WCAG 2.1 AA audit of all 5 pages (computed contrast for all ~38
+  color pairs, markup review, rendered geometry at 375/320px, live filter
+  test). Result: 2 AA findings, both fixed on Alex's "yes go":
+  (1) focus ring #1d4ed8 was 1.72:1 against the navy footer → footer
+  focus outline now white (11.5:1). NOTE: no footer links exist today, so
+  this was a latent guard, not a live failure.
+  (2) SC 4.1.3: filter changes were silent to screen readers → hidden
+  role="status" element on research.html + filters.js (?v=3) announces
+  "Showing N of 45 papers". Verified live: 1x1px, correct text, no
+  layout shift.
+- Also: rel="noopener" on the 5 target="_blank" links (index grants,
+  teaching catalogs). Advisory items NOT taken (Alex-approved skip):
+  default filter-button border contrast, 44px touch targets (32-34px
+  passes AA), new-tab hint text.
+- site.css now referenced as ?v=2 on all five pages — the stale-CSS trap
+  bit again during verification (cached sheet lacked .visually-hidden).
+- Contrast margins for future reference: closest passes are the Decision
+  Making tag chip (4.51:1) and link blue on white (5.17:1).
+- Tag-count note: DECISIONS' old "chip counts" were estimates; Alex
+  updated them manually. Live counts: dc 31, gt 24, policy 7, methods 7,
+  45 cards total.
+- W3C: 0 messages on the three re-validated edited pages.
+- NEXT: deploy gate, each on Alex's explicit go-ahead — git identity
+  re-author BEFORE first push, "bad photos?" exclusion, GitHub Pages +
+  Cloudflare DNS.
