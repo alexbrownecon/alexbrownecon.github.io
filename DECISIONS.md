@@ -769,3 +769,28 @@ These studies examine the tools of experimental economics themselves, especially
 - Grant-funding stat description now reads "National Science Foundation,
   Federal Highway Administration, ..." (was "NSF, ..."). Only occurrence
   of "NSF" sitewide. Verified live.
+
+## 2026-08-24 — Phase 5 scoped from GPT critique (Alex approved via questionnaire)
+
+- Alex had GPT critique the live site. Assessment: no redesign (the redesign
+  branch was already built and rejected 2026-08-23); scoped polish instead.
+  Rejected critique items, with reasons: shorten homepage intro (About text
+  frozen, Alex rewrote it 2026-08-24), stats band removal (settled Pass 3;
+  GPT's "30+ imprecise" claim wrong — 31 journal pubs, the 45 cards include
+  working/other papers), replace cv.html (Safari iframe fix + Alex's
+  keep-the-header decision stand), hamburger menu (no-hamburger stands),
+  per-paper abstracts (all copy must be Alex's own words; declined).
+- APPROVED Phase 5, four passes with stop-gates, mechanical work to Opus:
+  1. Research hierarchy — reorder to Working Papers → Journal Publications
+     → Other Publications; jump-link line under the h1.
+  2. Filter upgrades — URL updates on click (shareable), always-visible
+     count, clear reset state.
+  3. Card scannability — link labels standardized to "Published version" /
+     "Free PDF" (supplemental materials unchanged); bold Alexander L. Brown
+     in author lists (full lists stay).
+  4. Mobile nav polish — intentional two-row styling, ~44px touch targets,
+     revisit the deferred mobile filter-button labels.
+- ADD-ONS approved: remove the four tag colors (research page goes
+  monochrome — supersedes color plan A's category colors; Alex had called
+  the colors arbitrary) and Contact as its own page (contact.html, sixth
+  page). Featured-papers block DECLINED (would require Alex-written blurbs).
