@@ -960,3 +960,16 @@ These studies examine the tools of experimental economics themselves, especially
   min-height mechanism sitewide; Alex's call if it bothers him.
 - Alex should eyeball the active-filter navy fill once in Safari (the
   hidden-pane transition quirk forced scripted verification).
+- Alex: "commit and close" — committed 8bf3bcc. PHASE 5 CLOSED.
+  NOT YET PUSHED: live alexbrownecon.com still runs the pre-Phase-5
+  site; deploy is a single git push origin main on Alex's go.
+
+## 2026-08-24 — Phase 6 opened: GPT re-review loop (Alex's framing)
+
+- Phase 6 = Claude writes a response to GPT's critique; Alex sends it
+  back to GPT, which re-reviews the updated site ON THE LOCAL COMPUTER
+  (http://localhost:8213 — preview server must be running; GPT's
+  browser must run on this machine to reach localhost, else deploy
+  first and point it at the live site).
+- Response doc saved OUTSIDE the deployable folder (web/, not
+  site-2026/) so it can never be published by GitHub Pages.
