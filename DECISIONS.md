@@ -1045,3 +1045,21 @@ These studies examine the tools of experimental economics themselves, especially
   removal). Do not re-propose without new evidence.
 - Card margins: GPT explicitly endorsed desktop card metrics — do not
   widen desktop cards. Tags stay above titles (its call too).
+
+## 2026-08-24 — DEPLOYED v11 (second deploy); narrow-phone spacing built
+
+- Pushed main (e382b97..c211fdd). Live verification: all six pages +
+  sitemap 200 over https, site.css?v=11 live, 11 abstracts and the
+  tel: link present in served HTML. Phases 5 and 6 are now the live
+  alexbrownecon.com.
+- Post-deploy spacing tweak built per Alex's pick: inside the existing
+  ≤360px block — section/.page-column side padding 16px, .paper-card
+  padding 16px, .paper-list/.paper-group gap 12px. Measured at 320px:
+  card content width 219 → 254px (beats GPT's 241 estimate — gutter
+  AND card padding both slim), zero overflow; 375px verified unchanged
+  (22px/20px/16px). site.css ?v=12 on all six pages. Committed; PUSH
+  PENDING Alex's glance (his sequencing choice).
+- STILL OPEN after this: Alex's qa-checklist re-run against the live
+  site; better teaching photo (class starts Tue 2026-08-25); Colin
+  Hegarty market headshot; optional TAMU homepage redirect
+  (Alex-approved only).

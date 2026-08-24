@@ -359,6 +359,11 @@ footer a { color: rgba(255,255,255,0.9); }
   .filter-bar { display: grid; grid-template-columns: 1fr 1fr; grid-auto-rows: 1fr; gap: 10px; }
   .filter-bar .filter-btn:first-child { grid-column: 1 / -1; }
   .filter-btn { display: flex; align-items: center; justify-content: center; text-align: center; min-height: 44px; padding: 6px; line-height: 1.25; }
+  /* Narrowest phones: reclaim gutter for text — 219px → 241px of card
+     content width. 375px and up keeps the standard spacing. */
+  section, .page-column { padding-left: 16px; padding-right: 16px; }
+  .paper-card { padding: 16px; }
+  .paper-list, .paper-group { gap: 12px; }
 }
 
 /* REDUCED MOTION */
