@@ -647,3 +647,34 @@ Alex approved or rejected, and why.
 - No git remote configured yet — created at deploy (step 3).
 - REMAINING deploy gate (Alex go-ahead needed): GitHub repo + Pages +
   Cloudflare DNS for alexbrownecon.com per GitHub's checklist.
+
+## 2026-08-24 — DEPLOYED: alexbrownecon.com is LIVE (Phase 4 step 3 complete)
+
+- GitHub: repo alexbrownecon/alexbrownecon.github.io (user site; account
+  alexbrownecon), main pushed at c853a7b via new SSH key (~/.ssh/id_ed25519,
+  passphrase-less, key added by Alex). Branch `redesign` NOT pushed (local
+  reference only). Pages auto-enabled from main root.
+- Domain verified on GitHub (account Settings→Pages→Verified domains):
+  TXT _github-pages-challenge-alexbrownecon added at Cloudflare, verified
+  green. Protects the domain from Pages takeover.
+- Cloudflare DNS (all DNS only / gray cloud — proxying deliberately OFF so
+  GitHub could issue the cert; ignore Cloudflare's "proxying required"
+  nags): 4x A @ → 185.199.108-111.153; CNAME www → alexbrownecon.github.io;
+  the challenge TXT. DNS work delegated to an Opus subagent (Alex asked to
+  conserve Fable); records verified by screenshot + dig.
+- STALL + FIX worth remembering: custom domain was saved (Safari) BEFORE
+  DNS records existed → "DNS Check in Progress" hung ~45 min, cert never
+  requested. Removing and re-adding the custom domain in repo Pages
+  settings forced a fresh check; cert issued within a minute after that.
+  (GitHub committed Delete CNAME/Create CNAME through this — pulled.)
+- Enforce HTTPS: ON. Cert CN=alexbrownecon.com, expires 2026-11-22
+  (auto-renews ~every 3 months).
+- Verified live: http→https 301; https on all 5 pages 200; sitemap, css
+  (?v=2), cv PDF 200; www→apex 301; github.io→custom domain 301;
+  "bad photos?" content 404 (never published, as designed).
+- Chrome now has GitHub + Cloudflare sessions; SSH pushes work from this
+  Mac (git push origin main).
+- STILL OPEN: Alex's quick post-deploy re-run of qa-checklist.md against
+  https://alexbrownecon.com; better teaching photo (after class Tue
+  2026-08-25); Colin Hegarty headshot; OPTIONAL Alex-approved-only TAMU
+  homepage redirect (papers stay at people.tamu.edu forever).

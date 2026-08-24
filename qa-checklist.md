@@ -80,5 +80,5 @@ or enable Safari Settings → Advanced → "Press Tab to highlight each item".
 - [X] Then: the full WCAG audit review (Phase 4 step 3) — done 2026-08-23:
       2 AA findings fixed (footer focus-ring color guard; aria-live filter
       status), rel="noopener" added; all contrast pairs computed and pass
-- [ ] Then: deploy go-ahead — reminders queued: git identity re-author,
+- [X] Then: deploy go-ahead — DONE 2026-08-24: identity re-authored,
       "bad photos?" folder excluded (gitignored), GitHub Pages + DNS wiring
