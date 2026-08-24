@@ -867,3 +867,23 @@ These studies examine the tools of experimental economics themselves, especially
 - Verified: W3C zero messages; live counts dc 31 / gt 24 / policy 7 /
   methods 7 / All 45; direct ?filter= loads work; home-page deep links
   land filtered; real trusted-click test passed; 320px no overflow.
+- Approved by Alex ("look over was good") and committed (89fa1fa).
+
+## 2026-08-24 — Phase 5 Pass 3: link labels + name bolding (built; at gate)
+
+- LABEL DECISION (Alex, via questionnaire + follow-up): avoid the word
+  "free" anywhere near publishers. Scheme chosen: "published version"
+  (was journal version, 31), "PDF" (was most recent version 21 + final
+  version 15 — no card had both, so no collisions), "open access
+  version" (was free published version, 1 — Testing-Simplicity card).
+  This SUPERSEDES the scope entry's original "Published version / Free
+  PDF" wording. Lowercase label convention kept; PDF stays an initialism.
+- KEPT UNCHANGED (named-source labels carry meaning): NBER version,
+  original working paper (+2009/2012), request copy, supplemental
+  materials, web appendix, publisher page, full report, encyclopedia
+  version.
+- Alex's name bolded (<strong>, weight 600, color inherits) in all 45
+  author lists — 27 "Brown, Alexander L." + 18 "Alexander L. Brown";
+  verified exactly one per card, no other Browns exist in any list.
+- site.css ?v=6 all five pages; W3C zero messages; 320px no overflow;
+  filters unaffected; hrefs byte-identical (text-only replacements).

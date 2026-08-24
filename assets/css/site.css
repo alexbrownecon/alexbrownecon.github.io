@@ -156,6 +156,7 @@ section h3 { font-size: 1.15rem; color: #1e3a5f; margin: 28px 0 12px; }
 .paper-card:target { border-color: #1e3a5f; }
 .paper-title { font-size: 0.98rem; font-weight: 600; color: #333; margin-bottom: 4px; }
 .paper-authors { font-size: 0.86rem; color: #666; margin-bottom: 3px; }
+.paper-authors strong { font-weight: 600; } /* subtle emphasis on Alex's name; color inherits */
 .paper-venue { font-size: 0.86rem; color: #5f6672; font-style: italic; margin-bottom: 8px; }
 .paper-award { font-size: 0.82rem; font-weight: 600; color: #1e3a5f; margin-bottom: 8px; }
 .paper-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
