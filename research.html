@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@300;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/site.css?v=4">
+<link rel="stylesheet" href="assets/css/site.css?v=5">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
@@ -42,7 +42,9 @@
       <button class="filter-btn" data-filter="policy" aria-pressed="false"><span class="label-full">Policy Applications</span><span class="label-short">Policy Applications</span></button>
       <button class="filter-btn" data-filter="methods" aria-pressed="false"><span class="label-full">Experimental Methodology</span><span class="label-short">Methodology</span></button>
     </div>
-    <p class="visually-hidden" id="filter-status" role="status"></p>
+    <!-- Visible count + WCAG 4.1.3 live region. The default text must match
+         the number of .paper-card elements; filters.js corrects it if not. -->
+    <p class="filter-status" id="filter-status" role="status">Showing 45 of 45 papers</p>
     <p class="jump-links"><a href="#working-papers">Working Papers</a> &middot; <a href="#journal-publications">Journal Publications</a> &middot; <a href="#other-publications">Other Publications</a></p>
     <div class="paper-list">
       <section class="paper-group" id="working-papers">
@@ -150,6 +152,6 @@
   </div>
 </main>
 <footer>&copy; 2026 Alexander L. Brown &bull; Department of Economics &bull; Texas A&amp;M University</footer>
-<script src="assets/js/filters.js?v=3"></script>
+<script src="assets/js/filters.js?v=4"></script>
 </body>
 </html>

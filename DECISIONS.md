@@ -836,3 +836,34 @@ These studies examine the tools of experimental economics themselves, especially
   Lies-Labels, and "Experiments in Continuous Time" (Brown and
   Stephenson, Other Publications).
 - NOT pushed — live site unchanged until Alex says deploy.
+
+## 2026-08-24 — No research-page split (Alex: "we will not split...to be clear")
+
+- Alex asked how much sense separate nav tabs for Working Papers vs.
+  Publications would make. Recommendation against (nav already at 7 items
+  with contact.html coming; unified filters across all 45 papers; Pass 1
+  reorder + jump links already solved WP discoverability; link equity on
+  the live research.html). Alex CONFIRMED: no split. Research stays one
+  page — settled.
+
+## 2026-08-24 — Phase 5 Pass 2: filter upgrades (built; at gate)
+
+- URL sync on click: category buttons write research.html?filter=<key>
+  via history.replaceState (DELIBERATE: replaceState, not pushState —
+  shareable/bookmarkable without polluting back-button history; verified
+  history.length unchanged across clicks). "All" restores the clean URL.
+  Existing hash preserved. Load-time preselect unchanged; bogus
+  ?filter= values degrade to All (URL left as typed, harmless).
+- Count line now ALWAYS VISIBLE: the WCAG 4.1.3 role="status" element
+  un-hidden (same element, announcements still fire — verified), default
+  "Showing 45 of 45 papers" ships in the markup so it's right before JS
+  runs; filters.js self-corrects if the card count ever changes. Styled
+  0.85rem muted #5f6672, placed buttons → count → jump links; filter-bar
+  margin 30px → 14px so the count reads as attached to the buttons.
+  .visually-hidden utility now unused but kept in site.css.
+- Reset state: already strong (All ships active/navy-filled,
+  aria-pressed) — no change needed.
+- Cache-busts: filters.js ?v=4, site.css ?v=5 (all five pages).
+- Verified: W3C zero messages; live counts dc 31 / gt 24 / policy 7 /
+  methods 7 / All 45; direct ?filter= loads work; home-page deep links
+  land filtered; real trusted-click test passed; 320px no overflow.
