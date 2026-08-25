@@ -1135,3 +1135,21 @@ I also study the tools of experimental economics themselves, especially whether 
 - AT GATE: caption wording is Claude's draft — Alex's copy method says
   he approves or rewrites it before upload. Upload = BOTH files
   (index.html + headshot-2013.jpg) to ~alexbrown/.
+
+## 2026-08-25 — TAMU redirect copy: humanizer pass (GPT + Alex flagged AI-ish wording)
+
+- Alex kept sentences 1-2 ("This photo is from 2013. So was this
+  website.") as the delivery. Paper-links sentence CUT (explanation
+  nobody needs; the §34 pattern). Info sentence rewritten by humanizer
+  audit: em dash + passive "you will be redirected" replaced with
+  "The new one is at alexbrownecon.com. This page will take you there
+  in a few seconds." Applied to index.html AND preview.html in
+  web/tamu-redirect/. Photo: recentered square crop (face midline at
+  center) after two rounds of Alex feedback.
+- Review server for GPT: python http.server on port 8216 in
+  web/tamu-redirect (8214 was squatted by a stale server — lesson
+  reconfirmed). preview.html = redirect-disabled copy for critique;
+  index.html keeps the 4s redirect.
+- Final page body is three lines: photo, name, joke + destination.
+  Awaiting Alex's upload to people.tamu.edu (both index.html and
+  headshot-2013.jpg).
