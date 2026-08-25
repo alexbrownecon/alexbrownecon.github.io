@@ -1121,3 +1121,17 @@ I also study the tools of experimental economics themselves, especially whether 
   replacing ONLY the homepage file; papers stay untouched. Step-by-step
   given in chat; after upload, verify the old URL redirects AND a paper
   PDF URL still serves.
+
+## 2026-08-25 — TAMU redirect: humorous version (Alex's idea, at gate)
+
+- Alex supplied his 2013 headshot (6-headshot.JPG, "with hair") for the
+  redirect page. Endorsed: self-deprecating, harmless for the audience.
+  Rebuilt web/tamu-redirect/index.html: circular 2013 photo (web copy
+  headshot-2013.jpg, 600px/30KB, sips -Z from the 2MB original),
+  caption draft "This photo is from 2013. So was this website.",
+  redirect DELAYED to 4 seconds (meta refresh + setTimeout) so the joke
+  is actually seen; prominent immediate link; note that paper links
+  keep working. Canonical unchanged.
+- AT GATE: caption wording is Claude's draft — Alex's copy method says
+  he approves or rewrites it before upload. Upload = BOTH files
+  (index.html + headshot-2013.jpg) to ~alexbrown/.
