@@ -1153,3 +1153,20 @@ I also study the tools of experimental economics themselves, especially whether 
 - Final page body is three lines: photo, name, joke + destination.
   Awaiting Alex's upload to people.tamu.edu (both index.html and
   headshot-2013.jpg).
+
+## 2026-08-25 — TAMU redirect copy FINAL (Alex approved)
+
+- Final wording, Alex's picks after GPT round + humanizer: "This photo
+  is from 2013. So was this website." (period kept — ellipsis
+  considered twice and declined: deadpan over telegraphed pause; GPT
+  concurred) / "The new one is at alexbrownecon.com. You'll be there
+  in three seconds." ("the new one" = Alex's explicit keep; ending =
+  Claude's active-voice recommendation over GPT's "You'll be
+  redirected").
+- Mechanical batch applied: redirect 4s → 3s (meta + setTimeout),
+  title "Alexander L. Brown | Website Moved", inline-block tap padding
+  on the link. Both index.html and preview.html updated; verified
+  served on :8216.
+- READY FOR UPLOAD: Alex uploads index.html + headshot-2013.jpg to
+  people.tamu.edu/~alexbrown (backup old homepage first; papers
+  untouched; test redirect + one paper PDF after).
