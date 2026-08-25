@@ -1170,3 +1170,13 @@ I also study the tools of experimental economics themselves, especially whether 
 - READY FOR UPLOAD: Alex uploads index.html + headshot-2013.jpg to
   people.tamu.edu/~alexbrown (backup old homepage first; papers
   untouched; test redirect + one paper PDF after).
+
+## 2026-08-25 — TAMU REDIRECT IS LIVE (Alex uploaded; verified)
+
+- people.tamu.edu/~alexbrown/ now serves the redirect page — fetched
+  live and byte-checked against our final: correct title, canonical,
+  3s meta refresh + 3000ms setTimeout, final approved copy, photo
+  referenced. headshot-2013.jpg serves 200 image/jpeg. Paper PDFs
+  UNTOUCHED and serving (PeerEvaluations12232025.pdf 200
+  application/pdf). The old-site → new-site transition is complete.
+- Review server on :8216 stopped (its job ended with the upload).
