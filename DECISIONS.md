@@ -1106,3 +1106,18 @@ I also study the tools of experimental economics themselves, especially whether 
   meta-refreshes/JS-redirects to https://alexbrownecon.com and shows a
   fallback link (TAMU hosting won't offer server-level 301s) — design
   it next session, Alex uploads.
+
+## 2026-08-24 — /catchup command + TAMU redirect file built
+
+- New project command `/catchup` (.claude/commands/catchup.md, committed;
+  verified NOT published by Pages — Jekyll excludes dot-dirs, 404 live):
+  any fresh chat types /catchup to read CLAUDE.md + DECISIONS.md in
+  full, check git/server/live-site state, and report a recap + open
+  list before doing anything.
+- TAMU redirect homepage built at web/tamu-redirect/index.html (OUTSIDE
+  the repo, never deployed by Pages): canonical + meta refresh 0 + JS
+  location.replace to https://alexbrownecon.com/ with a visible
+  fallback link. Alex uploads it manually to people.tamu.edu/~alexbrown
+  replacing ONLY the homepage file; papers stay untouched. Step-by-step
+  given in chat; after upload, verify the old URL redirects AND a paper
+  PDF URL still serves.
