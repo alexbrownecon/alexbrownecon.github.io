@@ -1093,3 +1093,16 @@ Several of my projects apply experimental and behavioral results to policy. Exam
 **Experimental Methodology** (research.html?filter=methods)
 
 I also study the tools of experimental economics themselves, especially whether elicitation methods accurately measure underlying preferences. One paper finds consistent bargaining and trade results across 2,000 classroom experiments.
+
+## 2026-08-24 — TAMU redirect PROMOTED to the to-do list (Alex)
+
+- Alex: "we need to do a redirect from tamu people site" — the
+  people.tamu.edu/~alexbrown HOMEPAGE redirect is now a planned task,
+  no longer optional. Standing constraints from the 2026-08-22 hosting
+  decision still bind: the redirect applies to the homepage ONLY;
+  paper PDFs stay at their people.tamu.edu URLs forever (Scholar
+  indexing + inbound links); Alex performs all TAMU uploads manually.
+  Likely shape: replace the old homepage with a small page that
+  meta-refreshes/JS-redirects to https://alexbrownecon.com and shows a
+  fallback link (TAMU hosting won't offer server-level 301s) — design
+  it next session, Alex uploads.
