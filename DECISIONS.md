@@ -1066,3 +1066,30 @@ These studies examine the tools of experimental economics themselves, especially
   site; better teaching photo (class starts Tue 2026-08-25); Colin
   Hegarty market headshot; optional TAMU homepage redirect
   (Alex-approved only).
+
+## 2026-08-24 — THEME PARAGRAPHS REPLACED AGAIN BY ALEX (new baseline); pushed
+
+- Alex supplied replacement wording for all four Research Theme
+  paragraphs; inserted VERBATIM (headings, anchors, filter deep-links,
+  and everything else untouched — git diff is exactly 4 changed
+  paragraph lines). W3C zero messages. SUPERSEDES the earlier
+  2026-08-24 theme baseline. Committed and pushed on Alex's
+  instruction ("A short update to push").
+
+NEW THEME PARAGRAPHS (index.html, .theme-grid):
+
+**Behavioral Decision Making and Theory** (research.html?filter=dc)
+
+My research examines individual choices and preferences that deviate from conventional economic theory under uncertainty, over time, or both. Topics include loss aversion, behavioral strategies and impediments to savings and debt reduction, capital allocation within firms, social and nonpecuniary preferences such as charitable giving and lying aversion, and preferences over ambiguity and the resolution of uncertainty.
+
+**Equilibrium Feasibility, Selection, and Mechanism Design** (research.html?filter=gt)
+
+Another area of my work asks when equilibrium, the primary solution concept in game theory, is a useful predictor of human behavior. Applications include estimating non-equilibrium models of limited strategic thinking in field settings and testing whether auctions and mechanisms perform as designed.
+
+**Policy Applications** (research.html?filter=policy)
+
+Several of my projects apply experimental and behavioral results to policy. Examples include spillover effects of the CARD Act on student loan borrowing, informing drivers to improve traffic-grid utilization, and measuring and addressing consumer financial vulnerability.
+
+**Experimental Methodology** (research.html?filter=methods)
+
+I also study the tools of experimental economics themselves, especially whether elicitation methods accurately measure underlying preferences. One paper finds consistent bargaining and trade results across 2,000 classroom experiments.
