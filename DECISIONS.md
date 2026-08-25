@@ -1057,8 +1057,11 @@ These studies examine the tools of experimental economics themselves, especially
   padding 16px, .paper-list/.paper-group gap 12px. Measured at 320px:
   card content width 219 → 254px (beats GPT's 241 estimate — gutter
   AND card padding both slim), zero overflow; 375px verified unchanged
-  (22px/20px/16px). site.css ?v=12 on all six pages. Committed; PUSH
-  PENDING Alex's glance (his sequencing choice).
+  (22px/20px/16px). site.css ?v=12 on all six pages. Alex reviewed via
+  a before/after demo artifact and said "push" — v12 PUSHED and
+  verified live (889b62e). Live text-column at 320px: 234 → 254px by
+  a consistent yardstick (card clientWidth minus padding; the entry
+  above quoted GPT's 219 figure, which used a different measure).
 - STILL OPEN after this: Alex's qa-checklist re-run against the live
   site; better teaching photo (class starts Tue 2026-08-25); Colin
   Hegarty market headshot; optional TAMU homepage redirect
