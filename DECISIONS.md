@@ -1252,3 +1252,26 @@ I also study the tools of experimental economics themselves, especially whether 
   address remains, correct). Backup: cv/cv_brown_before_site_update.pdf.
 - assets/cv_brown.pdf replaced; committed and pushed on Alex's "then
   post" instruction.
+
+## 2026-08-25 — REVERT "Consumer Behavior" -> "Behavioral Consumer Finance"; CV phone fixed (Alex, after a suspicious review request)
+
+- Alex received a weird review request and got cautious about the
+  "Consumer Behavior" tag introduced earlier today. Reverted to the
+  OLD-SITE wording "Behavioral Consumer Finance" — confirmed verbatim
+  in the pre-March-2026 archive (web/index.html line 182) — in BOTH
+  places: index.html hero interests line (its only site occurrence)
+  and the CV Research fields line. Fields now: Behavioral Economics,
+  Experimental Economics, Game Theory, Behavioral Consumer Finance,
+  Decision Theory ("Decision Theory" kept; only the one tag changed).
+- CV phone mismatch fixed per Alex ("use whatever was on old website;
+  I would go to people.tamu all the time to find my numbers"): old
+  site's contact block had exactly one number, (979) 845-7392 — which
+  the new site already uses. CV "Phone: (979) 862-7392" -> 845-7392.
+  KEPT the CV's Secretary (845-7351) and Fax lines — the old site had
+  no such lines, so nothing to match against; flag to Alex in chat,
+  drop on his word.
+- Recompiled 2x, 11 pages, fields line wraps identically to the old
+  CV's ("Behavioral Con-/sumer Finance"); 845-7392 present, 862
+  absent, verified via PyMuPDF. assets/cv_brown.pdf replaced. Frozen
+  About + theme paragraphs proven identical to HEAD; W3C index.html
+  zero messages.
