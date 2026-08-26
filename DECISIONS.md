@@ -1180,3 +1180,39 @@ I also study the tools of experimental economics themselves, especially whether 
   UNTOUCHED and serving (PeerEvaluations12232025.pdf 200
   application/pdf). The old-site → new-site transition is complete.
 - Review server on :8216 stopped (its job ended with the upload).
+
+## 2026-08-25 — TEACHING PHOTO FINAL: doctored first-day photo (Alex approved; deployed)
+
+- Alex supplied IMG_4782.HEIC (web/, first 459 class of the semester,
+  shot from the back: projection screen left, Alex right, students
+  foreground). He liked the photo but not the screen content (Canvas
+  syllabus in Chrome, dock visible). Screen DOCTORED at his request to
+  show the "Brown et al. (2024)" JEL loss-aversion slide — same slide
+  as the old interim teaching photo — rendered crisp from the actual
+  deck: page 66 of "Unit 15-Loss Aversion and Disposition Effect.pdf"
+  (~/Documents/prof/ECON 618/slides/2025 redesign/).
+- Composite built by an Opus subagent (per the conserve-Fable rule):
+  subpixel corner fits of the lit area, 4:3 slide pillarboxed on the
+  ~16:9 screen, projective warp, per-pixel white-point field, black
+  lift + veiling glare, blur matched to the photo's edge softness,
+  level-dependent grain matched to the photo's noise. No occlusions.
+  Fable reviewed the output visually before Alex saw it.
+- Alex's picks: FADED tone variant (KB 0.235/0.170/0.140, glare 0.17)
+  over the punchier default; CROP C (0,0,3900,2600 of the 4032x3024
+  frame, wide 3:2, less foreground) over full-frame and right-trimmed
+  candidates; new alt text approved ("...teaching a class, with a
+  slide of his loss aversion meta-analysis on the screen").
+- Shipped: assets/images/teaching.jpg 1400x933, 227 KB, EXIF/GPS
+  stripped (verified 0 metadata bytes). teaching.html diff = the one
+  alt line; frozen Teaching paragraph proven byte-identical (md5);
+  W3C zero messages.
+- Recipe + full-res outputs preserved in "bad photos?/doctor-recipe/"
+  (gitignored, never published): compose.py etc. re-runnable if Alex
+  ever re-shoots. Slide footer note: legible at full zoom it reads
+  "Econ 618 (TAMU) ... 10/23/25 25/26" (last fall's compile date) —
+  Alex accepted.
+- Known context: photo is the 459 classroom; slide is from 618. Alex
+  approved. Old teaching photo remains in git history.
+- Stale-server lesson AGAIN: the long-running :8213 server 404'd
+  everything (dead directory handle) while lsof still showed the right
+  cwd — verify content, not just the process. Restarted in-place.
