@@ -1237,3 +1237,18 @@ I also study the tools of experimental economics themselves, especially whether 
   before overwriting, pointing, or deleting. Claude cannot see inside
   howdy (NetID login); Alex will need to check or ask the department.
 - TO-DO (next session): resolve the howdy question, then pick 1/2/3.
+
+## 2026-08-25 — CV UPDATED: website line + research fields (Alex ordered, deployed)
+
+- Two edits to cv_brown.tex (Opus subagent; compiled 2x, verified):
+  header URL people.tamu.edu/~alexbrown -> alexbrownecon.com; Research
+  fields -> the site hero's five fields "Behavioral Economics,
+  Experimental Economics, Game Theory, Consumer Behavior, Decision
+  Theory" (Alex corrected mid-run from Claude's first read of "match
+  website" = the four theme headings — the hero interests line was
+  what he meant). Teaching fields untouched. Diff exactly 2 lines;
+  11 pages, pages 2-11 byte-identical; zero new LaTeX warnings;
+  people.tamu.edu now appears NOWHERE in the CV (mailto tamu.edu
+  address remains, correct). Backup: cv/cv_brown_before_site_update.pdf.
+- assets/cv_brown.pdf replaced; committed and pushed on Alex's "then
+  post" instruction.
