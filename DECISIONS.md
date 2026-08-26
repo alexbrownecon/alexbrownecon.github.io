@@ -1216,3 +1216,24 @@ I also study the tools of experimental economics themselves, especially whether 
 - Stale-server lesson AGAIN: the long-running :8213 server 404'd
   everything (dead directory handle) while lsof still showed the right
   cwd — verify content, not just the process. Restarted in-place.
+
+## 2026-08-25 — OLD TAMU CV: decision DEFERRED to next session (Alex)
+
+- Old CV still serves at people.tamu.edu/~alexbrown/papers/cv.pdf
+  (last-modified 2026-03-23 — predates CARD Act forthcoming, AMA award,
+  retitles). The homepage redirect deliberately left papers/ alone.
+- Options discussed: (1) overwrite with current CV + add a sync line to
+  qa-checklist; (2) one-page pointer PDF "Current CV:
+  alexbrownecon.com/cv.html" (Claude's recommendation — one upload,
+  zero maintenance, soft landing for old links); (3) delete the file
+  (Google self-corrects in weeks; direct-link followers hit a bare 404).
+- Linking the NEW site to the TAMU copy was RULED OUT: TAMU sends
+  X-Frame-Options: SAMEORIGIN, so cv.html's embedded viewer cannot
+  frame it, and it would invert the dependency onto legacy hosting.
+- ALEX'S OPEN CONCERN, must resolve BEFORE any change: something in
+  TAMU administration/regulations may point at the old CV URL —
+  specifically howdy.tamu.edu (faculty portal). Check what howdy or
+  other TAMU systems (AEFIS/Workday/dept faculty page?) reference
+  before overwriting, pointing, or deleting. Claude cannot see inside
+  howdy (NetID login); Alex will need to check or ask the department.
+- TO-DO (next session): resolve the howdy question, then pick 1/2/3.
