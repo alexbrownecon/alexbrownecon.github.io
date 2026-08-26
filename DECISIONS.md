@@ -1275,3 +1275,10 @@ I also study the tools of experimental economics themselves, especially whether 
   absent, verified via PyMuPDF. assets/cv_brown.pdf replaced. Frozen
   About + theme paragraphs proven identical to HEAD; W3C index.html
   zero messages.
+
+## 2026-08-25 — STANDING RULE: old website is the contact-info authority
+
+- Alex, after the phone fix: "old website is the standard for all
+  contacts. I would trust more than CV." Recorded in CLAUDE.md
+  non-negotiables. The review request that triggered the check was
+  genuine; the concern predated it.

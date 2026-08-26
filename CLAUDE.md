@@ -48,6 +48,11 @@ Read DECISIONS.md at the start of every session before doing anything (safety ra
 - STOP RULE: stop for Alex's explicit go-ahead at the end of every pass and
   at every decision point. Commit after each approved pass.
 - Working-paper PDFs stay at their people.tamu.edu URLs. Never move them.
+- Contact info standard: the ARCHIVED OLD WEBSITE (web/index.html,
+  pre-March-2026) is the authority for all contact details (phone,
+  address, email). Alex trusts it over the CV — he maintained it in
+  real time. On any conflict, old site wins; fix the CV to match
+  (2026-08-25, after the CV phone was found stale).
 - All asset paths relative and inside site-2026/. Test via
   `python3 -m http.server` in this folder, not file://.
 - Delegate mechanical build work to subagents on cheaper models — but drop
