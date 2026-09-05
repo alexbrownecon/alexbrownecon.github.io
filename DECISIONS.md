@@ -1338,3 +1338,15 @@ I also study the tools of experimental economics themselves, especially whether 
 - Sandbox lesson: the Cowork sandbox proxy blocks artsci.tamu.edu
   (403), so images from there are saved by Alex from the browser, not
   fetched by Claude.
+
+## 2026-09-05 — Google Search Console set up (Alex go-ahead)
+
+- Property https://alexbrownecon.com/ (URL-prefix type) added under
+  abrown.tx@gmail.com — chosen over the TAMU Google account because the
+  site is personal and should outlive any institutional account; the
+  TAMU account can be added as a second owner later if wanted.
+- Verified via HTML file google969ef586e48fff87.html at the site root
+  (content is the standard one-liner; committed and pushed by Alex).
+  The file must stay in the repo permanently — Google re-verifies.
+- sitemap.xml submitted; read successfully the same day, 6 pages.
+- Done through the Cowork browser pane with Alex signed in himself.
