@@ -1,6 +1,6 @@
 # site-2026 design rules (Phase 3+)
 
-Read DECISIONS.md at the start of every session before doing anything (safety rail #7).
+Read DECISIONS.md at the start of every session before doing anything (safety rail #7). Also read `../../START HERE.md` (two levels up) — it holds the project-wide status, the current open-items list, and record-keeping duties (append to `../../session-log.md` at the end of every session; update START HERE's Open items when one closes).
 
 ## Brand
 
@@ -18,9 +18,8 @@ Read DECISIONS.md at the start of every session before doing anything (safety ra
 
 ## Typography
 
-- Distinctive serif for headings (Alex picks from 3 Google Fonts candidates);
-  clean sans for body. Never Inter as first choice. ~18px body, real type
-  scale, tightened heading spacing.
+- Spectral (serif) for headings — chosen 2026-08-23, locked; clean sans for
+  body. Never Inter. ~18px body, real type scale, tightened heading spacing.
 
 ## Banned
 
@@ -94,4 +93,11 @@ Read DECISIONS.md at the start of every session before doing anything (safety ra
   tree hashes identical). Do NOT re-run the rebase. Branch `redesign`
   still carries the old machine identity and no longer shares history
   with main — fine as a local reference; re-author it only if it would
-  ever be pushed. No git remote is configured yet (added at deploy).
+  ever be pushed. Remote `origin` = git@github.com:alexbrownecon/alexbrownecon.github.io.git
+  (GitHub Pages; pushing `main` deploys — never push without Alex's word).
+- **Cowork sandbox (the desktop app's chat) must not run git here** — it
+  leaves `.git/index.lock` files it can't delete and has no identity or
+  SSH key. In Cowork, edit files and hand Alex the Terminal commands.
+  Claude Code on the Mac can use git normally.
+- `google969ef586e48fff87.html` at the root is the Search Console
+  verification file. Never delete it.
