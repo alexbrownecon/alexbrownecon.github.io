@@ -1282,3 +1282,45 @@ I also study the tools of experimental economics themselves, especially whether 
   contacts. I would trust more than CV." Recorded in CLAUDE.md
   non-negotiables. The review request that triggered the check was
   genuine; the concern predated it.
+
+## 2026-08-26 — CV/website TO-DO: CFPB IPA agreements as external support (Alex)
+
+- New fact (from the LinkedIn profile session): both CFPB Visiting
+  Scholar stints (Aug 2017–Jan 2018; Mar 2020–Jan 2021) were PAID
+  under IPA (Intergovernmental Personnel Act) agreements — Alex
+  remained a TAMU state employee detailed to the agency, which
+  reimbursed the university.
+- Idea Alex wants tracked: list the IPA agreements on the CV under
+  grants/external support (e.g., "Intergovernmental Personnel Act
+  agreement, Consumer Financial Protection Bureau, 2017–2018 and
+  2020–2021"). He believes this is legitimate CV practice but never
+  worked out the formatting; draft it when the amount is in hand.
+- Amount: roughly $100K total, but Alex has to FIND the exact
+  figure(s) in his records before anything is added. Blocked on that.
+- Knock-on if added: the grant total could move ~$3.4M → ~$3.5M in
+  BOTH places that state it — cv_brown.tex and the site stats band
+  ("$3.4M+ Grant Funding" on index.html). Change them together or not
+  at all. The LinkedIn build sheet says "more than $3.4 million,"
+  which stays true either way — no LinkedIn edit needed.
+
+## 2026-09-05 — CV fix: "Hagerty" → "Hegarty" (Alex go-ahead)
+
+- Live-site verification (fetched, not assumed) found the published CV
+  PDF listed the PhD student as "Colin Hagerty" while students.html
+  says "Colin Hegarty." Alex: "it's hegarty but verify on
+  econ.tamu.edu." Verified: department profile at
+  artsci.tamu.edu/economics/contact/profiles/colin-hegarty.html, email
+  ckhegarty@tamu.edu. CV was wrong; site was right.
+- cv_brown.tex line 516 corrected; recompiled twice; text diff against
+  the previous PDF shows exactly two changed lines (the name, and the
+  auto "Last updated" month → September 2026). 11 pages, unchanged.
+  assets/cv_brown.pdf replaced. Not pushed in this session unless Alex
+  says so.
+- Same verification pass confirmed: six pages serve, TAMU homepage
+  redirect works, one phone number (845-7392) everywhere, stats band
+  30+ / $3.4M+ / 9+, no banned category colors in live CSS, no broken
+  internal links. Only remaining content defect anywhere is the stale
+  March CV at people.tamu.edu/~alexbrown/papers/cv.pdf (on TAMU's
+  server; recommendation pending with Alex: overwrite it).
+- Project-level orientation now lives one level up: `../../START
+  HERE.md`, README.md, session-log.md, CLAUDE.md (written 2026-09-05).
