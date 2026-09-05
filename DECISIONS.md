@@ -1324,3 +1324,17 @@ I also study the tools of experimental economics themselves, especially whether 
   server; recommendation pending with Alex: overwrite it).
 - Project-level orientation now lives one level up: `../../START
   HERE.md`, README.md, session-log.md, CLAUDE.md (written 2026-09-05).
+
+## 2026-09-05 — students.html: Colin Hegarty card (Alex: "do 1 and 2")
+
+- Verified Colin has a personal site (sites.google.com/view/chegarty) and
+  a department job-market profile with a JMC headshot. His card linked
+  only the generic department PhD-students page.
+- Link now goes to his personal site. Photo replaced with the
+  department JMC headshot (Alex saved it from the browser; cropped to a
+  400x400 square at native resolution — no upscaling — replacing the
+  600x600 Aug 23 image). Title changed "Ph.D. Student" → "Ph.D.
+  Candidate, Economics" to match Zhang's card and his own site.
+- Sandbox lesson: the Cowork sandbox proxy blocks artsci.tamu.edu
+  (403), so images from there are saved by Alex from the browser, not
+  fetched by Claude.
