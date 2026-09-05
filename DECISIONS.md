@@ -1394,3 +1394,7 @@ I also study the tools of experimental economics themselves, especially whether 
 - Preview of the fixed pages left running at http://127.0.0.1:8214 for the
   VoiceOver check (Cmd+F5, VO-arrow through the hero line and footer, Cmd+F5
   off): live site = before, 8214 = after.
+- 2026-09-05, later: Alex "commit push it." Committed and pushed as 19beb89
+  from Claude Code. Live 45 s later; all six pages fetched with cache-bust
+  and confirmed byte-identical to HEAD (index 8 aria-hidden lines,
+  research 2, others 1). Preview server on 8214 stopped. Item closed.
