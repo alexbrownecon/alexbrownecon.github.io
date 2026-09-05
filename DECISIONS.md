@@ -1350,3 +1350,47 @@ I also study the tools of experimental economics themselves, especially whether 
   The file must stay in the repo permanently — Google re-verifies.
 - sitemap.xml submitted; read successfully the same day, 6 pages.
 - Done through the Cowork browser pane with Alex signed in himself.
+
+## 2026-09-05 — Live-site QA re-run + separator screen-reader test (Claude Code)
+
+- QA re-run of qa-checklist.md against https://alexbrownecon.com (open item
+  from START HERE; the checklist had only been run on localhost). Results
+  appended to qa-checklist.md. Summary: live HTML/CSS/sitemap/CV PDF are
+  byte-identical to repo HEAD; all six pages 0 W3C messages; internal links
+  and anchors all resolve; the four ?filter= deep links preselect the right
+  button (31/24/7/7 of 45), an unknown filter falls back to All; no
+  horizontal overflow at 1280/375/320px; short filter labels and 44px+
+  targets at 375px; 11 student photos load, 2 On Market badges; CV iframe
+  hidden and Download visible at 375px; reduced-motion block present in
+  live CSS; no banned category colors. External links: 174 checked — 132
+  OK, 31 publisher/SSRN bot-walls (403), 6 LinkedIn 999s, 2 Cambridge DOI
+  redirect chains, 1 rdcu.be 202; the two "404s" are the fonts.googleapis /
+  fonts.gstatic preconnect hints, not links. No broken link found.
+- Not re-testable from the hidden browser pane: :focus/:target styling and
+  Tab-key order (document.visibilityState is "hidden", hasFocus() false, so
+  Chromium applies neither pseudo-class). The CSS rules are present in the
+  live stylesheet (.skip-link:focus, .paper-card:target, focus-visible
+  rings); Alex's 2026-08-23 Safari keyboard pass stands as the human check.
+- Separator test: the accessibility tree of the live home page exposes the
+  separators as text — hero "Behavioral Economics · Experimental Economics
+  · …", Links block "• • •", grant lines "· Kezunovic…", footer "… • …".
+  NVDA's shipped symbol dictionary announces • ("bullet") at its default
+  punctuation level and · ("middle dot") at level "most" and above.
+  VoiceOver behaviour not yet confirmed by ear — Alex to do (below).
+- FIX (applied locally, NOT committed — awaiting Alex's go-ahead): every
+  ` &middot; ` and ` &bull; ` on all six pages wrapped in
+  `<span aria-hidden="true">…</span>`. 14 lines changed across 6 files; no
+  CSS change; no other markup touched. Chosen over list markup because it
+  is zero-risk visually (live vs. fixed measured pixel-identical at 1280px:
+  hero interests 600×52, Links 410×28, footer 1280×85, grant meta 856×25,
+  research jump links 860×24, page heights 3623 / 10865) and needs no
+  WebKit list-style workaround. After the fix the accessibility tree reads
+  "Behavioral Economics Experimental Economics Game Theory …", Links are
+  four bare links, footer "© 2026 Alexander L. Brown Department of
+  Economics Texas A&M University". W3C: 0 messages on all six edited files.
+  Frozen About and Teaching paragraphs diffed against HEAD: identical.
+  Jump-link separators still collapse under 640px (span inherits the
+  font-size:0).
+- Preview of the fixed pages left running at http://127.0.0.1:8214 for the
+  VoiceOver check (Cmd+F5, VO-arrow through the hero line and footer, Cmd+F5
+  off): live site = before, 8214 = after.

@@ -82,3 +82,39 @@ or enable Safari Settings → Advanced → "Press Tab to highlight each item".
       status), rel="noopener" added; all contrast pairs computed and pass
 - [X] Then: deploy go-ahead — DONE 2026-08-24: identity re-authored,
       "bad photos?" folder excluded (gitignored), GitHub Pages + DNS wiring
+
+## Live re-run — 2026-09-05 (automated, against https://alexbrownecon.com)
+
+Done from Claude Code with curl, the W3C validator and the in-app browser
+pane (viewport emulated at 1280, 375 and 320px). Items that need a human in
+Safari or on the iPhone (PDF viewer come-back, real Tab presses, reduce
+motion by ear) were not repeated; markup and CSS are unchanged from the
+2026-08-23 human pass on those points.
+
+- [x] Live HTML (6 pages), site.css, sitemap.xml and cv_brown.pdf are
+      byte-identical to repo HEAD; www and github.io 301 to the apex
+- [x] W3C: 0 messages on all six pages
+- [x] Internal links and anchors: all resolve (script over the six pages)
+- [x] Theme links: ?filter=dc/gt/policy/methods preselect the button and
+      reduce the list (31/24/7/7 of 45); ?filter=bogus falls back to All
+- [x] Selected Publications anchors (5) and section anchors (3) exist and
+      have scroll-margin; :target/:focus could not be exercised from the
+      hidden pane (see DECISIONS 2026-09-05)
+- [x] Grant links: TTI PDF, Research@TAMU archive, ALERT page all 200
+- [x] e-elgar Handbook link: 403 to curl (Cloudflare) — human-only, as before
+- [x] DOI / people.tamu.edu PDFs: all resolve or hit publisher bot-walls
+      (403 from SSRN, SAGE, Wiley, INFORMS, AEA, OUP); none 404
+- [x] CV page: iframe (not object) + matchMedia script present; at 375px the
+      iframe is display:none and the Download link is visible
+- [x] Students: 11 photos load (naturalWidth > 0), 2 On Market badges
+      visible at 375px; single column at 375px
+- [x] Teaching: Brown–Kagel DOI link + 3 catalog links present
+- [x] Skip link is the first tabbable element, targets #main; focus-visible
+      3px rings in CSS; footer focus ring guard present
+- [x] Zoom/reflow: no horizontal overflow on any page at 375px or 320px;
+      hero stacks (column-reverse), stats one per line
+- [x] iPhone-equivalent: short filter labels shown, full hidden; filter
+      buttons 45px tall; jump links one per line
+- [x] Reduced motion: @media (prefers-reduced-motion: reduce) block in live CSS
+- [x] External links: 174 checked, 0 broken (see DECISIONS for the 403/999
+      breakdown)

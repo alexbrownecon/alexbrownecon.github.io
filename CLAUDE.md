@@ -70,6 +70,11 @@ Read DECISIONS.md at the start of every session before doing anything (safety ra
   HTML file auto-opens pinned file:// preview tabs that cannot navigate —
   keep one dedicated localhost tab for testing. Widths <768 emulate mobile
   (touch, mobile UA).
+  While the pane is hidden, `document.visibilityState` is "hidden" and
+  `hasFocus()` is false, so Chromium applies no `:focus`/`:target` styles
+  and Tab keypresses don't move focus — verify those by the CSS rules or
+  ask Alex; everything else (computed styles, a11y tree via read_page,
+  filter JS) works fine hidden. (2026-09-05)
 - **Stale CSS:** after editing site.css, a plain reload may serve the cached
   file — cache-bust (`site.css?v=N`) or confirm via computed styles before
   concluding a fix failed.
