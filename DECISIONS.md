@@ -1430,3 +1430,24 @@ I also study the tools of experimental economics themselves, especially whether 
   (two lines); 320×700 — scrollWidth 320, row 288 wide at left 16 / right
   304 (two lines). Margins unchanged from the 2026-09-05 QA; the only visible
   change is the second line in the Links block. Item closed.
+
+## 2026-09-27 — Wide share image (og:image) for all six pages (Claude Code)
+
+- Why: every page's `og:image` was the square headshot
+  (`newhead4-1200.jpg`, 960×1200). LinkedIn and other previewers crop
+  that to a wide banner and cut the head off — seen on the LinkedIn Featured
+  cards today. A 1200×630 card is the standard preview size.
+- What (Alex: "can we do the wide share now?" … "go"): new
+  `assets/images/og-card-1200x630.jpg` (62 KB), rendered in headless Chrome
+  from a small HTML card that reuses the hero's own styling — the hero
+  gradient (#23456b → #1e3a5f), 6px gold rule, Spectral 500 name on one
+  line, subtitle, the five fields on two lines with non-breaking separators,
+  "alexbrownecon.com", and the same headshot in a 300px circle. Source HTML
+  kept outside the repo at `../og-card-source/card.html` (regenerate with
+  the headless-Chrome command noted there). All six pages now point
+  `og:image` at it and add `og:image:width` 1200 / `og:image:height` 630.
+  No visible page change. `newhead4-1200.jpg` stays (the hero uses it).
+- Checks: diff = 6 files × the same 3 meta lines; frozen About and Teaching
+  untouched (0 non-og lines in the diff); W3C 0 messages on all six.
+- Note: LinkedIn caches previews; a URL already previewed may keep the old
+  image until LinkedIn refetches (its Post Inspector can force it).
