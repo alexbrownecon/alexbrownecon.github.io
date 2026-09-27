@@ -1421,3 +1421,12 @@ I also study the tools of experimental economics themselves, especially whether 
   pages; the LinkedIn Featured cards were given custom thumbnails instead
   (`../../linkedin/featured-thumbnails/`). A site-side share image would fix
   every future preview, not just those three.
+- 2026-09-27, later: Alex "push and then check that there isn't a
+  catastrophic error to margins." Pushed as 1277da5; live in 48 s; live
+  index.html byte-identical to HEAD (sha1 2543d533…). Layout check on the
+  live page in the app's browser pane at explicit viewports: 1280×900 —
+  scrollWidth 1265 (no overflow), Links row 410×56 (two lines: "CV (PDF)"
+  wraps); 375×812 — scrollWidth 375, row 335 wide at left 20 / right 355
+  (two lines); 320×700 — scrollWidth 320, row 288 wide at left 16 / right
+  304 (two lines). Margins unchanged from the 2026-09-05 QA; the only visible
+  change is the second line in the Links block. Item closed.
