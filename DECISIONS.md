@@ -1398,3 +1398,26 @@ I also study the tools of experimental economics themselves, especially whether 
   from Claude Code. Live 45 s later; all six pages fetched with cache-bust
   and confirmed byte-identical to HEAD (index 8 aria-hidden lines,
   research 2, others 1). Preview server on 8214 stopped. Item closed.
+
+## 2026-09-27 — LinkedIn back-link added to the home page (Claude Code)
+
+- Context: Alex's LinkedIn profile went live today at
+  https://www.linkedin.com/in/alexbrownecon (built from
+  `../../linkedin/linkedin-90-minute-plan.md`; as-built record in
+  `../../linkedin/linkedin-build-log-2026-09-27.md`). The plan had LinkedIn
+  pointing at the site; whether the site should point back was left open.
+- Decision (Alex, 2026-09-27: "yes add it on the links... the four should
+  become 5"): index.html Links row gains a fifth link, "LinkedIn", placed
+  after RePEc/IDEAS and before "CV (PDF)" so the identity profiles stay
+  grouped and the CV stays last. Same URL added as the fourth `sameAs` entry
+  in the JSON-LD. No other page touched (contact.html has no links block).
+- Checks: git diff is exactly the two hunks; frozen About text untouched
+  (diff contains none of it); W3C Nu validator 0 messages on index.html.
+  Separator wrapped in `aria-hidden` like the others. QA note for future
+  link checks: linkedin.com answers automated checkers with HTTP 999 — not
+  a broken link.
+- Not done (optional, still open): a wide 1200×628 `og:image` for the site.
+  LinkedIn crops the square headshot when it previews alexbrownecon.com
+  pages; the LinkedIn Featured cards were given custom thumbnails instead
+  (`../../linkedin/featured-thumbnails/`). A site-side share image would fix
+  every future preview, not just those three.
