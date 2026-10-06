@@ -1451,3 +1451,28 @@ I also study the tools of experimental economics themselves, especially whether 
   untouched (0 non-og lines in the diff); W3C 0 messages on all six.
 - Note: LinkedIn caches previews; a URL already previewed may keep the old
   image until LinkedIn refetches (its Post Inspector can force it).
+
+## 2026-10-06 — Biometric/JEBO paper moved from working paper to publication (Cowork)
+
+- Why: Vitaku, Brown & Palma, "Biometric Responses to Unjustified and
+  Justified-Envy in School Choice Allocations," is published:
+  *Journal of Economic Behavior & Organization*, vol. 251, article 107796,
+  November 2026, doi:10.1016/j.jebo.2026.107796. Alex sent the DOI 2026-10-06.
+  Citation fields are from Crossref (deposited 2026-10-03); ScienceDirect was
+  behind a captcha, so no "available online" date was recorded.
+- What: `research.html` — card removed from Working Papers; new Journal
+  Publications card placed second, after the Management Science forthcoming
+  card (Alex's rule: a paper where his name is not first sits below the
+  forthcoming Brown-first paper). Title now links to the DOI; venue line
+  "Journal of Economic Behavior &amp; Organization, 251, 107796, 2026";
+  links "published version" (DOI) + "PDF" (SSRN, unchanged); abstract and
+  coauthor links carried verbatim; tag kept as Equilibrium only (Alex).
+  Card count unchanged at 45. `cv_brown.tex` — same move: entry deleted from
+  Working Papers (Under Review), added as the second peer-reviewed
+  publication; compiled twice, 11 pages, PDF copied to `assets/`. Peer-
+  reviewed count is now 32, so the stats band stays "30+".
+- Not done (Alex's choice): index.html Selected Recent Publications unchanged
+  ("I don't want to feature this publication, just record it"). LinkedIn
+  unchanged by design. Scholars@TAMU will surface the paper on its own.
+- Commit/push and the TAMU `papers/cv.pdf` upload are Alex's, from Terminal.
+
