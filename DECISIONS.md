@@ -1476,3 +1476,19 @@ I also study the tools of experimental economics themselves, especially whether 
   unchanged by design. Scholars@TAMU will surface the paper on its own.
 - Commit/push and the TAMU `papers/cv.pdf` upload are Alex's, from Terminal.
 
+
+## 2026-10-16 — Grant co-author name fixed; CV gains Theory and Decision editorship
+
+- Why: the cybersecurity grant listed its PI as "Guo, Guofei"; the correct
+  name is Guofei Gu ("Gu, Guofei"). Separately, Alex became Coordinating
+  Editor of *Theory and Decision* in 2026 (CV-only; the site has no editorial
+  section). Both edits were made in the 2026-10-16 Cowork session.
+- What: `index.html` — grant card meta line now reads "Gu, Brown, and Kumar"
+  (one line changed; frozen About text untouched). `cv_brown.tex` — line 267
+  co-author fixed; "Coordinating Editor, Theory and Decision, 2026--." added
+  under Disciplinary/Departmental Service above the JEBO special-issue line;
+  compiled twice, 11 pages, PDF copied to `assets/cv_brown.pdf` (verified
+  identical to `cv/cv_brown.pdf`; PDF text contains "Gu, Guofei" and
+  "Coordinating Editor", not "Guo, Guofei").
+- Commit and push done from Claude Code at Alex's request ("push them and
+  get github to record them"). The TAMU `papers/cv.pdf` upload remains Alex's.
